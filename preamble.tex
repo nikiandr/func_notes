@@ -1,0 +1,62 @@
+%%% Работа с языком
+%\usepackage{cmap}					    % поиск в PDF				    % русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}             % кодировка исходного текста
+\usepackage[english,ukrainian]{babel}	% локализация и переносы	    
+\usepackage{indentfirst}
+
+\usepackage[a4paper, top=25mm, bottom=25mm, left=30mm, right=30mm]{geometry}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+
+\usepackage{makecell}% Прикольная настройка ячеек в tabular 
+%http://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/makecell/makecell-rus.pdf
+
+\usepackage{diagbox}
+% Разделение клеток tabular по диагонали
+
+\usepackage{multicol} % Несколько колонок
+\usepackage{wrapfig} % Картинки посреди текста
+\usepackage{chngcntr} % для нумерации формул
+\usepackage{enumitem} % чтоб можно было делать римскую нумерацию
+\usepackage{mdwlist}
+\usepackage{adjustbox}
+\usepackage{xcolor} % градации цветов
+\usepackage[psdextra]{hyperref}
+\hypersetup{unicode=true}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+}
+\setlist[enumerate]{nosep}
+
+%%%% Теоремы, определения и т.д. и т.п.
+\theoremstyle{plain} % Это стиль по умолчанию, его можно не переопределять.
+\newtheorem{theorem}{Теорема}
+\newtheorem{proposition}{Твердження}
+\renewcommand{\qedsymbol}{$\blacktriangle$}
+ 
+\theoremstyle{definition} % "Определение"
+\newtheorem{definition}{Означення}[section]
+\newtheorem*{definition*}{Означення}
+\newtheorem*{example}{Приклад}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Зауваження}
+\newtheorem*{exercise}{Вправа}
+
+\counterwithout{equation}{chapter} % нумерация формул
+\counterwithin*{equation}{section}
+
+%%%% Картинки
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\usetikzlibrary{patterns}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes.geometric}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
