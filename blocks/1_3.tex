@@ -1,1 +1,131 @@
 % !TEX root = ../main.tex
+
+\begin{exercise}
+    Лінійний функціонал $\varphi: C[a, b] \rightarrow \mathbb{R}$ називається \emph{невід'ємним},
+    якщо для кожної невід'ємної на $[a ,b]$ функції $x \in C[a, b]$ має місце нерівність 
+    $\varphi(x) \geq 0$. Довести, що невід'ємний функціонал $\varphi$ є неперервним і при цьому
+    $\norm{\varphi} = \varphi(\mathds{1})$, де $\mathds{1}$ --- тотожньо одинична функція.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що лінійний оператор $A$, який діє в нормованому просторі $X$, є неперервним тоді
+    й тільки тоді, коли множина $\{x \in X | \norm{Ax} < 1\}$ має внутрішні точки.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- банахів простір; $A \in L(X)$ та існує $c > 0$ таке, що для кожного $x \in X$
+    виконується нерівність $\norm{Ax} \geq c \norm{}$. Довести, що $\mathrm{Im} A$ є замкненим підпростором.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що після заміни норми в нормованих просторах $X$ і $Y$ на еквіваленті,
+    нова норма в $L(X; Y)$ буде еквівалентна старій.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- комплексний нормований простір; $\varphi \in X^*$. Довести $\norm{\varphi} = 
+    \sup\{ \mathrm{Re}\varphi(x) | {\norm{x}=1} \}$
+\end{exercise}
+
+\begin{exercise}
+    Нехай лінійний функціонал, визначений на нормованому просторі  $X$ --- необмежений.
+    Довести, що в будь-якому околі нуля він приймає всі дійсні значення.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X,Y$ --- нормовані простори; $Z$ --- замкнений підпростір в $X$. Покладемо 
+    $M = \{A \in L(X;Y) | \mathrm{Ker} A = Z\}$. Чи буде $M$ замкненим підпростором в $L(X;Y)$?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X,Y$ --- нормовані простори; $Z$ --- замкнений підпростір в $X$. Покладемо 
+    $M = \{A \in L(X;Y) | \mathrm{Ker} A \supset Z\}$. Чи буде $M$ замкненим підпростором в $L(X;Y)$?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- нормований простір; $A \in L(X)$. Покладемо $M = \{B \in L(X) | AB=0\}$;
+    $N = \{B \in L(X) | AB=BA\}$. Довести, що $M$ та $N$ --- замкнені підпростори в $L(X)$.
+\end{exercise}
+
+\begin{theory}
+    \begin{theorem}[Ган, Банах]
+        Для кожного ненульового вектора $x$ нормованого простору $X$ існує $\varphi \in X^*$,
+        для якого $\norm{\varphi} = 1$ та $\varphi(x) = \norm{x}$. 
+    \end{theorem}
+\end{theory}
+
+\begin{exercise} ~
+    \begin{enumerate}[label=\ukr*)]
+        \item Нехай $X$ --- нормований простір; $x,y \in X$. Довести $(x=y) \Leftrightarrow 
+        \big(\forall\varphi \in X^*: \varphi_n(x) = \varphi_n(y)\big)$;
+        \item Нехай $X$ --- сепарабельний нормований простір. Довести існування зліченної сім'ї
+        функціоналів $\varphi_n \in X^*$, що розділяють точки $X$ \Big(Тобто 
+        $(x\neq y) \Leftrightarrow \big(\exists n \in \mathbb{N}: \varphi_n(x) \neq \varphi_n(y)\big)$\Big).
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Кожен вектор $x$ нормованого простору $X$ можна розглядати як функцію $\tilde{x}$, яка 
+    діє на $X^*$ за правилом $\tilde{x}(\varphi)=\varphi(x)$.
+\end{theory}
+
+\begin{exercise}
+    Доведіть:~
+    \begin{enumerate}[label=\ukr*)]
+        \item $\forall x \in X$ функція $\tilde{x}$ є лінійно обмежений функціонал на просторі $X^*$
+        і його норма, як елемента $X^{**}$, співпадає з нормою $x \in X$;
+        \item відображення $\alpha: X \ni x \mapsto \tilde{x} \in X^{**}$ є ізометричним вкладенням
+        простору $X$ в $X^{**}$, тобто $\alpha$ --- лінійний оператор; $\mathrm{Ker}\alpha = \{0\}$; 
+        $\norm{\alpha(x)} = \norm{\tilde{x}} = \norm{x}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    В разі, якщо $\mathrm{Im}\alpha = X^{**}$, тобто $\alpha$ --- ізоморфізм просторів $X$ та $X^{**}$,
+    вихідний простір $X$ називається \emph{рефлексивним}
+\end{theory}
+
+\begin{exercise}
+    Доведіть, що простори  $l_p$, де $1<p<\infty$, є рефлексивні, а простори $l_1$ та $l_\infty$ --- ні.
+\end{exercise}
+
+\begin{exercise}
+    Чи буде простір $L(X)$, де $X=L_2[0,1]$, сепарабельним?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$, $Y$ --- нормовані простори; $A \in L(X;Y)$; $B, C \in L(Y;X)$;
+    $AB = I_Y$; $CA = I_X$ ($I_X$ --- тотожній оператор в $X$).
+    Довести $B = C = A^{-1} \in L(Y; X)$ --- обернений оператор до $A$.
+\end{exercise}
+
+\begin{theory}
+    \begin{theorem}[Банаха-Штейнгауза (принцип рівномірної обмеженості)]
+        Нехай $X, Y$ --- нормовані простори; $X$ --- повний; $A_n \in L(X;Y),\; n\in \mathbb{N}$;
+        $\forall x \in X, \; \exists C(x) > 0$ таке, що $\forall n \in \mathbb{N}: \norm{A_n x} \leq C(x)$.
+        Тоді $\exists C>0: \forall n \in \mathbb{N}: \norm{A_n x} \leq C$
+    \end{theorem}
+\end{theory}
+
+\begin{exercise}
+    Нехай $\alpha_n$ --- числова послідовність в $\mathbb{R}$, для якої 
+    $\sum^\infty_{k=1} \alpha^2_k =\infty$. Довести, що існує така послідовність 
+    $\beta_n$ в $\mathbb{R}$, для якої $\sum^\infty_{k=1} \beta^2_k < \infty$, 
+    але $\sum^\infty_{k=1} \alpha_l\beta_k$ --- розбіжний ряд.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- нормований простір, $L$ --- замкнений підпростір в $X$; $\mathrm{codim}L \geq 1$.
+    Тоді $\exists \varphi \in X^*$; $\varphi \neq 0$, для деякого $L \subset \mathrm{Ker}\varphi$
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X, Y$ --- банахові простори над полем $K$ ($K$ = $\mathbb{R}$ або $\mathbb{C}$).
+    $\varphi: X \times Y \rightarrow K$ --- білінійний функціонал, що має наступні властивості:
+    \begin{enumerate}[label=\ukr*)]
+        \item $\forall y \in Y$: $\varphi(\,\cdot\,, y)$ - неперервний по $x$
+        \item $\forall x \in X$: $\varphi(x, \,\cdot\,)$ - неперервний по $y$
+    \end{enumerate}
+    Довести існування константи $k$ такої, що для кожного $(x,y) \in X \times Y$ має місце нерівність
+    $|\varphi(x,y)| \leq k \norm{x} \norm{y}$.
+\end{exercise}
