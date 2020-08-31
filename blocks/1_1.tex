@@ -1,0 +1,143 @@
+% !TEX root = ../main.tex
+
+\begin{theory}
+    Нехай $(X, \norm{\cdot}_X)$, $(Y, \norm{\cdot}_Y)$ - нормовані простори над полем K ($K = 
+    \mathbb{R}$ або $\mathbb{C}$, 
+    але обов'язково однакове для обох просторів). 
+
+    Лінійний оператор $A: X \rightarrow Y$ (визначений на всьому X) називається 
+    \emph{обмеженим}, якщо існує число $C > 0$, для якого $\forall x \in X$: 
+    $\norm{Ax}_Y \leq C \norm{x}_X$. Надалі найчастіше нижні індекси при позначенні норми 
+    не будемо ставити; за змістом формул зрозуміло, до якого простору належить відповідна 
+    норма. Також при позначенні нормованого простору $(X, \norm{\cdot})$ будемо писати лише 
+    літеру X, якщо за змістом задачі норма в X не викликає сумніву. 
+
+    В разі якщо Y є основне поле ($Y=\mathbb{R}$ або $Y = \mathbb{C}$), то лінійний оператор 
+    $\varphi: X \rightarrow Y$ прийнято називати \emph{(лінійним) функціоналом}.
+
+    Норма лінійного обмеженого оператора (функціонала) задається формулою: 
+    $\norm{A} = \inf\left\{C | \forall x \in X : \norm{Ax}\leq C\norm{x} \right\}$
+    ($\norm{\varphi} = \inf\left\{C | \forall x \in X : |\varphi(x)|\leq C\norm{x} \right\}$)
+\end{theory}
+
+\begin{exercise}
+    Нехай A - обмежений лінійний оператор з X в Y ($A: X \rightarrow Y$).
+    Довести: $\norm{A} = \min\left\{C|\forall x \in X : \norm{Ax} \leq C\norm{x}\right\}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A: X \rightarrow Y$ - обмежений лінійний оператор.
+    Довести: $\norm{A} = \sup\limits_{x \neq 0}\frac{\norm{Ax}}{\norm{x}} = 
+    \sup\limits_{\norm{x} \leq 1}\norm{Ax} = \sup\limits_{\norm{x} = 1}\norm{Ax}$.
+\end{exercise}
+
+\begin{theory}
+    Лінійний оператор $A: X \rightarrow Y$ називається \emph{неперервним}, якщо відображення 
+    A є неперервним в кожній точці $x \in X$.
+\end{theory}
+
+\begin{exercise}
+    Нехай А - лінійний оператор з X в Y. Довести: 
+    \begin{enumerate}[label=\alph*)]
+        \item якщо A - обмежений оператор, то A - неперервний
+        \item якщо існує точка $x_0 \in X$, в якій А - неперервний, то А - обмежений
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    \underline{\emph{Висновок}} Для перевірки неперервності лінійного оператору достатньо 
+    довести його неперервність лише в одній точці простору аргументу.
+\end{theory}
+
+\begin{exercise}
+    З'ясувати, чи є наведені нижче функціонали в просторі $C{\left[-1, 1\right]}$ лінійними; 
+    неперервними. В разі позитивної відповіді знайти їх норми. 
+    \begin{enumerate}[label=\ukr*)]
+        \item $\varphi(x) = x(0)$
+        \item $\varphi(x) = \int\limits_0^1x(t)dt$
+        \item $\varphi(x) = \frac{1}{2}(x(1) - x(-1))$
+        \item $\varphi(x) = \int\limits_0^1tx(t)dt$
+        \item $\varphi(x) = \int\limits_{-1}^1tx(t)dt$
+        \item $\varphi(x) = \norm{x} = \max\limits_{-1 \leq t \leq 1} |x(t)|$
+        \item $\varphi(x) = \int\limits_0^1|x(t)|dt$
+        \item $\varphi(x) = \int\limits_{-1}^1x(t)cos(\pi t)dt$
+        \item $\varphi(x) = \int\limits_0^1tx^2(t)dt$
+        \item $\varphi(x) = \int\limits_{-1}^0x(t)dt - \int\limits_0^1x(t)dt$
+        \item $\varphi(x) = \int\limits_{-1}^1x(t^2)dt$
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    З'ясувати, чи є наведені нижче функціонали на X лінійними; 
+    неперервними. В разі позитивної відповіді знайти їх норми.
+    \begin{enumerate}[label=\ukr*)]
+        \item $X = \ell_1$; $\varphi(\vec{x}) = \sum\limits_{n=1}^{\infty} x_n $
+        \item $X = \ell_1$; $\varphi(\vec{x}) = \sum\limits_{n=1}^{\infty} |x_n| $
+        \item $X = \ell_2$; $\varphi(\vec{x}) = x_1 + x_2 $
+        \item $X = \ell_2$; $\varphi(\vec{x}) = x_1 - x_2 + x_3$
+        \item $X = \ell_2$; $\varphi(\vec{x}) = \sum\limits_{n=1}^{\infty} \frac{x_n}{n}$
+        \item $X = \ell_p$ ($1 \leq p \leq +\infty$); $\varphi(\vec{x}) = 
+        \sum\limits_{n=1}^{\infty} \frac{x_n}{n}$
+        \item $X = L_2[0,1]$; $\varphi(x) = \int\limits_0^1 tx(t)dt$
+        \item $X = L_2[0,1]$; $\varphi(x) = \int\limits_0^1 |x(t)|^{\frac{1}{2}}dt$
+        \item $X = L_2[0,\frac{\pi}{2}]$; 
+        $\varphi(x) = \int\limits_0^{\frac{\pi}{2}} x(t)sin(t)dt$
+        \item $X = C^1[0,1]$ $(\norm{x}_1 = \max\limits_{[0,1]}|x(t)| + 
+        \max\limits_{[0,1]}|x^{\prime}(t)|)$; $\varphi(x) = x^{\prime}(0) + x(1)$
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Лінійний функціонал $\varphi$ визначено на просторі $C[0, 1]$ формулою 
+    $\varphi(x) = \int\limits_0^1 x(t)dt - x(0)$. Довести: $\norm{\varphi} = 2$, 
+    але не існує такої функції $x_0 \in C[0, 1]$, що $\norm{x_0} = 1$, $|\varphi(x_0)| = 2$
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X = C^1[0, 1]$ з нормою $\norm{x} = \max\limits_{[0, 1]}|x(t)|$, 
+    $\varphi(x) = x^\prime(0)$. Доведіть необмеженість функціонала $\varphi$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $f$, $g$ - лінійні функціонали на лінійному просторі $L$; $\ker f = \ker g$. 
+    Довести: існує $\alpha \in K$, для якого $f = \alpha g$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $f$, $f_1$, ..., $f_n$ - лінійні функціонали на лінійному просторі $L$. 
+    Довести, що $f$ є лінійною комбінацією $f_1$, ..., $f_n$ тоді й тільки тоді, 
+    коли $\bigcap\limits_{k=1}^n \ker f_k \subset \ker f$.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що будь-який оператор в нормованих просторах із скінченновимірною областю 
+    визначення $X$ є неперервним і при цьому існує такий ненульовий вектор $x_0 \in X$, 
+    для якого $\norm{Ax_0} = \norm{A}\norm{x_0}$.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що лінійний неперервний оператор $A: X \rightarrow Y$ залишається неперервним, 
+    якщо в $X$ та $Y$ замінити норми на еквівалентні.
+\end{exercise}
+
+\begin{exercise}
+    З'ясувати, чи є наведені нижче функціонали на X лінійними; 
+    неперервними. В разі позитивної відповіді знайти їх норми.
+    \begin{enumerate}[label=\ukr*)]
+        \item $A: C[0, 1] \rightarrow C[0, 1]$; $(Ax)(t) = \int\limits_0^t x(\tau) d\tau$
+        \item $A: C[0, 1] \rightarrow C[0, 1]$; $(Ax)(t) = \int\limits_0^t \tau x(\tau) d\tau$
+        \item $A: C[0, 1] \rightarrow C[0, 1]$; $(Ax)(t) = \int\limits_0^t \tau x^2(\tau) d\tau$
+        \item $A: C[0, 1] \rightarrow C[0, 1]$; $(Ax)(t) = x(t^2)$
+        \item $A: C^1[0, 1] \rightarrow C[0, 1]$; $(Ax)(t) = x^\prime (t)$ 
+        \item $A: \ell_2 \rightarrow \ell_2$; $A\vec{x} = (\underbrace{0,0,...,0}_n,
+        x_1,x_2,...)$
+        \item $A: \ell_2 \rightarrow \ell_2$; $A\vec{x} = (x_2,x_3,x_4,...)$
+        \item $A: \ell_2 \rightarrow \ell_2$; $A\vec{x} = (x_1,0,x_3,0,x_5,...)$
+        \item $A: \ell_2 \rightarrow \ell_1$; $A\vec{x} = \vec{x}$
+        \item $A: \ell_1 \rightarrow \ell_1$; $A\vec{x} = (x_1+x_2, x_1-x_2, x_3, x_4, ...)$
+        \item $A: L_2[0, 1] \rightarrow L_2[0, 1]$; $(Ax)(t) = t \int\limits_0^1 x(s)ds$
+        \item $A: L_2[0, 1] \rightarrow L_2[0, 1]$; $(Ax)(t) = \varphi(t)x(t)$ 
+        ($\varphi \in C[0,1]$)
+        \item $A: L_2[0, 1] \rightarrow L_2[0, 1]$; $(Ax)(t) = \int\limits_0^1 tsx(s)ds$
+    \end{enumerate}
+\end{exercise}
