@@ -1,7 +1,8 @@
 % !TEX root = ../main.tex
 
 \begin{theory}
-    Нехай $(X, \norm{\cdot}_X)$, $(Y, \norm{\cdot}_Y)$ --- нормовані простори над полем K ($K = 
+    Нехай $(X, \norm{\cdot}_X)$, $(Y, \norm{\cdot}_Y)$ --- нормовані простори над полем K (
+        зазвичай $K = 
     \mathbb{R}$ або $\mathbb{C}$, 
     але обов'язково однакове для обох просторів). 
 
@@ -12,16 +13,16 @@
     норма. Також при позначенні нормованого простору $(X, \norm{\cdot})$ будемо писати лише 
     літеру X, якщо за змістом задачі норма в X не викликає сумніву. 
 
-    В разі якщо Y є основне поле ($Y=\mathbb{R}$ або $Y = \mathbb{C}$), то лінійний оператор 
+    Якщо Y є основним полем ($Y=\mathbb{R}$ або $Y =Z \mathbb{C}$), то лінійний оператор 
     $\varphi: X \rightarrow Y$ прийнято називати \emph{(лінійним) функціоналом}.
 
     Норма лінійного обмеженого оператора (функціонала) задається формулою: 
-    $\norm{A} = \inf\left\{C | \forall x \in X : \norm{Ax}\leq C\norm{x} \right\}$
-    ($\norm{\varphi} = \inf\left\{C | \forall x \in X : |\varphi(x)|\leq C\norm{x} \right\}$)
+    $\norm{A} = \inf\left\{C\;|\;\forall x \in X : \norm{Ax}\leq C\norm{x} \right\}$
+    ($\norm{\varphi} = \inf\left\{C \;|\; \forall x \in X : |\varphi(x)|\leq C\norm{x} \right\}$).
 \end{theory}
 
 \begin{exercise}
-    Нехай A --- обмежений лінійний оператор з X в Y ($A: X \rightarrow Y$).
+    Нехай $A$ --- обмежений лінійний оператор з $X$ в $Y$ ($A: X \rightarrow Y$).
     Довести: $\norm{A} = \min\left\{C|\forall x \in X : \norm{Ax} \leq C\norm{x}\right\}$.
 \end{exercise}
 
@@ -37,15 +38,15 @@
 \end{theory}
 
 \begin{exercise}
-    Нехай А --- лінійний оператор з X в Y. Довести: 
+    Нехай $A$ --- лінійний оператор з $X$ в $Y$. Довести: 
     \begin{enumerate}[label=\alph*)]
-        \item якщо A - обмежений оператор, то A - неперервний
-        \item якщо існує точка $x_0 \in X$, в якій А - неперервний, то А - обмежений
+        \item якщо $A$ --- обмежений оператор, то $A$ --- неперервний.
+        \item якщо існує точка $x_0 \in X$, в якій $A$ --- неперервний, то $A$ --- обмежений.
     \end{enumerate}
 \end{exercise}
 
 \begin{theory}
-    \underline{\emph{Висновок}} Для перевірки неперервності лінійного оператору достатньо 
+    \underline{\emph{Висновок:}} Для перевірки неперервності лінійного оператору достатньо 
     довести його неперервність лише в одній точці простору аргументу.
 \end{theory}
 
@@ -68,7 +69,7 @@
 \end{exercise}
 
 \begin{exercise}
-    З'ясувати, чи є наведені нижче функціонали на X лінійними; 
+    З'ясувати, чи є наведені нижче функціонали на $X$ лінійними; 
     неперервними. В разі позитивної відповіді знайти їх норми.
     \begin{enumerate}[label=\ukr*)]
         \item $X = \ell_1$; $\varphi(\vec{x}) = \sum\limits_{n=1}^{\infty} x_n $
@@ -99,20 +100,20 @@
 \end{exercise}
 
 \begin{exercise}
-    Нехай $f$, $g$ --- лінійні функціонали на лінійному просторі $L$; $\ker f = \ker g$. 
+    Нехай $f$, $g$ --- лінійні функціонали на лінійному просторі $L$; $\mathrm{Ker} f = \mathrm{Ker} g$. 
     Довести: існує $\alpha \in K$, для якого $f = \alpha g$.
 \end{exercise}
 
 \begin{exercise}
     Нехай $f$, $f_1$, ..., $f_n$ --- лінійні функціонали на лінійному просторі $L$. 
     Довести, що $f$ є лінійною комбінацією $f_1$, ..., $f_n$ тоді й тільки тоді, 
-    коли $\bigcap\limits_{k=1}^n \ker f_k \subset \ker f$.
+    коли $\bigcap\limits_{k=1}^n \mathrm{Ker} f_k \subset \mathrm{Ker} f$.
 \end{exercise}
 
 \begin{exercise}
     Довести, що будь-який оператор в нормованих просторах із скінченновимірною областю 
     визначення $X$ є неперервним і при цьому існує такий ненульовий вектор $x_0 \in X$, 
-    для якого $\norm{Ax_0} = \norm{A}\norm{x_0}$.
+    для якого $\norm{Ax_0} = \norm{A}\cdot\norm{x_0}$.
 \end{exercise}
 
 \begin{exercise}
