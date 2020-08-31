@@ -1,1 +1,84 @@
 % !TEX root = ../main.tex
+\begin{exercise}
+    Нехай $\left\{c_n\right\}$ --- числова послідовність. Довести, що оператор
+    $A : \ell_2 \ni (x_1, x_2, ...) = \vec{x} \mapsto \vec{y} = (c_1, x_1, c_2, x_2, ...) \in \ell_2$
+    є обмеженим (та визначеним на всьому $\ell_2$) тоді й тільки тоді, коли $c = \underset{n\in\mathbb{N}}{\sup} |c_n| < +\infty$, 
+    і при цьому $\norm{A} = c$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $K \in C\left( [a;b] \times [a;b]\right)$ і оператор $A: C\left( [a;b]\right) \rightarrow C\left( [a;b]\right)$
+    визначено формулою $(Ax)(t) = \int\limits_a^b K(t, s) x(s) ds$. Довести лінійність і обмеженість оператора $A$.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що ядро лінійного неперервного оператора замкнене. Чи завжди замкнена його область значень?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A: X \rightarrow Y$ --- обмежений лінійний оператор, $Z$ --- передкомпакт в $X$.
+    Довести $A(Z)$ --- передкомпакт в $Y$. Чи завжди образ компакта під дією обмеженого оператора буде компактом?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\varphi$ --- лінійний функціонал на нормованому просторі $X$. 
+    Довести, що $\varphi$ --- обмежений тоді й тільки тоді, коли його ядро замкнене. 
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$ --- лінійний оператор з $X$ в $Y$, $\mathrm{dim} Y < \infty$.
+    Доведіть, що $A$ --- обмежений тоді й тільки тоді, коли його ядро замкнене.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$ --- лінійний оператор з $X$ в $Y$. Чи завжди з умови замкненості ядра $A$ випливає його обмеженість?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\varphi$ --- лінійний функціонал на нормованому просторі. Довести $\varphi$ --- неперервний тоді й тільки тоді, коли
+    для будь-якої послідовності $x_n \rightarrow 0$ числова послідовність $\left\{\varphi(x_n)\right\}$ --- обмежена.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\varphi$ --- ненульовий лінійний функціонал на нормованому просторі $X$. Довести, що для будь-якого $x \in X$ виконується рівність
+    $\rho \left( x, \mathrm{Ker}\varphi\right) = \inf \left\{\norm{x - y} \; | \; y \in \mathrm{Ker} \varphi\right\} = \frac{|\varphi(x)|}{\norm{\varphi}}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\varphi$ --- ненульовий лінійний функціонал на нормованому просторі $X$, $a \in K$ ($\mathbb{R}$ або $\mathbb{C}$).
+    Позначимо $L - \left\{x\in X \; | \; \varphi(x) = a\right\}$. Довести $\rho(0, L) = \frac{|a|}{\norm{\varphi}}$.
+\end{exercise}
+
+\begin{theory}
+    Обмежені лінійні оператори з нормованого простору $X$ в нормований простір $Y$ утворюють лінійний простір за поточковими операціями:
+    $(A+B)x = Ax + Bx$, $(\lambda\cdot A)x = \lambda \cdot Ax$. Цей простір є нормований із стандартною операторною нормою.
+    Найчастіше він позначається так: $L\left( X, Y\right)$ або $\left\{X \rightarrow Y\right\}$. В разі, якщо $X = Y$, застосовується
+    скорочене позначення $L(X)$. Якщо $Y = K$ (основне поле), то $L\left( X, K\right)$ позначається $X^*$ і називається 
+    \underline{простором, спряженим} до $X$.
+\end{theory}
+
+\begin{exercise}
+    Довести, що в разі, якщо простір $Y$ є повним, простір $L\left( X, Y\right)$ також є повним.
+    Зокрема, для кожного нормованого простору $X$ спряжений простір $X^*$ є банаховим.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$, $Y$, $Z$ --- нормовані простори. Довести:
+    \begin{enumerate}[label=\ukr*)]
+        \item $\left( A \in L\left( X, Y\right); B \in L\left( Y, Z\right)\right) \Rightarrow \left( B \circ A \in A \in L\left( X, Z\right); \norm{B\circ A} \leq \norm{B} \cdot \norm{A}\right)$.
+        \item $\left( A \in L(X), n\in\mathbb{N}\right) \Rightarrow \left( A^n \in L(X) ; \norm{A^n} \leq \norm{A}^n\right)$.
+        \item $\left( X \text{ --- банахів}; A_n \in L(X), n \in \mathbb{N} ; \text{ ряд } \sum\limits_{n=1}^{\infty} \norm{A_n} \text{ --- збіжний}\right) \Rightarrow$ 
+
+        $\Rightarrow \left( \exists A \in L(X): \norm{A - \sum\limits_{k=1}^n A_k} \rightarrow 0, n\rightarrow \infty \right)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- банахів простір, $A \in L(X)$. $e^A = \exp{A} := I + \sum\limits_{n=1}^{\infty} \frac{1}{n!}A^n$, $I$ --- тотожний оператор.
+    Довести: існування, $\exp{A} \in L(X)$, $\norm{e^A} \leq e^{\norm{A}}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- банахів простір, $A\in L(X)$. Довести, що ряд $\sum_{k=0}^{\infty} A^k$ ($A^0 := I$)
+    збігається тоді й тільки тоді, коли існує натуральне число $n$, для кого виконується нерівність $\norm{A^n} < 1$.
+\end{exercise}
