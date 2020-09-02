@@ -48,6 +48,10 @@
 % \newtheorem*{remark}{Зауваження}
 \theoremstyle{remark}
 \newtheorem{exercise}{}[section]
+\newenvironment{exercise*}
+  {\renewcommand\theexercise{\thesection.\arabic{exercise}\rlap{$^*$}}%
+   \exercise\edef\@currentlabel{\thesection.\arabic{exercise}}}
+  {\endexercise}
 
 %\counterwithout{equation}{chapter} % нумерация формул
 %\counterwithin*{equation}{section}

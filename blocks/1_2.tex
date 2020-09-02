@@ -1,7 +1,7 @@
 % !TEX root = ../main.tex
 \begin{exercise}
     Нехай $\left\{c_n\right\}$ --- числова послідовність. Довести, що оператор
-    $A : \ell_2 \ni (x_1, x_2, ...) = \vec{x} \mapsto \vec{y} = (c_1, x_1, c_2, x_2, ...) \in \ell_2$
+    $A : \ell_2 \ni (x_1, x_2, ...) = \vec{x} \mapsto \vec{y} = (c_1x_1, c_2x_2, ...) \in \ell_2$
     є обмеженим (та визначеним на всьому $\ell_2$) тоді й тільки тоді, коли $c = \underset{n\in\mathbb{N}}{\sup} |c_n| < +\infty$, 
     і при цьому $\norm{A} = c$.
 \end{exercise}
@@ -46,7 +46,7 @@
 
 \begin{exercise}
     Нехай $\varphi$ --- ненульовий лінійний функціонал на нормованому просторі $X$, $a \in K$ ($\mathbb{R}$ або $\mathbb{C}$).
-    Позначимо $L - \left\{x\in X \; | \; \varphi(x) = a\right\}$. Довести $\rho(0, L) = \frac{|a|}{\norm{\varphi}}$.
+    Позначимо $L = \left\{x\in X \; | \; \varphi(x) = a\right\}$. Довести $\rho(0, L) = \frac{|a|}{\norm{\varphi}}$.
 \end{exercise}
 
 \begin{theory}
@@ -65,7 +65,7 @@
 \begin{exercise}
     Нехай $X$, $Y$, $Z$ --- нормовані простори. Довести:
     \begin{enumerate}[label=\ukr*)]
-        \item $\left( A \in L\left( X, Y\right); B \in L\left( Y, Z\right)\right) \Rightarrow \left( B \circ A \in A \in L\left( X, Z\right); \norm{B\circ A} \leq \norm{B} \cdot \norm{A}\right)$;
+        \item $\left( A \in L\left( X, Y\right); B \in L\left( Y, Z\right)\right) \Rightarrow \left( B \circ A \in L\left( X, Z\right); \norm{B\circ A} \leq \norm{B} \cdot \norm{A}\right)$;
         \item $\left( A \in L(X), n\in\mathbb{N}\right) \Rightarrow \left( A^n \in L(X) ; \norm{A^n} \leq \norm{A}^n\right)$;
         \item $\left( X \text{ --- банахів}; A_n \in L(X), n \in \mathbb{N} ; \text{ ряд } \sum\limits_{n=1}^{\infty} \norm{A_n} \text{ --- збіжний}\right) \Rightarrow$ 
 
@@ -80,7 +80,7 @@
 
 \begin{exercise}
     Нехай $X$ --- банахів простір, $A\in L(X)$. Довести, що ряд $\sum_{k=0}^{\infty} A^k$ ($A^0 := I$)
-    збігається тоді й тільки тоді, коли існує натуральне число $n$, для кого виконується нерівність $\norm{A^n} < 1$.
+    збігається тоді й тільки тоді, коли існує натуральне число $n$, для якого виконується нерівність $\norm{A^n} < 1$.
 \end{exercise}
 
 \begin{exercise}
@@ -127,7 +127,7 @@
     з нормою $\norm{\vec{x}} = \sup\left\{|x_n| \; | \; n \in \mathbb{N}\right\}$.
 \end{exercise}
 
-\begin{exercise}[*]
+\begin{exercise*}
     Нехай $X$ --- нормований простір, $X^*$ --- сепарабельний простір. Довести сепарабельність простору $X$.
     Чи можна стверджувати, що спряжений простір до сепарабельного простору $X$ завжди є сепарабельним?
-\end{exercise}
+\end{exercise*}
