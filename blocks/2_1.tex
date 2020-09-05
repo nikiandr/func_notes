@@ -1,0 +1,85 @@
+% !TEX root = ../main.tex
+
+\begin{theory}
+    Нехай $H$ --- нескінченновимірний гільбертів простір (дійсний або комплексний); 
+    $\{e_1, e_2, ...\}$ --- зліченна ортонормована система векторів в $H$ (тобто $\dotprod{e_i}{e_j} 
+    = \delta_{ij}$). Для $x \in H$ покладемо $c_n = \dotprod{x}{e_n}$. Ряд $\sum\limits_{n=1}^\infty 
+    c_n e_n$ називається \underline{рядом Фур'є} вектора $x$ за ортонормованою системою 
+    $\{e_n\}$; $c_n$ - \underline{коефіцієнтами Фур'є}.
+\end{theory}
+
+\begin{exercise}
+    Довести \underline{нерівність Бесселя}: $\sum\limits_{n=1}^\infty |\dotprod{x}{e_n}|^2 \leq 
+    \norm{x}^2$ (нагадаємо: $\norm{x} = \sqrt{\dotprod{x}{x}}$).
+\end{exercise}
+
+\begin{theory}
+    Ортонормована система $\{e_n\}$ в $H$ називається \underline{повною}, якщо її лінійна 
+    оболонка (л.о.) щільна в $H$ 
+    (тобто $\forall x \in H, \;\forall \varepsilon > 0 \; \exists \{\alpha_1, ..., 
+    \alpha_m\} \subset K$: $\norm{\alpha_1 e_1 + ... + \alpha_m e_m - x} < \varepsilon$)
+
+    Ортонормована система $\{e_n\}$ називається \underline{замкненою}, якщо для кожного 
+    $x \in H$ має місце рівність: $\norm{x}^2 = \sum\limits_{n=1}^\infty |\dotprod{x}{e_n}|^2$ 
+    (\underline{рівність Парсеваля}).
+
+    Повна ортонормована система векторів $\{e_n\}$ називається \underline{ортонормованим 
+    базисом} в $H$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $\{e_n\}$ --- ортонормована система векторів в гільбертовому просторі $H$. 
+    Довести еквівалентність трьох умов:
+    \begin{enumerate}[label=\ukr*)]
+        \item система векторів $\{e_n\}$ повна в $H$;
+        \item система векторів $\{e_n\}$ замкнена в $H$;
+        \item $\forall x \in H$ ряд $\sum\limits_{n=1}^\infty \dotprod{x}{e_n}e_n$ збігається до $x$
+        (тобто $\norm{x - \sum\limits_{n=1}^m \dotprod{x}{e_n}e_n}
+        \underset{m\rightarrow\infty}{\rightarrow}0$)
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Довести еквівалентність двох умов:
+    \begin{enumerate}[label=\ukr*)]
+        \item $H$ --- сепарабельний гільбертів простір;
+        \item в просторі $H$ існує ортонормований базис.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Ортонормована система векторів $\{e_n\}$ в $H$ називається \underline{тотальною}, 
+    якщо умова <<$\dotprod{x}{e_n} = 0$ $\forall n \in N$>> виконується лише для вектора $x=0$.
+\end{theory}
+
+\begin{exercise}[лема Ріса-Фішера]
+    Нехай $\{e_n\}$ --- ортонормована система векторів в $H$, $\{c_n\}$ --- числова послідовність,
+    для якої ряд $\sum\limits_{n=1}^\infty |c_n|^2$ --- збіжний. Тоді існує $x \in H$, 
+    для якого при всіх $n \in N$ має місце рівність: $c_n = \dotprod{x}{e_n}$ і при цьому 
+    $\norm{x}^2 = \sum\limits_{n=1}^\infty |c_n|^2$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\{e_n\}$ --- ортонормована система в $H$. Тоді дві умови еквівалентні:
+    \begin{enumerate}[label=\ukr*)]
+        \item $\{e_n\}$ --- ортонормований базис в $H$;
+        \item $\{e_n\}$ --- тотальна система векторів в $H$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Гільбертові простори $H_1$ і $H_2$ називають \underline{ізоморфними}, якщо існує 
+    лінійний оператор $A: H_1 \rightarrow H_2$, для якого виконуються рівності: 
+    $\ker A = \{0\}$; $ImA = H_2$; $\dotprod{Ax}{Ay}_2 = \dotprod{x}{y}_1$ (тут $x$, $y$ --- довільні 
+    вектори в $H_1$; $\dotprod{\cdot}{\cdot}_k$ --- скалярний добуток в $H_k$). 
+    Такий оператор $A$ називається \underline{ізоморфізмом}. Позначення: $H_1 \cong H_2 $.
+\end{theory}
+
+\begin{exercise}
+    Нехай $A: H_1 \rightarrow H_2$ - ізоморфізм. Доведіть, що в означенні ізоморфізма:
+    \begin{enumerate}[label=\ukr*)]
+        \item умова <<$\ker A = \{0\}$>> є зайвою;
+        \item умова <<$\dotprod{Ax}{Ay} = \dotprod{x}{y}$ для всіх $x, y \in H_1$>> може бути 
+        замінена на таку: <<$\norm{Ax} = \norm{x}$ для всіх $x \in H_1$>>.
+    \end{enumerate}
+\end{exercise}
