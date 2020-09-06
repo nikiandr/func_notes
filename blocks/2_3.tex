@@ -1,1 +1,97 @@
 % !TEX root = ../main.tex
+
+\begin{exercise}
+    Нехай $H_1$, $H_2$ --- замкнені підпростори в $H$.
+    Довести еквівалентність наступних тверджень:
+    \begin{enumerate}[label=\ukr*)]
+        \item $H = H_1 \oplus H_2$;
+        \item $H_1 = H_2^\perp $;
+        \item $H_2 = H_1^\perp $.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Довести, що при фіксованому $n$ множина $M = \set{ \vec{x}=(x_1,x_2,\dots) \in l_2
+    \mid \sum\limits^n_{k=1} x_k=0 }$ є замкненим підпростором в $l_2$.
+    Знайти такий замкнений підпростір $N$, що виконується рівність $l_2 = M \oplus N$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $M$ та $N$ --- підмножини гільбертового простору $H$. Довести наступні твердження:
+    \begin{enumerate}[label=\ukr*)]
+        \item $(M \subset N) \Rightarrow (N^\perp \subset M^\perp)$;
+        \item $M \subset M^{\perp\perp}$, $\left(M^{\perp\perp}={(M^\perp)}^\perp\right)$;
+        \item $M = M^{\perp\perp}$ тоді й тільки тоді, коли $M$ ---
+              замкнений підпростір в $H$;
+        \item $M^\perp \subset M^{\perp\perp\perp}$;
+        \item $(M \cap N)^\perp = \overline{M^\perp + N^\perp}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $M_\alpha$ --- сім'я підмножин гільбертового простору $H$. Довести:
+    \begin{enumerate}[label=\ukr*)]
+        \item $\Big( \bigcup\limits_\alpha M_\alpha \Big)^\perp = 
+              \bigcap\limits_\alpha M_\alpha^\perp$;
+        \item $\Big( \bigcap\limits_\alpha M_\alpha \Big)^\perp = 
+              \overline{\text{л.о.}\Big(\bigcup\limits_\alpha M_\alpha^\perp\Big)}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $M$ --- замкнена опукла множина в дійсному гільбертовому просторі $H$.
+    Довести, що вектор $y \in M$ задовольняє умову $\rho(x, M) = \norm{x-y}$,
+    де $x \in H$ тоді й тільки тоді, коли для будь-якого $z \in H$ виконується
+    нерівність $\dotprod{x-y}{y-z} \geq 0$.
+\end{exercise}
+
+\begin{exercise}
+    В просторі $l_2$ знайти замкнену підмножину в якій немає вектора з найменшою нормою.
+\end{exercise}
+
+\begin{exercise}
+    В просторі $L_2[0;1]$ знайти відстань від елемента $x_0(t) = t^2$ до підпростору
+    $L = \set{x \in L_2[0;1] \mid \int\limits_0^1x(t)dt = 0}$.
+\end{exercise}
+
+\begin{exercise}
+    В просторі $l_2$ знайти відстань $\rho_n(\vec{x}_0, L_n)$ від вектора $\vec{x}_0$ до
+    підпростору $L_n = \set{ \vec{x}\in l_2 \mid \sum\limits^n_{k=1} x_k = 0}$.
+    Чому дорівнює $\lim\limits_{n \to \infty} \rho_n(x_0, L_n)$?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $M$ --- замкнена опукла множина в гільбертовому просторі $H$; $x \in H$.
+    Довести, що існує, і при тому єдиний, вектор $y \in M$ для якого $\norm{x-y} =
+    \rho(x, M)$.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що \underline{система Радемахера} $f_n(t) = \sgn\sin(2^n \pi t)$,
+    $n=0,1,2,\dots$ ортонормована, але не є повною в $L_2[0;1]$
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\{x_n\}$ --- ортогональна система векторів гільбертового простору $H$.
+    Довести еквівалентність наступних трьох умов:
+    \begin{enumerate}[label=\ukr*)]
+        \item ряд $\sum\limits^\infty_{n=1} x_n$ збігається;
+        \item для кожного $y=H$ ряд $\sum\limits^\infty_{n=1} \dotprod{x_n}{y}$ збігається;
+        \item ряд $\sum\limits^\infty_{n=1} \norm{x_n}^2$ збігається.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    В лінійному просторі послідовностей $\vec{x} = (x_1, x_2, \dots)$
+    $(x_n \in \mathbb{R})$ таких, що $\sum\limits^\infty_{n=1} x_n^2 < \infty$,
+    покладемо $\dotprod{x}{y} \coloneqq \sum\limits^\infty_{k=1} \lambda_k x_k y_k$,
+    де $\lambda_k \in \mathbb{R}$; $0 < \lambda_k < 1$. Перевірте, що остання формула
+    коректно визначає скалярний добуток. Чи буде одержаний евклідів простір гільбертовим?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\{e_n\}$ --- ортонормована система в гільбертовому просторі $H$;
+    $\{\lambda_n\}$ --- числова послідовність. Доведіть, що ряд $\sum\limits^\infty_{n=1}
+    \lambda_n e_n$ збігається в $H$ тоді й тільки тоді, коли $\sum\limits^\infty_{n=1}
+    |\lambda_n|^2 < \infty$
+\end{exercise}

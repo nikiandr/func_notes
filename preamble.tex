@@ -10,6 +10,7 @@
 
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
 \usepackage{dsfont} %для цифр в шрифте типа mathbb
+\usepackage{braket} % для команды \set
 
 \usepackage{makecell}% Прикольная настройка ячеек в tabular 
 %http://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/makecell/makecell-rus.pdf
@@ -83,6 +84,7 @@
 
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % command for norm
 \newcommand{\dotprod}[2]{\left(#1, #2\right)} % command for scalar
+\DeclareMathOperator{\sgn}{sgn} %
 
 \makeatletter
 \def\ukr#1{\expandafter\@ukr\csname c@#1\endcsname}
