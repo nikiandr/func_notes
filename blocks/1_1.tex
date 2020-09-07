@@ -52,7 +52,7 @@
 \end{theory}
 
 \begin{exercise}
-    З'ясувати, чи є наведені нижче функціонали в просторі $C{\left[-1, 1\right]}$ лінійними; 
+    З'ясувати, чи є наведені нижче функціонали в просторі $C{\left[-1; 1\right]}$ лінійними; 
     неперервними. В разі позитивної відповіді знайти їх норми. 
     \begin{enumerate}[label=\ukr*)]
         \item $\varphi(x) = x(0)$;
@@ -80,12 +80,12 @@
         \item $X = \ell_2$, $\varphi(\vec{x}) = \sum\limits_{n=1}^{\infty} \frac{x_n}{n}$;
         \item $X = \ell_p$ ($1 \leq p \leq +\infty$), $\varphi(\vec{x}) = 
         \sum\limits_{n=1}^{\infty} \frac{x_n}{n}$;
-        \item $X = L_2[0,1]$, $\varphi(x) = \int\limits_0^1 tx(t)dt$;
-        \item $X = L_2[0,1]$, $\varphi(x) = \int\limits_0^1 |x(t)|^{\frac{1}{2}}dt$;
-        \item $X = L_2[0,\frac{\pi}{2}]$,
+        \item $X = L_2[0;1]$, $\varphi(x) = \int\limits_0^1 tx(t)dt$;
+        \item $X = L_2[0;1]$, $\varphi(x) = \int\limits_0^1 |x(t)|^{\frac{1}{2}}dt$;
+        \item $X = L_2[0;\frac{\pi}{2}]$,
         $\varphi(x) = \int\limits_0^{\frac{\pi}{2}} x(t)sin(t)dt$;
-        \item $X = C^1[0,1]$ $(\norm{x}_1 = \max\limits_{[0,1]}|x(t)| + 
-        \max\limits_{[0,1]}|x^{\prime}(t)|)$, $\varphi(x) = x^{\prime}(0) + x(1)$.
+        \item $X = C^1[0;1]$ $(\norm{x}_1 = \max\limits_{[0;1]}|x(t)| + 
+        \max\limits_{[0;1]}|x^{\prime}(t)|)$, $\varphi(x) = x^{\prime}(0) + x(1)$.
     \end{enumerate}
 \end{exercise}
 
@@ -126,20 +126,20 @@
     З'ясувати, чи є наведені нижче оператори на X лінійними; 
     неперервними. В разі позитивної відповіді знайти їх норми.
     \begin{enumerate}[label=\ukr*)]
-        \item $A: C[0, 1] \rightarrow C[0, 1]$, $(Ax)(t) = \int\limits_0^t x(\tau) d\tau$;
-        \item $A: C[0, 1] \rightarrow C[0, 1]$, $(Ax)(t) = \int\limits_0^t \tau x(\tau) d\tau$;
-        \item $A: C[0, 1] \rightarrow C[0, 1]$, $(Ax)(t) = \int\limits_0^t \tau x^2(\tau) d\tau$;
-        \item $A: C[0, 1] \rightarrow C[0, 1]$, $(Ax)(t) = x(t^2)$;
-        \item $A: C^1[0, 1] \rightarrow C[0, 1]$, $(Ax)(t) = x^\prime (t)$; 
+        \item $A: C[0; 1] \rightarrow C[0; 1]$, $(Ax)(t) = \int\limits_0^t x(\tau) d\tau$;
+        \item $A: C[0; 1] \rightarrow C[0; 1]$, $(Ax)(t) = \int\limits_0^t \tau x(\tau) d\tau$;
+        \item $A: C[0; 1] \rightarrow C[0; 1]$, $(Ax)(t) = \int\limits_0^t \tau x^2(\tau) d\tau$;
+        \item $A: C[0; 1] \rightarrow C[0; 1]$, $(Ax)(t) = x(t^2)$;
+        \item $A: C^1[0; 1] \rightarrow C[0; 1]$, $(Ax)(t) = x^\prime (t)$; 
         \item $A: \ell_2 \rightarrow \ell_2$, $A\vec{x} = (\underbrace{0,0,...,0}_n,
         x_1,x_2,...)$;
         \item $A: \ell_2 \rightarrow \ell_2$, $A\vec{x} = (x_2,x_3,x_4,...)$;
         \item $A: \ell_2 \rightarrow \ell_2$, $A\vec{x} = (x_1,0,x_3,0,x_5,...)$;
         \item $A: \ell_2 \rightarrow \ell_1$, $A\vec{x} = \vec{x}$;
         \item $A: \ell_1 \rightarrow \ell_1$, $A\vec{x} = (x_1+x_2, x_1-x_2, x_3, x_4, ...)$;
-        \item $A: L_2[0, 1] \rightarrow L_2[0, 1]$, $(Ax)(t) = t \int\limits_0^1 x(s)ds$;
-        \item $A: L_2[0, 1] \rightarrow L_2[0, 1]$, $(Ax)(t) = \varphi(t)x(t)$ 
-        ($\varphi \in C[0,1]$);
-        \item $A: L_2[0, 1] \rightarrow L_2[0, 1]$, $(Ax)(t) = \int\limits_0^1 tsx(s)ds$.
+        \item $A: L_2[0; 1] \rightarrow L_2[0; 1]$, $(Ax)(t) = t \int\limits_0^1 x(s)ds$;
+        \item $A: L_2[0; 1] \rightarrow L_2[0; 1]$, $(Ax)(t) = \varphi(t)x(t)$ 
+        ($\varphi \in C[0;1]$);
+        \item $A: L_2[0; 1] \rightarrow L_2[0; 1]$, $(Ax)(t) = \int\limits_0^1 tsx(s)ds$.
     \end{enumerate}
 \end{exercise}

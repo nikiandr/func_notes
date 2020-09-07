@@ -1,15 +1,15 @@
 % !TEX root = ../main.tex
 
 \begin{exercise}
-    Лінійний функціонал $\varphi: C[a, b] \rightarrow \mathbb{R}$ називається \underline{невід'ємним},
-    якщо для кожної невід'ємної на $[a ,b]$ функції $x \in C[a, b]$ має місце нерівність 
+    Лінійний функціонал $\varphi: C[a; b] \rightarrow \mathbb{R}$ називається \underline{невід'ємним},
+    якщо для кожної невід'ємної на $[a; b]$ функції $x \in C[a, b]$ має місце нерівність 
     $\varphi(x) \geq 0$. Довести, що невід'ємний функціонал $\varphi$ є неперервним і при цьому
     $\norm{\varphi} = \varphi(\mathds{1})$, де $\mathds{1}$ --- тотожно одинична функція.
 \end{exercise}
 
 \begin{exercise}
     Довести, що лінійний оператор $A$, який діє в нормованому просторі $X$, є неперервним тоді
-    й тільки тоді, коли множина $\{x \in X \;|\; \norm{Ax} < 1\}$ має внутрішні точки.
+    й тільки тоді, коли множина $\set{x \in X \mid \norm{Ax} < 1}$ має внутрішні точки.
 \end{exercise}
 
 \begin{exercise}
@@ -33,17 +33,17 @@
 
 \begin{exercise}
     Нехай $X,Y$ --- нормовані простори, $Z$ --- замкнений підпростір в $X$. Покладемо 
-    $M = \{A \in L(X;Y) | \mathrm{Ker} A = Z\}$. Чи буде $M$ замкненим підпростором в $L\left( X, Y\right)$?
+    $M = \set{A \in L(X,Y) \mid \mathrm{Ker} A = Z}$. Чи буде $M$ замкненим підпростором в $L\left( X, Y\right)$?
 \end{exercise}
 
 \begin{exercise}
     Нехай $X,Y$ --- нормовані простори; $Z$ --- замкнений підпростір в $X$. Покладемо 
-    $M = \{A \in L(X;Y) | \mathrm{Ker} A \supset Z\}$. Чи буде $M$ замкненим підпростором в $L\left( X, Y\right)$?
+    $M = \set{A \in L(X,Y) \mid \mathrm{Ker} A \supset Z}$. Чи буде $M$ замкненим підпростором в $L\left( X, Y\right)$?
 \end{exercise}
 
 \begin{exercise}
-    Нехай $X$ --- нормований простір; $A \in L(X)$. Покладемо $M = \{B \in L(X) | AB=0\}$;
-    $N = \{B \in L(X) | AB=BA\}$. Довести, що $M$ та $N$ --- замкнені підпростори в $L(X)$.
+    Нехай $X$ --- нормований простір; $A \in L(X)$. Покладемо $M = \{B \in L(X) \;|\; AB=0\}$;
+    $N = \set{B \in L(X) \mid AB=BA}$. Довести, що $M$ та $N$ --- замкнені підпростори в $L(X)$.
 \end{exercise}
 
 \begin{theory}
@@ -85,11 +85,11 @@
 \end{theory}
 
 \begin{exercise}
-    Доведіть, що простори  $l_p$, де $1<p<\infty$, є рефлексивні, а простори $l_1$ та $l_\infty$ --- ні.
+    Доведіть, що простори  $\ell_p$, де $1<p<\infty$, є рефлексивними, а простори $\ell_1$ та $\ell_\infty$ --- ні.
 \end{exercise}
 
 \begin{exercise}
-    Чи буде простір $L(X)$, де $X=L_2[0,1]$, сепарабельним?
+    Чи буде простір $L(X)$, де $X=L_2[0;1]$, сепарабельним?
 \end{exercise}
 
 \begin{exercise}
@@ -102,7 +102,7 @@
     \begin{theorem*}[Банах, Штейнгауз (принцип рівномірної обмеженості)]
         Нехай $X, Y$ --- нормовані простори; $X$ --- повний; $A_n \in L\left( X, Y\right),\; n\in \mathbb{N}$;
         $\forall x \in X, \; \exists C(x) > 0$ таке, що $\forall n \in \mathbb{N}: \norm{A_n x} \leq C(x)$.
-        Тоді $\exists C>0: \forall n \in \mathbb{N}: \norm{A_n} \leq C$.
+        Тоді $\exists \; C>0: \forall n \in \mathbb{N}: \norm{A_n} \leq C$.
     \end{theorem*}
 \end{theory}
 
@@ -114,8 +114,8 @@
 \end{exercise}
 
 \begin{exercise}
-    Нехай $X$ --- нормований простір, $L$ --- замкнений підпростір в $X$; $\mathrm{codim}L \geq 1$.
-    Тоді $\exists \varphi \in X^*$; $\varphi \neq 0$, для деякого $L \subset \mathrm{Ker}\varphi$.
+    Нехай $X$ --- нормований простір, $L$ --- замкнений підпростір $X$; $\mathrm{codim}L \geq 1$.
+    Тоді $\exists \; \varphi \in X^*$; $\varphi \neq 0$, для деякого $L \subset \mathrm{Ker}\varphi$.
 \end{exercise}
 
 \begin{exercise}
