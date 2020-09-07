@@ -1,1 +1,85 @@
 % !TEX root = ../main.tex
+\begin{exercise}
+    Довести, що на множині гільбертових просторів відношення <<бути ізоморфним>>
+    є відношенням еквівалентності, тобто виконуються наступні властивості:
+    \begin{enumerate}[label=\ukr*)]
+        \item $H \cong H$ (рефлексивність);
+        \item $(H_1 \cong H_2) \Leftrightarrow (H_2 \cong H_1)$ (симетричність);
+        \item $(H_1 \cong H_2, H_2 \cong H_3) \Rightarrow (H_1 \cong H_3)$ (транзитивність).
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H_1$, $H_2$ --- два нескінченновимірні гільбертові простори над однаковим полем, $H_1$ --- сепарабельний.
+    Довести $H_2$ --- сепарабельний простір тоді й тільки тоді, коли $H_1 \cong H_2$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H$ --- гільбертів простір, $x_n, y_n \in H \; (n \in \mathbb{N})$, $\norm{x_n} = \norm{y_n} = 1 \; \forall n \in \mathbb{N}$.
+    Довести наступні твердження:
+    \begin{enumerate}[label=\ukr*)]
+        \item $(\dotprod{x_n}{y_n} \rightarrow 1) \Rightarrow (\norm{x_n - y_n} \rightarrow 0)$;
+        \item $(\norm{x_n + y_n} \rightarrow 2) \Rightarrow (\norm{x_n - y_n} \rightarrow 0)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Нехай $x \in H$, $M$ --- підмножина $H$. Вектор $x$ називається \uline{ортогональним до $M$},
+    якщо $\dotprod{x}{y} = 0$ для кожного $y \in M$. Позначення: $x \perp M$.
+    Множина всіх векторів, ортогональних заданій множині $M$, називається \uline{ортогональним доповненням} 
+    та позначається $M^\perp$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $H$ --- гільбертів простір, $x\in H$, $M \subset H$, $x \perp M$.
+    Довести:
+    \begin{enumerate}[label=\ukr*)]
+        \item $X \perp \overline{M}$ ($\overline{M}$ --- замикання $M$);
+        \item $M^\perp$ --- замкнений підпростір в $H$;
+        \item $\overline{M}^\perp = M^\perp$;
+        \item $(\text{л.о. } M)^\perp = M^\perp$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $L$ --- замкнений підпростір гільбертового простору $H$, $x \in H$. Довести:
+    $x \perp L$ тоді й тільки тоді, коли для кожного $y \in L$ виконується нерівність $\norm{x} \leq \norm{x-y}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $M \subset H$. Довести: умова <<$M^\perp = \{0\}$>> еквівалентна <<$\text{л.о. } M)$ щільна в $H$>>.
+\end{exercise}
+
+\begin{exercise}
+    Перевірити взаємну ортогональність наступних систем векторів:
+    \begin{enumerate}[label=\ukr*)]
+        \item $\set{1, \cos{nt}, \sin{nt} \mid n \in \mathbb{N}}$, $H = L_2 [-\pi; \pi]$;
+        \item $\set{\frac{d^n}{dt^n} ((t^2-1)^n) \mid n \in \{0 \} \cup \mathbb{N}}$, $H = L_2 [-1; 1]$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    В комплексному просторі $H = L_2 [-\pi; \pi]$ знайти $M^\perp$ для наступних множин:
+    \begin{enumerate}[label=\ukr*)]
+        \item $M = \set{e^{i n t} \mid n \in \mathbb{Z}}$;
+        \item $M = \set{e^{i n t} \mid n \in \mathbb{N}}$;
+        \item $M = \set{\sin{n t} \mid n \in \mathbb{N}}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    В просторі $L_2 [0; 1]$ знайти ортогональне доповнення до наступних множин:
+    \begin{enumerate}[label=\ukr*)]
+        \item $M = C[0; 1]$;
+        \item $M = P[0;1]$ --- множина всіх многочленів, що визначені на $[0; 1]$;
+        \item $M = \set{ x \in C[0;1] \mid x(0) = 0}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Нехай $H_1$, $H_2$ --- замкнені підпростори в гільбертовому просторі $H$.
+    $H$ називається \uline{сумою $H_1$ та $H_2$} ($H = H_1 + H_2$), якщо виконується умова
+    $(x \in H) \Rightarrow (\exists \; x_1 \in H_1, x_2 \in H_2 : x = x_1 + x_2)$;
+    \uline{ортогональною сумою $H_1$ та $H_2$} ($H = H_1 \oplus H_2$), якщо додатково виконується умова
+    $(x \in H_1, y \in H_2) \Rightarrow ( \dotprod{x}{y} = 0)$.
+\end{theory}

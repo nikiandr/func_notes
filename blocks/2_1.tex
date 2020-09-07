@@ -5,26 +5,26 @@
     $\{e_1, e_2, ...\}$ --- зліченна ортонормована система векторів в $H$ (тобто $\dotprod{e_i}{e_j} 
     = \delta_{ij}$). Для $x \in H$ покладемо $c_n = \dotprod{x}{e_n}$. Ряд $\sum\limits_{n=1}^\infty 
     c_n e_n$ називається \underline{рядом Фур'є} вектора $x$ за ортонормованою системою 
-    $\{e_n\}$; $c_n$ - \underline{коефіцієнтами Фур'є}.
+    $\{e_n\}$, $c_n$ --- \underline{коефіцієнтами Фур'є}.
 \end{theory}
 
 \begin{exercise}
     Довести \underline{нерівність Бесселя}: $\sum\limits_{n=1}^\infty |\dotprod{x}{e_n}|^2 \leq 
-    \norm{x}^2$ (нагадаємо: $\norm{x} = \sqrt{\dotprod{x}{x}}$).
+    \norm{x}^2$ ($\norm{x} = \sqrt{\dotprod{x}{x}}$).
 \end{exercise}
 
 \begin{theory}
     
     Ортонормована система $\{e_n\}$ в $H$ називається \underline{повною}, якщо її лінійна 
-    оболонка (л.о.) щільна в $H$ 
-    (тобто $\forall x \in H, \;\forall \varepsilon > 0 \; \exists \{\alpha_1, ..., 
-    \alpha_m\} \subset K$: $\norm{\alpha_1 e_1 + ... + \alpha_m e_m - x} < \varepsilon$)
+    оболонка (л.о.) щільна в $H$:
+     $\forall x \in H, \;\forall \varepsilon > 0 \; \exists \{\alpha_1, ..., 
+    \alpha_m\}$: $\norm{\sum\limits_{k=1}^m \alpha_k e_k - x} < \varepsilon$.
 
     Ортонормована система $\{e_n\}$ називається \underline{замкненою}, якщо для кожного 
     $x \in H$ має місце рівність: $\norm{x}^2 = \sum\limits_{n=1}^\infty |\dotprod{x}{e_n}|^2$ 
     (\underline{рівність Парсеваля}).
 
-    Повна ортонормована система векторів $\{e_n\}$ називається \uline{ортонормованим 
+    Повна ортонормована система $\{e_n\}$ називається \uline{ортонормованим 
     базисом} в $H$.
 \end{theory}
 
@@ -56,7 +56,7 @@
 \begin{exercise}[лема Ріса-Фішера]
     Нехай $\{e_n\}$ --- ортонормована система векторів в $H$, $\{c_n\}$ --- числова послідовність,
     для якої ряд $\sum\limits_{n=1}^\infty |c_n|^2$ --- збіжний. Тоді існує $x \in H$, 
-    для якого при всіх $n \in N$ має місце рівність: $c_n = \dotprod{x}{e_n}$ і при цьому 
+    для якого при всіх $n \in \mathbb{N}$ має місце рівність: $c_n = \dotprod{x}{e_n}$ і при цьому 
     $\norm{x}^2 = \sum\limits_{n=1}^\infty |c_n|^2$.
 \end{exercise}
 
@@ -77,7 +77,7 @@
 \end{theory}
 
 \begin{exercise}
-    Нехай $A: H_1 \rightarrow H_2$ - ізоморфізм. Доведіть, що в означенні ізоморфізма:
+    Нехай $A: H_1 \rightarrow H_2$ --- ізоморфізм. Доведіть, що в означенні ізоморфізма:
     \begin{enumerate}[label=\ukr*)]
         \item умова <<$\ker A = \{0\}$>> є зайвою;
         \item умова <<$\dotprod{Ax}{Ay} = \dotprod{x}{y}$ для всіх $x, y \in H_1$>> може бути 
