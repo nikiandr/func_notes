@@ -1,0 +1,26 @@
+% !TEX root = ../main.tex
+
+\noindent\ref{N:1_1_9}. Нехай $\bigcap\limits_{k=1}^m {Ker} \varphi_k \subset {Ker}\varphi$.
+Без втрати загальності можна вважати, що $\forall k \in \set{1, ..., m}: {Ker} \varphi_k \not\supset \bigcap\limits_{j \neq k} {Ker} \varphi_j$.
+Звідси зробіть висновок, що
+$\forall k \in \set{1, ..., n}$ $\exists \; x_k \in L$
+такий, що $\forall j \in \set{1, ..., m} : \varphi_j(x_k) = \delta_{jk}$ (<<символ Кронекера>>)
+і розгляньте функціонал $\sum\limits_{k=1}^m \varphi(x_k) \cdot \varphi_k$.
+
+\noindent\ref{N:1_1_12}.
+ґ) $\norm{x}_1 = \underset{0\leq t \leq 1}{\max} |x(t)| + \underset{0\leq t \leq 1}{\max} |x'(t)|$, тож $\norm{A} \leq 1$.
+Зворотну нерівність можна одержати за допомогою послідовності $x_n(t) = \frac{1}{n} t^n$.
+
+\noindent з) $\norm{A\vec{x}} \leq 2 \cdot \sum\limits_{k=1}^{\infty} |x_k| = 2 \norm{\vec{x}}$, $A \vec{e_1} = (1, 1, 0, ...)$. $\norm{A} = 2$.
+
+\noindent і) $\norm{Ax}^2 = \int\limits_0^1 \varphi^2 (t) x^2(t) dt \leq \left(\underset{[0;1]}{\max} |\varphi(t)|\right)^2 \cdot \norm{x}^2 $, 
+тому $\norm{A} \leq \underset{[0;1]}{\max} |\varphi(t)|$.
+З іншого боку, якщо $\underset{[0;1]}{\max} |\varphi(t)| = C > 0$ (випадок $C = 0$ очевидний), то
+$\forall \varepsilon \in (0, C) \; \exists \; \text{проміжок } \Delta \subset [0;1]$,
+на якому $|\varphi(t)| > C - \varepsilon$. Нехай $x = j_\Delta$ ($x(t) = 1$, якщо $t \in \Delta$ та $x(t) = 0$, якщо $t \notin \Delta$).
+Тоді $\norm{x}^2 = \mu(\Delta)$, $\norm{Ax}^2 \geq \int\limits_\Delta (C-\varepsilon)^2 dt = (C-\varepsilon)^2 \cdot \mu(\Delta)$ (тут $\mu$ --- міра <<довжина>>).
+Звідси отримуємо $\norm{A} = \underset{[0;1]}{\max} |\varphi(t)|$.
+
+\noindent ї) $\left| (Ax)(t) \right|^2 = t^2 \cdot \left( \int\limits_0^1 s x(s) ds\right)^2 \leq t^2 \cdot \left( \int\limits_0^1 s^2 ds\right)^2 \cdot \left( \int\limits_0^1 x^2(s) ds\right)^2 = \frac{1}{3} \cdot t^2 \cdot \norm{x}^2$.
+$\norm{Ax}^2 = \int\limits_0^1 \left| (Ax)(t) \right|^2 dt \leq \frac{1}{9} \cdot \norm{x}^2$, звідки $\norm{A} \leq \frac{1}{3}$.
+Зворотну нерівність отримуємо підстановкою $x(t) = t$.

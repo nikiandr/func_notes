@@ -17,7 +17,7 @@
     
     Ортонормована система $\{e_n\}$ в $H$ називається \underline{повною}, якщо її лінійна 
     оболонка (л.о.) щільна в $H$:
-     $\forall x \in H, \;\forall \varepsilon > 0 \; \exists \{\alpha_1, ..., 
+     $\forall x \in H, \;\forall \varepsilon > 0 \; \exists \; \{\alpha_1, ..., 
     \alpha_m\}$: $\norm{\sum\limits_{k=1}^m \alpha_k e_k - x} < \varepsilon$.
 
     Ортонормована система $\{e_n\}$ називається \underline{замкненою}, якщо для кожного 
@@ -71,7 +71,7 @@
 \begin{theory}
     Гільбертові простори $H_1$ і $H_2$ називають \underline{ізоморфними}, якщо існує 
     лінійний оператор $A: H_1 \rightarrow H_2$, для якого виконуються рівності: 
-    $\ker A = \{0\}$; $ImA = H_2$; $\dotprod{Ax}{Ay}_2 = \dotprod{x}{y}_1$ (тут $x$, $y$ --- довільні 
+    $\mathrm{Ker} A = \{0\}$; $\mathrm{Im} A = H_2$; $\dotprod{Ax}{Ay}_2 = \dotprod{x}{y}_1$ (тут $x$, $y$ --- довільні 
     вектори в $H_1$; $\dotprod{\cdot}{\cdot}_k$ --- скалярний добуток в $H_k$). 
     Такий оператор $A$ називається \underline{ізоморфізмом}. Позначення: $H_1 \cong H_2 $.
 \end{theory}
@@ -79,7 +79,7 @@
 \begin{exercise}
     Нехай $A: H_1 \rightarrow H_2$ --- ізоморфізм. Доведіть, що в означенні ізоморфізма:
     \begin{enumerate}[label=\ukr*)]
-        \item умова <<$\ker A = \{0\}$>> є зайвою;
+        \item умова <<$\mathrm{Ker} A = \{0\}$>> є зайвою;
         \item умова <<$\dotprod{Ax}{Ay} = \dotprod{x}{y}$ для всіх $x, y \in H_1$>> може бути 
         замінена на таку: <<$\norm{Ax} = \norm{x}$ для всіх $x \in H_1$>>.
     \end{enumerate}
