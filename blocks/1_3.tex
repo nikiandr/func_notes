@@ -56,10 +56,10 @@
 \begin{exercise} 
     \begin{enumerate}[label=\ukr*)]
         \item Нехай $X$ --- нормований простір; $x,y \in X$. Довести $(x=y) \Leftrightarrow 
-        \big(\forall\varphi \in X^*: \varphi_n(x) = \varphi_n(y)\big)$;
+        \big(\forall\varphi \in X^*: \varphi(x) = \varphi(y)\big)$;
         \item Нехай $X$ --- сепарабельний нормований простір. Довести існування зліченної сім'ї
-        функціоналів $\varphi_n \in X^*$, що розділяють точки $X$ \Big(Тобто 
-        $(x\neq y) \Leftrightarrow \big(\exists n \in \mathbb{N}: \varphi_n(x) \neq \varphi_n(y)\big)$\Big).
+        функціоналів $\varphi_n \in X^*$, що розділяють точки $X$, тобто 
+        $(x\neq y) \Leftrightarrow \big(\exists n \in \mathbb{N}: \varphi_n(x) \neq \varphi_n(y)\big)$.
     \end{enumerate}
 \end{exercise}
 
@@ -99,7 +99,7 @@
 \end{exercise}
 
 \begin{theory}
-    \begin{theorem*}[Банах, Штейнгауз (принцип рівномірної обмеженості)]
+    \begin{theorem*}[Банах, Штейнгауз; принцип рівномірної обмеженості]
         Нехай $X, Y$ --- нормовані простори; $X$ --- повний; $A_n \in L\left( X, Y\right),\; n\in \mathbb{N}$;
         $\forall x \in X, \; \exists C(x) > 0$ таке, що $\forall n \in \mathbb{N}: \norm{A_n x} \leq C(x)$.
         Тоді $\exists \; C>0: \forall n \in \mathbb{N}: \norm{A_n} \leq C$.
