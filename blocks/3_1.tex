@@ -1,2 +1,132 @@
 % !TEX root = ../main.tex
 
+\begin{exercise}
+    Нехай $L$ --- замкнений підпростір в $H$, $L \neq \{0\}$. 
+    Відображення $P: H \rightarrow H$ визначене формулою 
+    $P: x \rightarrow {pr}_L x$. Довести:
+    \begin{enumerate}[label=\ukr*)]
+        \item $P$ --- лінійний обмежений оператор в $H$;
+        \item $\norm{P} = 1$; $ImP = L$; $Ker P = L^\bot$;
+        \item $P^2 = P$; $L = \{x|x=Px\}$; $\dotprod{Px}{y}=\dotprod{x}{Py}$;
+        $\dotprod{Px}{x} = \norm{Px}^2$ ($\forall x,y \in H$)
+        \item оператор $Q: x \rightarrow {pr}_{L^\bot}x$ пов'язаний з $P$ 
+        співвідношенням: $Q = I-P$ (тут $I$ --- тотожній оператор в $H$);
+        \item $PQ = QP = 0$; $KerP = ImQ$; $ImP = KerQ$;
+        \item якщо $M$ --- замкнений підпростір в $L$ і для $x \in H$:
+        $P_1 x = {pr}_M x$, то $P_1 P = P P_1 = P_1$; 
+        $\dotprod{P_1x}{x} = \dotprod{Px}{x}$ ($\forall x \in H$)
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Лінійний оператор $P$ із задачі 1.3.1 називається \uline{ортопроектором}.
+\end{theory}
+
+\begin{exercise}
+    Нехай $X$ --- нормований простір; $P \in L(X)$.
+    $P$ називається \uline{проектором}, якщо $P^2=P$. Доведіть наступні 
+    властивості (обмеженого) проектора:
+    \begin{enumerate}[label=\ukr*)]
+        \item $M = KerP$ --- замкнений підпростір;
+        \item оператор $Q = I - P$ також є (обмеженим) проектором;
+        \item $L=ImP=KerQ=\{x|Px=x\}$ --- замкнений підпростір в $X$;
+        \item $X = L \dotplus M$ (тобто $\forall x \in X$ має і притому 
+        єдиний розклад: $x=x_1+x_2$, де $x_1 \in L$; $x_2 \in M$)
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Оператор $P$ називається \uline{проектором на $L$ паралельно $M$}.
+\end{theory}
+
+\begin{exercise}[теорема Фреше-Ріса]
+    Нехай $H$ --- гільбертів простір над полем $K$ ($K=\mathbb{R}$ 
+    або $\mathbb{C}$), $y \in H$; $\varphi_y : H \rightarrow K$ визначено 
+    формулою $\phi_y(x) = \dotprod{x}{y}$. Довести:
+    \begin{enumerate}[label=\ukr*)]
+        \item $\varphi_y \in H^*$; $\norm{\phi_y} = \norm{y}$;
+        \item $\forall \varphi \in H^*$ $\exists!y\in H$, для якого 
+        $\varphi = \varphi_y$ (при цьому $y\in(Ker\varphi)^\bot$).
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Застосувати теорему Фреше-Ріса для розв'язання задачі \ref{N:1_1_5}
+    (в, г, ґ, е, ж).
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H$ --- гільбертів простір; $A$ --- лінійний оператор. 
+    Довести, що $A \in L(H)$ тоді й тільки тоді, коли існує 
+    $C > 0$ таке, що для кожного $x, y \in H$ має місце нерівність:
+    $|\dotprod{Ax}{y}| \leq C\norm{x}\norm{y}$. При цьому $\norm{A} = 
+    \underset{x,y \neq 0}{sup} \frac{|\dotprod{Ax}{y}|}{\norm{x}\norm{y}}
+    =\underset{\norm{x},\norm{y} \leq 1}{sup} |\dotprod{Ax}{y}| = 
+    \underset{\norm{x} = \norm{y} = 1}{sup} |\dotprod{Ax}{y}|$
+\end{exercise}
+
+\begin{theory}
+    Нехай $A \in L(H)$. \uline{Спряженим оператором} до $A$ називається 
+    такий оператор $B \in L(H)$, для якого при всіх $x, y \in H$ 
+    виконується рівність $\dotprod{Ax}{y} = \dotprod{x}{By}$. 
+    Позначення: $B = A^*$ 
+\end{theory}
+
+\begin{exercise}
+    Довести коректність означення $A^*$ (тобто для кожного $A\in L(H)$ 
+    $\exists! A^* \in L(H)$).
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A, B \in L(H)$, $\alpha \in K$. Доведіть наступні властивості:
+    \begin{enumerate}[label=\ukr*)]
+        \item $(A+B)^* = A^* + B^*$;
+        \item $0^*=0$; $I^* = I$;
+        \item $(\alpha A)^* = \overline{\alpha}A^*$
+        \item $(A^*)^* = A^{**} = A$;
+        \item якщо існує $A^{-1} \in L(H)$, то існує $(A^*)^{-1} \in 
+        L(H)$ і при цьому $(A^*)^{-1} = (A^{-1})^*$;
+        \item $\norm{A^*} = \norm{A}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Оператор $A \in L(H)$ називається \uline{самоспряженим}, якщо 
+    $A = A^*$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $A, B \in L(H)$; $A, B$ --- самоспряжені. Довести:
+    \begin{enumerate}[label=\ukr*)]
+        \item $A+B$ --- самоспряжений;
+        \item $\alpha \in \mathbb{R} \rightarrow \alpha A $ 
+        --- самоспряжений;
+        \item $0, I$ --- самоспряжені;
+        \item $AB$ -- самоспряжений $\Rightarrow AB = BA$;
+        \item якщо існує $A^{-1} \in L(H)$, то $A^{-1}$ --- 
+        самоспряжений.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Знайти спряжений оператор до $A: H\rightarrow H$ в наступних 
+    прикладах:
+    \begin{enumerate}[label=\ukr*)]
+        \item $H = \ell_2$; $A\vec{x} = (\alpha_1x_1, \alpha_2x_2, ...)$
+        ($\alpha_k \in \mathbb{C}$; $sup|\alpha_k| < \infty$)
+        \item $H = \ell_2$; $A\vec{x} = (0, x_1, x_1, ...)$;
+        \item $H = \ell_2$; $A\vec{x} = (x_5, x_6, x_7, ...)$;
+        \item $H = \ell_2$; $A\vec{x} = (x_1, x_2, x_3,0,0,...)$;
+        \item $H = \ell_2$; $A\vec{x} = (\underbrace{0,...,0}_m, 
+        x_1, 0, 0, ...)$;
+        \item $H = \ell_2$; $A\vec{x} = (2x_1 + 5x_2, x_2, x_3, ...)$;
+        \item $H = \ell_2$; $A\vec{x} = (0, 0, x_1 + x_2, x_1 - x_2, 0,  
+        0, ...)$;
+        \item $H = L_2[0,1]$; $(Ax)(t) = \int\limits_0^t x(\tau) d\tau$;
+        \item $H = L_2[0,1]$; $(Ax)(t) = x(t^\alpha)$, $\alpha \in (0,1)$;
+        \item $H = L_2[0,1]$; $(Ax)(t) = \int\limits_0^1 e^{t+\tau}x(\tau) 
+        d\tau$;
+        \item $H = L_2[0,1]$; $(Ax)(t) = \int\limits_0^1 
+        sin(t+2\tau) x(\tau) d\tau$;
+    \end{enumerate}
+\end{exercise}
