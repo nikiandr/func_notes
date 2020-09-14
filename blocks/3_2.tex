@@ -1,2 +1,128 @@
 % !TEX root = ../main.tex
 
+\begin{exercise}
+    Нехай $A \in L(H)$ --- самоспряжений оператор.
+    Довести: $\norm{A} = \underset{\norm{x} = 1}{\sup}(Ax, x)$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(H)$.
+    \begin{enumerate}[label=\ukr*)]
+        \item довести рівності: $(\mathrm{Im}A)^\perp = \mathrm{Ker}A^*$, $(\mathrm{Ker}A)^\perp = \overline{\mathrm{Im}A^*}$;
+        \item навести приклад, коли $(\mathrm{Ker}A)^\perp \neq \mathrm{Im}A^*$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(H)$. Довести наступні твердження:
+    \begin{enumerate}[label=\ukr*)]
+        \item $\mathrm{Ker}(A A^*) = \mathrm{Ker}(A^*)$;
+        \item $\mathrm{Ker}(A^* A) = \mathrm{Ker}(A)$;
+        \item $\overline{\mathrm{Im} (A A^*)} = \overline{\mathrm{Im} (A)}$;
+        \item $\norm{A^* A} = \norm{A}^2$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(H)$. Довести еквівалентність двох умов:
+    \begin{enumerate}[label=\ukr*)]
+        \item $A A^* = A^* A$;
+        \item $\forall x \in H : \norm{Ax} = \norm{x}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Оператор $A \in L(H)$, для якого $A A^* = A^* A$, називається \uline{нормальним}.
+\end{theory}
+
+\begin{exercise}
+    Нехай $A$ --- нормальний оператор в $H$. Довести:
+    \begin{enumerate}[label=\ukr*)]
+        \item $\mathrm{Ker} A = \mathrm{Ker} A^* = (\mathrm{Im} A)^\perp$;
+        \item $\norm{A^2} = \norm{A}^2$;
+        \item $(A^2 = 0) \Leftrightarrow (A = 0)$;
+        \item $\left( \exists \; A^{-1} \in L(H)\right) \Rightarrow (A^{-1} \text{ --- нормальний оператор})$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H$ --- комплексний лінійний простір, $A \in L(H)$. Довести: 
+    $A$ --- самоспряжений оператор тоді й тільки тоді, коли 
+    \uline{квадратична форма} $(Ax, x)$ набуває лише дійсних значень.
+\end{exercise}
+
+\begin{theory}
+    Самоспряжений оператор $A \in L(H)$ називається \uline{невід'ємним} ($A \geq 0$),
+    якщо квадратична форма $(Ax, x)$ на $H$ набуває лише невід'ємних значень.
+
+    Самоспряжені оператори $A, B \in L(H)$ задовольняють нерівність $A \geq B$, якщо $A - B \geq 0$.
+\end{theory}
+
+\begin{exercise}
+    Довести, що ортопроектор --- невід'ємний оператор.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $P \in L(H)$, $P^2 = P$. Довести еквівалентність наступних умов:
+    \begin{enumerate}[label=\ukr*)]
+        \item $P$ --- ортопроектор;
+        \item $P = P^*$;
+        \item $P P^* = P^* P$;
+        \item $\mathrm{Im} P = (\mathrm{Ker} P)^\perp$;
+        \item $\forall x \in H: (Px, x) = \norm{Px}^2$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $P_1$, $P_2$ --- ортопроектори в $H$, $H_k = \mathrm{Im} P_k$ ($k = 1, 2$).
+    Довести:
+    \begin{enumerate}[label=\ukr*)]
+        \item $(P_1 + P_2 \text{ --- ортопроектор}) \Leftrightarrow (P_1 P_2 = 0) \Leftrightarrow (H_1 \perp H_2)$.
+        При цьому $P_1 + P_2$ --- ортопроектор на $H_1 \oplus H_2$;
+        \item $(P_1 P_2 \text{ --- ортопроектор}) \Leftrightarrow (P_1 P_2 = P_2 P_1)$.
+        При цьому $P_1 + P_2$ --- ортопроектор на $H_1 \cap H_2$;
+        \item $(P_1 - P_2) \Leftrightarrow (P_1 \geq P_2) \Leftrightarrow (H_1 \supset H_2)$.
+        При цьому $P_1 - P_2$ --- ортопроектор на $H_1 \ominus (H_1 \cap H_2) = H_1 \cap H_2^\perp$;
+        \item $(P_1 P_2 = P_2) \Leftarrow (P_2 P_1 = P_2) \Leftrightarrow (P_1 \geq P_2) \Leftrightarrow (H_1 \supset H_2)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}\label{N:1_3_19}
+    Нехай $P_1$, $P_2$ --- ортопроектори в гільбертовому просторі, $H_k = \mathrm{Im} P_k$ ($k = 1, 2$). Довести:
+    \begin{enumerate}[label=\ukr*)]
+        \item $(H_1 \subset H_2; \norm{P_1 - P_2} < 1) \Rightarrow (P_1 = P_2)$;
+        \item навести приклад ортопроекторів $P_1 \neq P_2$, для яких $\norm{P_1 - P_2} < 1$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    В позначеннях задачі \ref{N:1_3_19}:
+    \begin{enumerate}[label=\ukr*)]
+        \item довести: $(\norm{P_2 - P_1} < 1) \Rightarrow (\dim H_1 = \dim H_2)$;
+        \item навести приклад таких ортопроекторів $P_1$, $P_2$, для яких $\norm{P_2 - P_1} = 1$ та $\dim H_1 \neq \dim H_2$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(H), A \geq 0, x, y \in H$. Довести:
+    \begin{enumerate}[label=\ukr*)]
+        \item $|(Ax, y)|^2 \leq (Ax, x) \cdot (Ay, y)$;
+        \item $\norm{A}^2 \leq \norm{A} \cdot (Ax, x)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(H)$. Довести:
+    \begin{enumerate}[label=\ukr*)]
+        \item $(A \geq 0, \exists \; A^{-1} \in L(H)) \Rightarrow (\exists \; \lambda > 0 : A \geq \lambda I)$;
+        \item $\exists \; (I + A^* A)^{-1} \in L(H)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(H)$. Довести еквівалентність умов:
+    \begin{enumerate}[label=\ukr*)]
+        \item $\exists \; A^{-1} \in L(H)$;
+        \item $\exists \; \alpha, \beta > 0 : A A^{*} \geq \alpha I, A^{*} A \geq \beta I$.
+    \end{enumerate}
+\end{exercise}
