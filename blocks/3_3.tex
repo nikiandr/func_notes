@@ -1,2 +1,88 @@
 % !TEX root = ../main.tex
 
+\begin{exercise}
+    Нехай $A \in L(H)$ --- самоспряжений оператор. Довести, що $A = 0$ тоді,
+    й тільки тоді, коли для кожного $x \in H$ виконується рівність $\dotprod{Ax}{x}=0$.
+    Навести приклад дійсного гільбертового простору $H$ і ненульового оператора
+    $A \in L(H)$, для якого $\dotprod{Ax}{x}=0$ для всіх $x \in H$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(H)$ і для кожного $B \in L(H)$ має місце рівність $AB = BA$.
+    Довести, що існує число $\alpha$ таке, що $A = \alpha I$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H$ - комплексний гільбертів простір. Для оператора $A \in L(H)$ позначимо
+    \uline{дійсну} та \uline{уявну} частину формулами $\mathrm{Re}A = \frac{1}{2} (A + A^*)$;
+    $\mathrm{Im}A = \frac{1}{2i} (A - A^*)$. Доведіть:
+    \begin{enumerate}[label=\ukr*)]
+        \item $\mathrm{Re}A$ та $\mathrm{Im}A$ --- самоспряжені оператори;
+        \item якщо $A$ --- нормальний оператор, то $\norm{A} = 
+        \sqrt{\norm{ (\mathrm{Re}A)^2 + (\mathrm{Im}A)^2 }}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Як повинні бути пов'язані між собою замкнені підпростори $H_1, H_2 \in H$,
+    щоб ортопроектори $P_1$ і $P_2$ на ці підпростори комутували?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A, B \in L(H)$ --- самоспряжені оператори; $A \geq 0$; $B \geq 0$.
+    Доведіть:
+    \begin{enumerate}[label=\ukr*)]
+        \item $A + B \geq 0$;
+        \item[б)*] $(AB = BA) \Rightarrow (AB \geq 0)$. %тут костыль
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(H)$, $A$ --- самоспряжений оператор; $n \in \mathbb{N}$.
+    Довести $\mathrm{Ker}A^n = \mathrm{Ker}A$. 
+\end{exercise}
+
+\begin{theory}
+    Лінійний оператор $U$ в $H$ називається \uline{унітарним}, якщо
+    $U$ - лінійний ізоморфізм $H$ на $H$, і при цьому $(x, y \in H) \Rightarrow 
+    \left(\dotprod{Ux}{Uy} = \dotprod{x}{y}\right)$. За іншою термінологією, оператор
+    $U$ у випадку дійсного простору $H$ називають \uline{ортогональним}.
+\end{theory}
+
+\begin{exercise}
+    Нехай лінійний оператор $U:H \to H$ задовольняє умови:
+    \begin{enumerate}[label=\ukr*)]
+        \item $\mathrm{Im}A = H$;
+        \item $\norm{Ux} = \norm{x}$ для кожного $x \in H$.
+    \end{enumerate}
+    Доведіть $U$ --- унітарний оператор.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що оператор $U \in L(H)$ ($H$ --- комплексний) є унітарним в тому,
+    й тільки в тому разі, якщо виконуються дві умови:
+    \begin{enumerate}[label=\ukr*)]
+        \item $U$ --- нормальний;
+        \item $(\mathrm{Re}U)^2 + (\mathrm{Im}U)^2 = I$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $y, z \in H$; оператор $A: H \to H$ визначено формулою: $Ax = \dotprod{x}{y}z$.
+    Знайти $A^*$ та з'ясувати за яких умов на вектори $y$ та $z$ оператор $A$ буде:
+    \begin{enumerate}[label=\ukr*)]
+        \item нормальним;
+        \item самоспряженим;
+        \item додатним;
+        \item унітарним.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Довести: спряжений оператор до скінченновимірного також має скінченний ранг.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$, $B$ - самоспряжені оператори в $H$; $A \geq 0$.
+    Довести $BAB \geq 0$.
+\end{exercise}
