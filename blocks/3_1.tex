@@ -11,10 +11,10 @@
         $\dotprod{Px}{x} = \norm{Px}^2$ ($\forall x,y \in H$);
         \item оператор $Q: x \mapsto {pr}_{L^\bot}x$ пов'язаний з $P$ 
         співвідношенням: $Q = I-P$ (тут $I$ --- тотожній оператор в $H$);
-        \item $PQ = QP = 0$, $\mathrm{KerP} = \mathrm{Im}Q$, $\mathrm{Im}P = \mathrm{Ker}Q$;
+        \item $PQ = QP = 0$, $\mathrm{Ker}P = \mathrm{Im}Q$, $\mathrm{Im}P = \mathrm{Ker}Q$;
         \item якщо $M$ --- замкнений підпростір в $L$ і для $x \in H$:
         $P_1 x = {pr}_M x$, то $P_1 P = P P_1 = P_1$,
-        $\dotprod{P_1x}{x} = \dotprod{Px}{x}$ ($\forall x \in H$).
+        $\dotprod{P_1x}{x} \leq \dotprod{Px}{x}$ ($\forall x \in H$).
     \end{enumerate}
 \end{exercise}
 
@@ -27,10 +27,10 @@
     $P$ називається \uline{проектором}, якщо $P^2=P$. Доведіть наступні 
     властивості (обмеженого) проектора:
     \begin{enumerate}[label=\ukr*)]
-        \item $M = KerP$ --- замкнений підпростір;
+        \item $M = \mathrm{Ker}P$ --- замкнений підпростір в $X$;
         \item оператор $Q = I - P$ також є (обмеженим) проектором;
-        \item $L=ImP=KerQ=\set{x \mid Px=x}$ --- замкнений підпростір в $X$;
-        \item $X = L \dotplus M$ (тобто $\forall x \in X$ має, і притому 
+        \item $L=\mathrm{Im}P=\mathrm{Ker}Q=\set{x \mid Px=x}$ --- замкнений підпростір в $X$;
+        \item $X = L \dotplus M$ (тобто $\forall x \in X$ має, і при тому 
         єдиний розклад: $x=x_1+x_2$, де $x_1 \in L$, $x_2 \in M$).
     \end{enumerate}
 \end{exercise}
@@ -42,9 +42,9 @@
 \begin{exercise}[теорема Фреше-Ріса]
     Нехай $H$ --- гільбертів простір над полем $K$ ($K=\mathbb{R}$ 
     або $\mathbb{C}$), $y \in H$, $\varphi_y : H \rightarrow K$ визначено 
-    формулою $\phi_y(x) = \dotprod{x}{y}$. Довести:
+    формулою $\varphi_y(x) = \dotprod{x}{y}$. Довести:
     \begin{enumerate}[label=\ukr*)]
-        \item $\varphi_y \in H^*$, $\norm{\phi_y} = \norm{y}$;
+        \item $\varphi_y \in H^*$, $\norm{\varphi_y} = \norm{y}$;
         \item $\forall \varphi \in H^*$ $\exists! \; y\in H$, для якого 
         $\varphi = \varphi_y$ (при цьому $y\in(Ker\varphi)^\bot$).
     \end{enumerate}
@@ -102,7 +102,7 @@
         \item $\alpha \in \mathbb{R}, \alpha A $ 
         --- самоспряжений;
         \item $0, I$ --- самоспряжені;
-        \item $AB$ -- самоспряжений $\Rightarrow AB = BA$;
+        \item ($AB$ -- самоспряжений) $\Rightarrow$ $(AB = BA)$;
         \item якщо існує $A^{-1} \in L(H)$, то $A^{-1}$ --- 
         самоспряжений.
     \end{enumerate}
@@ -127,6 +127,6 @@
         \item $H = L_2[0,1]$; $(Ax)(t) = \int\limits_0^1 e^{t+\tau}x(\tau) 
         d\tau$;
         \item $H = L_2[0,1]$; $(Ax)(t) = \int\limits_0^1 
-        sin(t+2\tau) x(\tau) d\tau$;
+        sin(t+2\tau) x(\tau) d\tau$.
     \end{enumerate}
 \end{exercise}
