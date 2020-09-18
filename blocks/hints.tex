@@ -24,3 +24,34 @@ $\forall \varepsilon \in (0, C) \; \exists \; \text{проміжок } \Delta \s
 \noindent ї) $\left| (Ax)(t) \right|^2 = t^2 \cdot \left( \int\limits_0^1 s x(s) ds\right)^2 \leq t^2 \cdot \left( \int\limits_0^1 s^2 ds\right)^2 \cdot \left( \int\limits_0^1 x^2(s) ds\right)^2 = \frac{1}{3} \cdot t^2 \cdot \norm{x}^2$.
 $\norm{Ax}^2 = \int\limits_0^1 \left| (Ax)(t) \right|^2 dt \leq \frac{1}{9} \cdot \norm{x}^2$, звідки $\norm{A} \leq \frac{1}{3}$.
 Зворотну нерівність отримуємо підстановкою $x(t) = t$.
+
+\noindent\ref{N:1_1_17}. Нехай $\varphi \neq 0$ та $\mathrm{Ker}\varphi$ - замкнене,
+$x_n \to 0$. Доведемо: $\varphi(x_n) \to 0$. Нехай $\varphi(x_n) \not\to 0$.
+\uline{Випадок 1}: послідовність $\{\varphi(x_n)\}$ - обмежена. Тоді існує підпослідовність
+$x_{n_k}$, для якої $\varphi(x_{n_k}) \to C \neq 0$. Візьмемо вектор $z$, для якого
+$\varphi(z) = 1$. Тоді $x_{n_k} - \varphi(x_{n_k})\cdot z \in \mathrm{Ker}\varphi$;
+$x_{n_k} - \varphi(x_{n_k})\cdot z \to - Cz \notin \mathrm{Ker}\varphi$, суперечність.
+\uline{Випадок 2}: послідовність $\{\varphi(x_n)\}$ - необмежена. Тоді існує
+підпослідовність $x_{n_k}$ така, що $\varphi(x_{n_k}) \to \infty$. Тоді 
+$y_k = \frac{1}{\varphi(x_{n_k})}x_{n_k} \to 0$; $\varphi(y_k)=1, \; \forall k$,
+а це суперечить випадку 1.
+
+\noindent\ref{N:1_1_19}. Нехай $X = C^1[a,b]$, але з нормою простору $C[a,b]=Y$.
+Оператор $A = \frac{d}{dt}: X \to Y$ необмежений, але його ядро $\mathrm{Ker}A$
+замкнене в $X$.
+
+\noindent\ref{N:1_1_20}. Нехай $x_n \to 0$, але $\varphi(x_n) \not\to 0$.
+Тоді існує підпослідовність $x_{n_k}$ така, що $|\varphi(x_{n_k}| \geq \delta > 0$.
+Тоді $y_k = \frac{1}{\sqrt{\norm{x_{n_k}}}} x_{n_k} \to 0$, але $|\varphi(y_k)|\to\infty$.
+
+\noindent\ref{N:1_1_21}. $\rho(x,\mathrm{Ker}\varphi) \geq \inf
+\{\; \frac{ |\varphi(x-y)| }{ \norm{\varphi} } \mid y \in \mathrm{Ker}\varphi \;\} = 
+\frac{|\varphi(x)|}{\norm{\varphi}}$.
+\uline{Зворотня нерівність}: $\forall\varepsilon > 0$ $\exists z \in X$:
+$|\varphi(z)| > (\norm{\varphi} - \varepsilon)\norm{z}$;
+$z = \alpha x + y$, $y \in \mathrm{Ker}\varphi$, $\alpha \neq 0$.
+$|\alpha| \cdot |\varphi(x)|
+> (\norm{\varphi} - \varepsilon)\cdot|\alpha|\cdot\norm{x = \frac{1}{\alpha}y}
+\geq (\norm{\varphi} - \varepsilon)\cdot|\alpha|\cdot\rho(x,\mathrm{Ker}\varphi)$.
+Звідси: $\frac{\varphi(x)}{\norm{\varphi} - \varepsilon} > \rho(x,\mathrm{Ker}\varphi)$
+і врахувати довільність $\varepsilon$.
