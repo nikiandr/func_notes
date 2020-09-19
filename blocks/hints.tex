@@ -1,5 +1,12 @@
 % !TEX root = ../main.tex
 
+\noindent\ref{N:1_1_6}. Припустимо, що $|x(t)|\leq 1$, але $|\varphi(x)| = 2$.
+Оскільки $|\int\limits^1_0 x(t) dt| \leq 1$, $|x(0)| \leq 1$, то це можливо лише тоді,
+якщо $\int\limits^1_0 x(t) dt = 1$ та $x(0) = -1$, або, навпаки: $\int\limits^1_0 x(t) dt = -1$,
+$x(0) = 1$. Розглянемо перший варіант. З неперервності функції $x$ виходить існування
+$\delta > 0$ такого, що $x(t) < 0$ при $t \in [0,\delta]$. Але тоді 
+$\int\limits^1_0 x(t) dt < \int\limits^1_\delta x(t) dt < 1$.
+
 \noindent\ref{N:1_1_9}. Нехай $\bigcap\limits_{k=1}^m {Ker} \varphi_k \subset {Ker}\varphi$.
 Без втрати загальності можна вважати, що $\forall k \in \set{1, ..., m}: {Ker} \varphi_k \not\supset \bigcap\limits_{j \neq k} {Ker} \varphi_j$.
 Звідси зробіть висновок, що
@@ -55,3 +62,52 @@ $|\alpha| \cdot |\varphi(x)|
 \geq (\norm{\varphi} - \varepsilon)\cdot|\alpha|\cdot\rho(x,\mathrm{Ker}\varphi)$.
 Звідси: $\frac{\varphi(x)}{\norm{\varphi} - \varepsilon} > \rho(x,\mathrm{Ker}\varphi)$
 і врахувати довільність $\varepsilon$.
+
+\noindent\ref{N:1_1_22}. Задача рівносильна \ref{N:1_1_21}, тому що якщо
+$\varphi(x) = a$, то $\rho(x,\mathrm{Ker}\varphi) = \rho(0,L)$, де
+$L = \set{y \mid \varphi(y) = a}$.
+
+\noindent\ref{N:1_1_26}. Якщо ряд $\sum\limits^\infty_{k=0} A^k$ збігається,
+то $\norm{A^k} \to 0$, $k \to \infty$. Якщо існує $n \in \mathbb{N}$, для
+якого $\norm{A^k} < 1$, то для $m \in \set{0,1,\dots,n-1}$ ряд
+$\sum\limits^\infty_{k=0} \norm{A^{m+kn}}$ збіжний, тому що $\norm{A^{m+kn}}
+\leq \norm{A^m} \cdot \norm{A^n}^k$. Абсолютна збіжність вихідного ряду є
+наслідком рівності $\sum\limits^\infty_{k=0} \norm{A^k} = 
+\sum\limits^{n-1}_{m=0} \sum\limits^\infty_{k=0} \norm{A^{m+kn}}$.
+
+\noindent\ref{N:1_1_27}. $\mathrm{Im}A = \text{л.о.}\{y\}$, якщо $\varphi \neq 0$;
+$\mathrm{Im}A = \{0\}$, якщо $\varphi = 0$. $\mathrm{Ker}A = X$, якщо $y = 0$;
+$\mathrm{Ker}A = \mathrm{Ker}\varphi$, якщо $y \neq 0$.
+$\norm{Ax} = |\varphi(x)|\cdot \norm{y} \leq \norm{\varphi}\cdot\norm{y}\cdot\norm{x}$.
+Тому $\norm{A} \leq \norm{\varphi}\cdot\norm{y}$. Нехай $\varphi \neq 0$, $y \neq 0$.
+Беремо $\varepsilon > 0$ $\exists x \in X$: $|\varphi(x)| > (\norm{\varphi}-\varepsilon)
+\norm{x}$. Тому $\norm{Ax} > (\norm{\varphi}-\varepsilon)\cdot\norm{y}\cdot\norm{x}$.
+Тому $\norm{A} \geq (\norm{\varphi}-\varepsilon)\cdot\norm{y}$ і врахуйте довільність 
+$\varepsilon>0$.
+
+\noindent\ref{N:1_1_30}. а) Відображення $A: \ell_\infty \to \ell_1^*$
+будуємо наступним чином: $\vec{c} = (c_1,c_2,\dots) \in \ell_\infty$,
+$A\vec{c}: \ell_1 \ni \vec{x} \mapsto \sum\limits^\infty_{k=1} c_k x_k$.
+При цьому ряд $\sum\limits^\infty_{k=1} |c_k x_k|$ --- збіжний, тому що послідовність
+$\{c_k\}$ обмежена, а ряд $\sum\limits^\infty_{k=1} |x_k|$ --- збіжний.
+$A\vec{c}$ --- лінійний функціонал на $\ell_1$. Його обмеженість --- наслідок нерівності
+$|\sum\limits^\infty_{k=1} c_k x_k| \leq \sup\{|c_k|\} \cdot \sum\limits^\infty_{k=1} |x_k|$.
+При цьому $\norm{A \vec{c}} \leq \norm{\vec{c}} = \sup\{|c_k|\}$. Насправді 
+$\norm{A \vec{c}} = \norm{\vec{c}}$ тому, що для $\forall k: |(A \vec{c})(\vec{e}_k)| = |c_k|$,
+де $\vec{e}_k = (\underbrace{0,0,\dots}_{k-1},1,0,\dots) \in \ell_1$.
+Наступний крок --- це лінійність відображення $A$ (перевірте!). Залишилось довести
+$\mathrm{Im}A = \ell_1^*$. Беремо $\varphi\in \ell_1^*$. Будуємо послідовність $\{c_k\}$
+за правилом $c_k = \varphi(\vec{e}_k)$. Тоді $\{c_k\}$ - обмежена послідовність, 
+$\vec{c} \in \ell_\infty$. При цьому $\varphi(\vec{x}) = \sum\limits^\infty_{k=1} c_k x_k$.
+Остання формула --- наслідок граничного переходу $\varphi(\vec{x}) = 
+\underset{n\to \infty}{\lim} \varphi(\sum\limits^\infty_{k=1} x_k \vec{e}_k)$.
+Тож $\varphi = A \vec{c}$.
+
+\noindent\ref{N:1_2_8}. Нехай $A: H_1 \to H_2$ --- ізоморфізм і $H_1$ --- сепарабельний
+гільбертів простір. Доведемо сепарабельність простору $H_2$. Нехай система $\{e_n\}$ ---
+ортонормована в $H_1$. Тоді система $\{A e_n\}$ --- ортонормована в $H_2$. Оскільки
+лінійна оболонка $\{e_n\}$ щільна в $H_1$, а оператор $A$ --- обмежений і $\mathrm{Im}A = H_2$,
+то вектори $f_n = A e_n$ утворюють ортонормований базис в $H_2$. Тому в $H_2$ щільна
+множина лінійних комбінацій векторів $f_n$ з раціональними (у випадку поля $\mathbb{R}$)
+коефіцієнтами. У випадку поля $\mathbb{C}$ слід брати комплексні коефіцієнти
+$z_k = u_k + i v_k$, $u_k, v_k \in \mathbb{Q}$.
