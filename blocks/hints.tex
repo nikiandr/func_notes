@@ -103,6 +103,18 @@ $\vec{c} \in \ell_\infty$. При цьому $\varphi(\vec{x}) = \sum\limits^\in
 \underset{n\to \infty}{\lim} \varphi(\sum\limits^\infty_{k=1} x_k \vec{e}_k)$.
 Тож $\varphi = A \vec{c}$.
 
+\noindent\ref{N:1_1_44}. Для вимірної підмножини $Z \subset [0; 1]$ розглянути оператор
+$A_Z: f \mapsto f \cdot j_Z$ ($j_A$ --- індикатор множини $A$). У разі, якщо $\mu(Z) \neq 0$, 
+$\norm{A_Z} = 1$ і, якщо $\mu (Z_1 \bigtriangleup Z_2) > 0$, $\norm{A_{Z_1} - A_{Z_2}} = 1$.
+Розглянути $\{A_{Z_t}\}$, де $Z_t = [0, t]$.
+
+\noindent\ref{N:1_1_45}. Умова $AB = I_Y$ гарантує, що $\mathrm{Im} A = Y$; умова $6A = I_X$
+гарантує, що $\rm KerA = \{0\}$. Тому існує обернений оператор $A^{-1}$. 
+Тому $B = A^{-1}AB = A^{-1}$; $C = CAA^{-1} = A^{-1}$.
+
+\noindent\ref{N:1_1_46}. Розглянути на $\ell_2$ функціонали $\varphi_n (\vec{\beta}) = \sum\limits_{k = 1}^{n} \alpha_k \beta_k$
+і застосувати теорему Банаха-Штейнгауза.
+
 \noindent\ref{N:1_2_8}. Нехай $A: H_1 \to H_2$ --- ізоморфізм і $H_1$ --- сепарабельний
 гільбертів простір. Доведемо сепарабельність простору $H_2$. Нехай система $\{e_n\}$ ---
 ортонормована в $H_1$. Тоді система $\{A e_n\}$ --- ортонормована в $H_2$. Оскільки
@@ -111,3 +123,41 @@ $\vec{c} \in \ell_\infty$. При цьому $\varphi(\vec{x}) = \sum\limits^\in
 множина лінійних комбінацій векторів $f_n$ з раціональними (у випадку поля $\mathbb{R}$)
 коефіцієнтами. У випадку поля $\mathbb{C}$ слід брати комплексні коефіцієнти
 $z_k = u_k + i v_k$, $u_k, v_k \in \mathbb{Q}$.
+
+\noindent\ref{N:1_2_14}. в) Відповідь: $M^{\perp} = \overline{\{1; \cos nt, n \in \mathbb{N} \}}$.
+
+\noindent\ref{N:1_2_16}. а) $\Rightarrow$ б) 
+$(x \in H_2^{\perp}) \iff (\norm{x_2}^2 = (x, x_2) = 0) \iff (x \in H_1)$;
+
+\noindent б) $\Rightarrow$ a) $x - pr_{H_2} x \in H_2^{\perp} = H_1$.
+
+\noindent\ref{N:1_2_18}. ґ) $(x \in M^{\perp}+N^{\perp}) \Rightarrow (x = x_1+x_2; x_1 \perp M; x_2 \perp N)$
+$\Rightarrow (x \in (M \cap N)^{\perp})$. Тому $\overline{M^{\perp} + N^{\perp}} \subset (M \cap N)^{\perp}$.
+$L = M \cap N$. $M = L \oplus  M_1; N = L \oplus N_1 (M_1 = L^{\perp} \cap M; N_1 = L^{\perp} \cap N); M_1 \cap N_1 = \{0\}$.
+Тому $L^{\perp} = M_1 \oplus M^{\perp} = N_1 \oplus N^{\perp}$. 
+$M_1 = M_1 \cap L^{\perp} = M_1 \cap (N_1 \oplus N^{\perp}) = M_1 \cap N^{\perp}$. 
+Тому $L^{\perp} = (M_1 \cap N^{\perp}) \oplus M^{\perp} \subset \overline{N^{\perp} + M^{\perp}}$.
+
+\noindent\ref{N:1_2_21}. $M = \{(1+\frac{1}{n})\vec{e_n}\}$ 
+(тут $\vec{e_n} = (\underbrace{0, \dots 0}_{n-1}, 1, 0, \dots)$).
+
+\noindent\ref{N:1_2_24}. Нехай $d = \rho(x, M)$; $\rho(x, y_1) = d + \varepsilon_1$; $\rho(x, y_2) = d + \varepsilon_2$;
+$\varepsilon_2 \in (0, \varepsilon_1)$. Оскільки $\rho(x, \frac{y_1+y_2}{2}) \geq d$, то з
+рівності паралелограма для векторів $y_1 - x$ та $y_2 - x$ одержимо нерівність: 
+$\rho(y_1, y_2) \leq 2 \sqrt{2d\varepsilon_1 + \varepsilon_1^2}$. Тому існує послідовність додатних чисел
+$\varepsilon_n \searrow 0$, для якої $\rho(y_n, y_{n+1}) \leq \frac{1}{2} \rho(y_{n-1}, y_n)$.
+Послідовність $\{y_n\}$ є фундаментальною.
+
+\noindent\ref{N:1_2_26}. б) $\Rightarrow$ в) Застосувати теорему Банаха-Штейнгауза до функціоналів
+$\varphi_n (y) = (y, \sum_{k = 1}^n x_k)$.
+
+\noindent\ref{N:1_2_27}. Якщо $\inf \lambda_k > 0$, то нова норма еквівалентна стандартній в $\ell_2$.
+Якщо $\inf \lambda_k = 0$, то в разі повноти простору для функціоналів 
+$\varphi_k (y) = (\frac{1}{\lambda_k} \vec{e_k}, \vec{y})$ мали б суперечність із теоремою Банаха-Штейнгауза.
+
+\noindent\ref{N:1_2_32}. Якщо послідовність функцій $\{f_n\}$ має обмежені у сукупності похідні, то ця
+система функцій одностайно неперервна. Крім того, умови 
+$\sup_n \{|f_n (x) - f_n (y)|\mid n \in \mathbb{N}; x, y \in [0, 2\pi]\} < \infty$ та 
+$\int\limits_0^{2\pi} f_n^2 (x) dx = 1$, $\forall n$ разом гарантують рівномірну обмеженість системи функцій.
+За теоремою Арцела-Асколі: $\{f_n\}$ --- передкомпакт в $C[0; 2\pi]$, а тому й в $L_2 [0; 2\pi]$, що
+суперечить її ортонормованості.
