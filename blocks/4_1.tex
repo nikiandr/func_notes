@@ -1,0 +1,117 @@
+% !TEX root = ../main.tex
+
+\begin{theory}
+    Нехай $X$ --- нормований простір; $X^*$ --- його спряжений. Послідовність $\{x_n\}$ 
+    векторів простору $X$ називається \ul{сильно збіжною} до вектора $x \in X$, якщо 
+    $\norm{x_n - x} \underset{n \rightarrow \infty}{\rightarrow} 0$. Це є звичайна збіжність 
+    за нормою. Позначення : $x_n \rightarrow x$.
+
+    Послідовність $x_n \in X$ називається \ul{слабо} (або \ul{слабко}) збіжною до $x \in X$, 
+    якщо $\forall \varphi \in X^*$ : $\varphi(x_n) \underset{n \rightarrow \infty}{\rightarrow} 
+    \varphi(x)$. Позначення : $x_n \underset{\text{сл.}}{\rightarrow} x$ 
+    (або $x_n \rightharpoonup x$).
+
+    Послідовність функціоналів $\varphi_n \in X$ \ul{сильно збігається} до $\varphi \in X^*$, 
+    якщо $\norm{\varphi_n - \varphi} \underset{n \rightarrow \infty}{\rightarrow} 0$ 
+    (збіжність за нормою в $X^*$). \ul{Слабка збіжність} $\varphi_n$ до $\varphi$ --- 
+    це просто поточкова збіжність  $\forall x \in X$ : $\varphi_n(x) \rightarrow \varphi(x)$.
+    Позначаємо її так : $\varphi_n \overset{*}{\rightarrow} \varphi$. 
+    Її також називають *-слабкою, бо в $X^*$ є і інша слабка збіжність : $\forall \alpha 
+    \in X^{**}$ : $\alpha(\varphi_n) \rightarrow \alpha(\varphi)$ (як в будь-якому 
+    нормованому просторі).
+
+    Для послідовності операторів $A_n \in L(X; Y)$ будемо розглядати \ul{збіжність за нормою} 
+    (або \ul{рівномірну}) : $\norm{A_n - A} \rightarrow 0$, $n \rightarrow \infty$. 
+    Позначення: $A_n \rightrightarrows A$.
+
+    Також нам важлива \ul{сильна збіжність}, яка визначена умовою: 
+    $A_n x \rightarrow Ax$ для $\forall x \in X$. Позначення: $A_n \overset{s}{\rightarrow} A$ 
+    (або інакше: <<$A_n \rightarrow A$ сильно>>).
+
+    Є ще <<слабка операторна збіжність>> $A_n \underset{\text{сл.}}{\rightarrow}$ 
+    (або $A_n \rightharpoonup A$). Слабка збіжність за означенням --- це умова : 
+    $\forall x \in X$, $\forall \varphi \in X^*$: $\varphi(A_nx) \rightarrow \varphi(Ax)$
+\end{theory}
+
+\begin{exercise}
+    Доведіть, що у випадку гільбертова простору $H$ слабка збіжність $x_n 
+    \underset{\text{сл.}}{\rightarrow} x$ ($x, x_n \in H$) рівносильна умові : 
+    $\forall y \in H$ : $\dotprod{x_n}{y} \rightarrow \dotprod{x}{y}$.
+\end{exercise}
+
+\begin{exercise}
+    Доведіть, що сильна збіжність послідовності $x_n$ нормованого простору $X$ гарантує 
+    її слабку збіжність. Доведіть, що у випадку скінченновимірного $X$ має місце і зворотній 
+    факт. Наведіть приклад нескінченновимірного простору $X$ і слабко збіжної послідовності 
+    $x_n$, яка не має сильної границі.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\{x_n\}$ --- слабо збіжна послідовність векторів гільбертова простору $H$. 
+    Доведіть : 
+    \begin{enumerate}[label=\ukr*)]
+        \item послідовність $\{x_n\}$ --- обмежена;
+        \item послідовність $\{x_n\}$ не може мати двох різних слабких 
+        границь.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\{x_n\}$ --- слабо збіжна послідовність векторів в нормованому 
+    просторі $X$. Доведіть :
+    \begin{enumerate}[label=\ukr*)]
+        \item послідовність $\{x_n\}$ --- обмежена;
+        \item послідовність $\{x_n\}$ не може мати двох різних 
+        слабких границь.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ - банахів простір; $\varphi_n \in X^*$; $\varphi_n$ --- 
+    слабко збіжна. Доведіть:
+    \begin{enumerate}[label=\ukr*)]
+        \item послідовність $\{\varphi_n\}$ обмежена (за нормою в $X^*$);
+        \item послідовність $\{\varphi_n\}$ не може мати двох різних слабких 
+        границь.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A_n$, $A \in L(X; Y)$. Доведіть: 
+    \begin{enumerate}
+        \item $(A_n \rightrightarrows A) \Rightarrow (A_n 
+        \overset{s}{\rightarrow} A)$;
+        \item взагалі кажучи : $(A_n 
+        \overset{s}{\rightarrow} A) \nRightarrow (A_n \rightrightarrows A)$;
+
+        Розгляньте приклад : $H = \ell_2$; $P_nx = (x_1, x_2, ..., x_n, 0, 0, ...)$;
+
+        \item $(A_n \overset{s}{\rightarrow} A) \Rightarrow \underset{n}{\sup}\norm{A_n} 
+        < \infty$ ($X$ --- повний простір)
+
+        \item $A_n$ не може мати двох різних сильних границь.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Наступні послідовності $x_n \in X$ дослідити на сильну і слабку збіжність : 
+    \begin{enumerate}
+        \item $X = \ell_2$ ; $\vec{x_n} = (1, \frac{1}{2}, \frac{1}{3}, ..., \frac{1}{n}, 0, 0
+        , ...)$;
+        \item $X = \ell_2$ ; $\vec{x_n} = ( \underbrace{0, ..., 0}_{n-1} ,
+        1, \frac{1}{2}, \frac{1}{3}, ...)$;
+        \item $X = \ell_2$ ; $\vec{x_n} = ( \underbrace{1, ..., 1}_{n-1} ,
+        \frac{1}{n}, \frac{1}{n+1}, ...)$;
+        \item $X = L_2[0, 1]$ ; $x_n(t) = t^n$;
+        \item $X = L_2[0, 1]$ ; $x_n(t) =  \begin{cases}
+            \sqrt{n} & t \in [0; \frac{1}{n}] \\
+            0 & t \in (\frac{1}{n}; 1]
+        \end{cases}$;
+        \item $X = L_2[0, 1]$ ; $x_n(t) = e^{int}$;
+        \item $X = L_2[0, 1]$ ; $x_n(t) = sin(2^nt)$;
+        \item $X = \ell_p (1 < p < \infty)$; $x_n = ( \underbrace{0, ..., 0}_{n-1} ,
+        1, \frac{1}{2}, \frac{1}{3}, ...)$;
+        \item $X = c_0$; $x_n = ( \underbrace{0, ..., 0}_{n-1} ,
+        1, \frac{1}{2}, \frac{1}{3}, ...)$;
+    \end{enumerate}
+\end{exercise}
