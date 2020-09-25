@@ -103,6 +103,11 @@ $\vec{c} \in \ell_\infty$. При цьому $\varphi(\vec{x}) = \sum\limits^\in
 \underset{n\to \infty}{\lim} \varphi(\sum\limits^\infty_{k=1} x_k \vec{e}_k)$.
 Тож $\varphi = A \vec{c}$.
 
+\noindent\ref{N:1_1_42}. а) $\norm{\tilde{x}} = \sup\set{|\varphi(x)| \mid
+\varphi\in X^*; \norm{\varphi}=1} \leq \norm{x}$. За теоремою Гана-Банаха 
+$\exists\varphi\in X^*$, $\norm{\varphi} = 1$, для якого досягається рівність
+$|\varphi(x)| = \norm{x}$.
+
 \noindent\ref{N:1_1_44}. Для вимірної підмножини $Z \subset [0; 1]$ розглянути оператор
 $A_Z: f \mapsto f \cdot j_Z$ ($j_A$ --- індикатор множини $A$). У разі, якщо $\mu(Z) \neq 0$, 
 $\norm{A_Z} = 1$ і, якщо $\mu (Z_1 \bigtriangleup Z_2) > 0$, $\norm{A_{Z_1} - A_{Z_2}} = 1$.
@@ -161,3 +166,51 @@ $\sup_n \{|f_n (x) - f_n (y)|\mid n \in \mathbb{N}; x, y \in [0, 2\pi]\} < \inft
 $\int\limits_0^{2\pi} f_n^2 (x) dx = 1$, $\forall n$ разом гарантують рівномірну обмеженість системи функцій.
 За теоремою Арцела-Асколі: $\{f_n\}$ --- передкомпакт в $C[0; 2\pi]$, а тому й в $L_2 [0; 2\pi]$, що
 суперечить її ортонормованості.
+
+\noindent\ref{N:1_3_14}. Скористаємось тим, що $A^* A$ --- самоспряжений оператор та
+результатом задачі \hyperref[N:1_3_12_h]{\ref*{N:1_3_12} \ref*{N:1_3_12_h}}. $\norm{A^2}^2 = \norm{(A^2)^*A^2} = 
+\norm{(A^* A)^2} = \norm{A^* A}^2 = \norm{A}^4$.
+
+\noindent\ref{N:1_3_18}. в) $(P_1 - P_2 \text{ --- ортопроектор}) \Leftrightarrow
+\left( \dotprod{(P_1 - P_2)x}{x} = \norm{(P_1 - P_2)x}^2 \geq 0 \right)$;\\
+$(P_1 \geq P_2) \Rightarrow \Big( 
+(x \in H_2) \Rightarrow \left( \norm{x}^2 = \dotprod{P_2 x}{x} \leq \dotprod{P_1 x}{x} = \norm{P_1 x}^2\right)
+\Rightarrow (x \in H_1)\Big) \Rightarrow (H_2 \subset H_1)$;
+$(H_2 \subset H_1) \Rightarrow (H_2 \perp (H_1 \ominus H_2)).$
+Нехай $H_3 \coloneqq H_1 \ominus H_2$, $P_3$ --- ортопроектор на $H_3$.
+Скористаємось \hyperref[N:1_3_18_a]{\ref*{N:1_3_18} \ref*{N:1_3_18_a}}: $P_2 + P_3 = P_1$,
+а тому $P_1 - P_2 = P_3$;
+
+\noindent г) Якщо $P_1 P_2 = P_2$, то $P_2 P_1 = (P_1 P_2)^* = P_2$. Тому
+$(P_1 - P_2)^2 = P_1 - P_2$ та $P_1 \geq P_2$. Якщо $P_1 \geq P_2$, то $H_2 \subset H_1$,
+а тому $\forall x \in H$: $P_1 P_2 x = P_2 x$.
+
+\noindent\ref{N:1_3_22} б) $((I + A^* A)x = 0) \Rightarrow \left(0 = \dotprod{(I + A^* A)x}{x}
+= \norm{x}^2 + \norm{Ax}^2\right) \Rightarrow (x=0) \Rightarrow (\mathrm{Ker}(I + A^* A) = \{0\})$.
+Оскільки $B = I + A^* A$ --- самоспряжений, то $\overline{\mathrm{Im}B} =
+(\mathrm{Ker}B)^\perp = H$. Замкненість $\mathrm{Im}B$ та обмеженість $B^{-1}$ є наслідком
+нерівності $\norm{Bx} \geq \norm{x}$ (обміркуйте!). 
+
+\noindent\ref{N:1_3_23} а)$\Rightarrow$б) $\left(\exists A^{-1} \in L(H)\right) \Rightarrow
+\left(\exists(A^*)^{-1} = (A^{-1})^* \in L(H)\right)$;
+$\exists m>0$: $\norm{Ax} \geq m\norm{x}$. Тому $\dotprod{A^* A x}{x} = \norm{Ax}^2 \geq
+m^2 \norm{x}^2$, ($\beta = m^2$);
+
+\noindent б)$\Rightarrow$а) $(A^* A \geq \beta I) \Rightarrow (\norm{Ax} \geq 
+\sqrt{\beta}\norm{x})$. Аналогічно $\norm{A^* x} \geq \sqrt{\alpha}\norm{x}$ $(\forall x \in H)$.
+Тому $\mathrm{Ker}A = \mathrm{Ker}A^* = \{0\}$, $\mathrm{Im}A = \mathrm{Im}A^* = H$ та
+$A^{-1}, (A^*)^{-1} \in L(H)$.
+
+\noindent\ref{N:1_3_25} Нехай $P_x$ --- ортопроектор на л.о.$\{x\}$. Тоді $(P_x Ax = 
+AP_x x = Ax) \Rightarrow (Ax = \lambda(x)x)$. Нехай $L = \text{л.о.}\{x,y\}$;
+$Bx = y$, $By = x$ та $Bz = z$ для $z \in L^\perp$. $BAx = \lambda(x)y; ABx = Ay = \lambda(y)y$.
+Тож $\lambda(x) = \lambda(y)$.
+
+\noindent\ref{N:1_3_33} $A^* x = \dotprod{x}{z}y$. Тепер скористайтесь задачею \ref{N:1_1_28}
+та теоремою Фреше-Рісса.
+
+\noindent\ref{N:1_3_39} Нехай $\varphi_y: x \mapsto \dotprod{Ax}{y} = \dotprod{x}{Ay}$.
+$\varphi_y \in H^*$ і при цьому $\norm{\varphi_y} = \norm{Ay}$. Якщо 
+$\underset{\norm{y}=1}{\sup} \norm{\varphi_y} = \infty$, то існують $y_n$ такі,
+що $\norm{y_n} = 1$; $\norm{\varphi_{y_n}} \to \infty$.
+Але на $\forall x \in H$: $|\varphi_{y_n}(x)| \leq \norm{Ax}$ і теорема Банаха-Штейнгауза.
