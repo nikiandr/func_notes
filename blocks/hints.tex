@@ -10,7 +10,7 @@ $\int\limits^1_0 x(t) dt < \int\limits^1_\delta x(t) dt < 1$.
 \noindent\ref{N:1_1_9}. Нехай $\bigcap\limits_{k=1}^m {Ker} \varphi_k \subset {Ker}\varphi$.
 Без втрати загальності можна вважати, що $\forall k \in \set{1, ..., m}: {Ker} \varphi_k \not\supset \bigcap\limits_{j \neq k} {Ker} \varphi_j$.
 Звідси зробіть висновок, що
-$\forall k \in \set{1, ..., n}$ $\exists \; x_k \in L$
+$\forall k \in \set{1, ..., m}$ $\exists \; x_k \in L$
 такий, що $\forall j \in \set{1, ..., m} : \varphi_j(x_k) = \delta_{jk}$ (<<символ Кронекера>>)
 і розгляньте функціонал $\sum\limits_{k=1}^m \varphi(x_k) \cdot \varphi_k$.
 
@@ -28,7 +28,7 @@ $\forall \varepsilon \in (0, C) \; \exists \; \text{проміжок } \Delta \s
 Тоді $\norm{x}^2 = \mu(\Delta)$, $\norm{Ax}^2 \geq \int\limits_\Delta (C-\varepsilon)^2 dt = (C-\varepsilon)^2 \cdot \mu(\Delta)$ (тут $\mu$ --- міра <<довжина>>).
 Звідси отримуємо $\norm{A} = \underset{[0;1]}{\max} |\varphi(t)|$.
 
-\noindent ї) $\left| (Ax)(t) \right|^2 = t^2 \cdot \left( \int\limits_0^1 s x(s) ds\right)^2 \leq t^2 \cdot \left( \int\limits_0^1 s^2 ds\right)^2 \cdot \left( \int\limits_0^1 x^2(s) ds\right)^2 = \frac{1}{3} \cdot t^2 \cdot \norm{x}^2$.
+\noindent ї) $\left| (Ax)(t) \right|^2 = t^2 \cdot \left( \int\limits_0^1 s x(s) ds\right)^2 \leq t^2 \cdot \left( \int\limits_0^1 s^2 ds\right) \cdot \left( \int\limits_0^1 x^2(s) ds\right) = \frac{1}{3} \cdot t^2 \cdot \norm{x}^2$.
 $\norm{Ax}^2 = \int\limits_0^1 \left| (Ax)(t) \right|^2 dt \leq \frac{1}{9} \cdot \norm{x}^2$, звідки $\norm{A} \leq \frac{1}{3}$.
 Зворотну нерівність отримуємо підстановкою $x(t) = t$.
 
@@ -61,7 +61,7 @@ $|\alpha| \cdot |\varphi(x)|
 > (\norm{\varphi} - \varepsilon)\cdot|\alpha|\cdot\norm{x + \frac{1}{\alpha}y}
 \geq (\norm{\varphi} - \varepsilon)\cdot|\alpha|\cdot\rho(x,\mathrm{Ker}\varphi)$.
 Звідси: $\frac{\varphi(x)}{\norm{\varphi} - \varepsilon} > \rho(x,\mathrm{Ker}\varphi)$
-і врахувати довільність $\varepsilon$.
+і врахувати довільність $\varepsilon > 0$.
 
 \noindent\ref{N:1_1_22}. Задача рівносильна \ref{N:1_1_21}: якщо
 $\varphi(x) = a$, то $\rho(x,\mathrm{Ker}\varphi) = \rho(0,L)$, де
@@ -100,7 +100,7 @@ $\mathrm{Im}A = \ell_1^*$. Беремо $\varphi\in \ell_1^*$. Будуємо п
 за правилом $c_k = \varphi(\vec{e}_k)$. Тоді $\{c_k\}$ --- обмежена послідовність, 
 $\vec{c} \in \ell_\infty$. При цьому $\varphi(\vec{x}) = \sum\limits^\infty_{k=1} c_k x_k$.
 Остання формула --- наслідок граничного переходу $\varphi(\vec{x}) = 
-\underset{n\to \infty}{\lim} \varphi\left(\sum\limits^\infty_{k=1} x_k \vec{e}_k\right)$.
+\underset{n\to \infty}{\lim} \varphi\left(\sum\limits^n_{k=1} x_k \vec{e}_k\right)$.
 Тож $\varphi = A \vec{c}$.
 
 \noindent\ref{N:1_1_42}. а) $\norm{\tilde{x}} = \sup\left\{|\varphi(x)| \mid
