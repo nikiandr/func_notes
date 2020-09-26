@@ -1,0 +1,110 @@
+% !TEX root = ../main.tex
+
+\begin{exercise}
+    Нехай $X$ --- банахів простір, $\varphi, \varphi_n \in X^{*}$.
+    Довести еквівалентність двох умов:
+    \begin{enumerate}
+        \item $\varphi_n \underset{\text{сл.}}{\rightarrow} \varphi$;
+        \item $\underset{n}{\sup}\norm{\varphi_n} < \infty$, $\exists$ щільна
+        в $X$ множина $Z$ така, що $(x \in Z) \Rightarrow (\varphi_n (x) \rightarrow \varphi(x))$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- нормований простір, $x, x_n \in X$.
+    Довести еквівалентність двох умов:
+    \begin{enumerate}
+        \item $x_n \underset{\text{сл.}}{\rightarrow} x$;
+        \item $\underset{n}{\sup}\norm{x_n} < \infty$, $\exists$ щільна
+        в $X^{*}$ множина $Z$ така, що $(\varphi \in Z) \Rightarrow (\varphi (x_n) \rightarrow \varphi(x))$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X, Y$ --- нормовані простори, $\mathrm{dim}X < \infty$. Довести:
+    \begin{enumerate}
+        \item $\left(x_n, x \in X, \; x_n \underset{\text{сл.}}{\rightarrow} x\right) \Rightarrow \left(x_n \rightarrow x\right)$;
+        \item $\left(\varphi_n, \; \varphi \in X^{*}, \varphi_n \underset{\text{сл.}}{\rightarrow} \varphi\right) \Rightarrow \left(\varphi_n \rightarrow \varphi\right)$;
+        \item $\left(A_n, A \in L(X, Y), \; A_n \overset{s}{\rightarrow} A\right) \Rightarrow \left(A_n \rightrightarrows A\right)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Наступні послідовності операторів $A_n \in L(X)$ дослідити на сильну та рівномірну збіжність:
+    \begin{enumerate}
+        \item $X = \ell_2$; $A_n \vec{x} = (x_1, x_2, ..., x_n, 0, 0, ...)$;
+        \item $X = \ell_2$; $A_n \vec{x} = (\underbrace{0, ..., 0}_{n}, x_1, x_2, ...)$;
+        \item $X = \ell_2$; $A_n \vec{x} = (\underbrace{0, ..., 0}_{n}, x_1, 0, 0, ...)$;
+        \item $X = \ell_2$; $A_n \vec{x} = (x_1, \frac{1}{2} x_2, \frac{1}{3} x_3, ...)$;
+        \item $X = \ell_p \; (1 \leq p \leq \infty)$; $A_n \vec{x} = (\underbrace{0, ..., 0}_{n-1}, x_n, x_{n+1}, ...)$;
+        \item $X = \ell_p \; (1 \leq p \leq \infty)$; $A_n \vec{x} = (\underbrace{0, ..., 0}_{n-1}, x_n, 0, 0, ...)$;
+        \item $X = \ell_p \; (1 \leq p \leq \infty)$; $A_n \vec{x} = (x_n, x_{n-1}, ..., x_1, 0, 0, ...)$;
+        \item $X = L_2 [0; 1]$; $(A_n x)(t) = x(t) \cos(nt)$;
+        \item $X = C [0; 1]$; $(A_n x)(t) = t^n x(t)$;
+        \item $X = C [0; 1]$; $(A_n x)(t) = e^{-nt} x(t)$;
+        \item $X = C [0; 1]$; $(A_n x)(t) = t \cdot \int\limits_0^1 x(s) \sin^n (\frac{\pi s}{2}) ds$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X, Y$ --- банахові простори, $A, A_n \in L(X, Y)$.
+    Довести еквівалентність двох умов:
+    \begin{enumerate}
+        \item $A_n \overset{s}{\rightarrow} A$;
+        \item $\forall x \in X$ послідовність $\left\{ A_n x\right\}$ обмежена в $Y$ та $\exists$ щільна
+        в $X$ множина $Z$, для якої $\forall z \in Z$ $A_n z \rightarrow A z$.
+    \end{enumerate} 
+\end{exercise}
+
+\begin{exercise}\label{N:1_4_13}
+    Нехай $X, Y$ --- гільбертові простори, $A : X \rightarrow Y$ --- лінійний оператор. 
+    Довести еквівалентність трьох умов:
+    \begin{enumerate}
+        \item $( x_n \rightarrow x) \Rightarrow (A x_n \rightarrow A x)$;
+        \item $(x_n \underset{\text{сл.}}{\rightarrow} x ) \Rightarrow (A x_n \underset{\text{сл.}}{\rightarrow} A x )$;
+        \item $( x_n \rightarrow x) \Rightarrow (A x_n \underset{\text{сл.}}{\rightarrow} A x )$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H_1, H_2$ --- гільбертові простори, $A: H_1 \rightarrow H_2$ та $B: H_2 \rightarrow H_1$
+    --- лінійні оператори, для яких $\forall x \in H_1, y \in H_2$ виконується $\dotprod{Ax}{y}_2 = \dotprod{x}{By}_1$.
+    Доведіть обмеженість операторів $A$ і $B$.
+    Зокрема, якщо $H_1 = H_2 = H$ та $A = B$, з рівності $\dotprod{Ax}{y} = \dotprod{x}{Ay}$,
+    що виконується дял всіх $x, y \in H$, випливає обмеженість (та самоспряженість) оператора $A$ (\ul{теорема Хелінгера-Тепліца}).
+\end{exercise}
+
+\begin{exercise*}
+    \begin{enumerate}
+        \item Доведіть твердження задачі \ref{N:1_4_13} для випадку довільних банахових просторів $X$ та $Y$.
+        \item Нехай відображення $A: X \rightarrow Y$ нормованих просторів $X$ та $Y$ задовольняє умову
+        $(\varphi \in Y^{*}) \Rightarrow (\varphi \circ A \in X^{*})$. Довести: $A \in L(X, Y)$.
+    \end{enumerate}
+\end{exercise*}
+
+\begin{exercise}
+    Нехай $H$ --- гільбертів простір. Довести:
+    \begin{enumerate}
+        \item $(x_n \underset{\text{сл.}}{\rightarrow} x, y_n \rightarrow y) \Rightarrow (\dotprod{x_n}{y_n} \rightarrow \dotprod{x}{y}$;
+        \item $(x_n \rightarrow x) \Leftrightarrow (x_n \underset{\text{сл.}}{\rightarrow} x, \norm{x_n} \rightarrow \norm{x}) 
+        \Leftrightarrow (x_n \underset{\text{сл.}}{\rightarrow} x,\; \underset{n \rightarrow \infty}{\overline{\lim}} \norm{x_n} \leq \norm{x})$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H$ --- гільбертів простір. Побудувати приклади послідовностей $\{x_n\}$ та $\{y_n\}$ в $H$, для яких виконується одна з наступних умов:
+    \begin{enumerate}
+        \item $x_n \underset{\text{сл.}}{\rightarrow} x$, $y_n \underset{\text{сл.}}{\rightarrow} y$, $\dotprod{x_n}{y_n} \not\rightarrow \dotprod{x}{y}$;
+        \item $x_n \underset{\text{сл.}}{\rightarrow} x$, $y_n \underset{\text{сл.}}{\rightarrow} y$, $x_n \not\to x$, $y_n \not \to y$, $\dotprod{x_n}{y_n} \to \dotprod{x}{y}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- банахів простір, $x, x_n \in X$, $\varphi, \varphi_n \in X^{*}$.
+    Довести збіжність $\varphi_n(x_n) \to \varphi(x)$, якщо виконується одна з наступних умов:
+    \begin{enumerate}
+        \item $x_n \to x$, $\varphi_n \to \varphi$;
+        \item $x_n \underset{\text{сл.}}{\rightarrow} x$, $\varphi_n \to \varphi$;
+        \item $x_n \to x$, $\varphi_n \underset{\text{сл.}}\rightarrow \varphi$.
+    \end{enumerate}
+\end{exercise}
