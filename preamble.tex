@@ -18,8 +18,7 @@
 \usepackage{makecell}% Прикольная настройка ячеек в tabular 
 %http://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/makecell/makecell-rus.pdf
 
-\usepackage{diagbox}
-% Разделение клеток tabular по диагонали
+\usepackage{diagbox}% Разделение клеток tabular по диагонали
 
 \usepackage{multicol} % Несколько колонок
 \usepackage{wrapfig} % Картинки посреди текста
@@ -36,29 +35,18 @@
 }
 \setlist[enumerate]{nosep}
 
-%%%% Теоремы, определения и т.д. и т.п.
+
 \theoremstyle{plain} % Это стиль по умолчанию, его можно не переопределять.
 \newtheorem{theorem}{Теорема}
 \newtheorem*{theorem*}{Теорема}
 \newtheorem{proposition}{Твердження}
-%\renewcommand{\qedsymbol}{$\blacktriangle$}
- 
-% \theoremstyle{definition} % "Определение"
-% \newtheorem{definition}{Означення}[section]
-% \newtheorem*{definition*}{Означення}
-% \newtheorem*{example}{Приклад}
 
-% \theoremstyle{remark}
-% \newtheorem*{remark}{Зауваження}
 \theoremstyle{remark}
 \newtheorem{exercise}{}[section]
 \newenvironment{exercise*}
   {\renewcommand\theexercise{\thesection.\arabic{exercise}\rlap{$^*$}}%
    \exercise\edef\@currentlabel{\thesection.\arabic{exercise}}}
   {\endexercise}
-
-%\counterwithout{equation}{chapter} % нумерация формул
-%\counterwithin*{equation}{section}
 
 %%%% Картинки
 \usepackage{graphicx}
