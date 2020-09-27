@@ -1,0 +1,88 @@
+% !TEX root = ../main.tex
+
+\begin{exercise}
+    Чи є компактним оператор $(Ax)(t) = \frac{1}{2}\left(x(t)+x(-t)\right)$,
+    що діє в просторі $C[-1;1]$?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H_1$, $H_2$ сепарабельні гільбертові простори, $A: H_1 \to H_2$ ---
+    лінійний оператор. Довести еквівалентність наступних умов:
+    \begin{enumerate}
+        \item $A$  --- компактний;
+        \item $(x_n \underset{\text{сл.}}{\to} x; \; y_n \underset{\text{сл.}}{\to} y)
+        \Rightarrow \left(\dotprod{Ax_n}{y_n} \to \dotprod{Ax}{y}\right)$;
+        \item $(x_n \underset{\text{сл.}}{\to} x) \Rightarrow (Ax_n \to Ax \;\text{(сильно)})$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise*}
+    Довести, що будь-який обмежений оператор $A: \ell_2 \to \ell_1$ є компактним.
+\end{exercise*}
+
+\begin{exercise}
+    Нехай оператор $A: \ell_1 \to \ell_2$ є вкладенням, тобто $A\vec{x} = \vec{x}$.
+    Чи буде $A$ компактним?
+\end{exercise}
+
+\begin{exercise}
+    Чи може ненульовий компактний оператор $A$ в нескінченновимірному нормованому
+    просторі задовольняти рівняння $\sum\limits^n_{k=0} c_k A^k = 0$, де $A^0 \coloneqq I$?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H$ --- гільбертів простір, $A \in L(H)$. Довести, що оператори $A$, $A^*$,
+    $A^* A$ одночасно компактні або некомпактні.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$, $B$, $C$ --- самоспряжені обмежені оператори в гільбертовому просторі $H$;
+    $A$, $C$ --- компактні, $A \leq B \leq C$. Довести $B$ --- компактний.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$ --- оператор правого зсуву в $\ell_2$: $A\vec{x} = (0,x_1,x_2,\dots)$.
+    Довести $(B \in K(\ell_2), AB=BA) \Rightarrow (B=0)$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H$ --- гільбертів простір; $A \in K(H)$; $x \in H$, $\norm{x} = 1$;
+    $\norm{Ax} = \norm{A}$. Довести, що оператор $A$ переводить $\{x\}^\perp$
+    в $\{Ax\}^\perp$
+\end{exercise}
+
+\begin{exercise}
+    Довести, що кожний компактний оператор $A$ в $\ell_2$ дорівнює сумі $A_1 + A_2$,
+    де $A_1$ --- оператор скінченного рангу, а $\norm{A_2}<1$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$ --- компактний оператор в гільбертовому просторі $H$, $M$ ---
+    замкнена опукла обмежена множина в $H$. Довести:
+    \begin{enumerate}
+        \item $A(M)$ --- замкнена множина в $H$;
+        \item $\forall y \in H$ $\exists x_0 \in M$: $\rho(A(M),y) = \norm{Ax_0 - y}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- банахів простір, $A \in L(X)$ та існує таке $m>0$, що для кожного
+    $x \in X$ виконується нерівність $\norm{Ax} \geq m \norm{x}$. Чи може $A$ бути
+    компактним оператором?
+\end{exercise}
+
+\begin{exercise}
+    Чи може образ компактного оператора бути замкненим?
+\end{exercise}
+
+\begin{exercise}
+    Навести приклад оператора $A$, який не є компактним, але $A^2$ --- компактний.
+\end{exercise}
+
+\begin{theory}
+    Нехай $H$ --- сепарабельний нескінченновимірний гільбертів простір, $\{e_n\}$ ---
+    ортонормований базис в $H$; $A \in L(H)$. $A$ називається \ul{оператором
+    Гільберта-Шмідта}, якщо зібгається ряд $\sum\limits^\infty_{n=1} \norm{A e_n}^2$.
+
+    Множину всіх операторів Гільберта-Шмідта в $H$ позначимо через $S_2(H)$. 
+\end{theory}
