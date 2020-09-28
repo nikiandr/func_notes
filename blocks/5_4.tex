@@ -1,0 +1,77 @@
+% !TEX root = ../main.tex
+
+\begin{exercise}
+    Нехай $\{e_n\}$ та $\{f_n\}$ --- два ортонормованих базиси в гільбертовому просторі $H$, 
+    $A \in L(H)$. Довести рівність: 
+    $\sum\limits_{n = 1}^\infty \norm{A e_n}^2 = \sum\limits_{n = 1}^\infty \norm{A f_n}^2$ (точніше: якщо
+    один ряд збігається, то збігається інший та вони мають однакові суми).
+\end{exercise}
+
+\begin{theory}
+    Число $\norm{A}_2 = \left(\sum\limits_{n = 1}^\infty \norm{A e_n}^2\right)^{\frac{1}{2}}$ називається
+    \underline{абсолютною нормою} оператора $A$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $A \in S_2 (H)$; $B \in L(H)$. Довести наступні твердження:
+    \begin{enumerate}
+        \item $A^* \in S_2 (H)$; $\norm{A^*}_2 = \norm{A}_2$;
+        \item $\norm{A} \leq \norm{A}_2$;
+        \item $AB \in S_2 (H)$; $BA \in S_2 (H)$; $\norm{AB}_2 \leq \norm{A}_2 \cdot \norm{B}$; 
+        $\norm{BA}_2 \leq \norm{A}_2 \cdot \norm{B}$;
+        \item $A \in K(H)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Довести наступні твердження:
+    \begin{enumerate}
+        \item $S_2(H)$ є лінійним простором за стандартними операціями над лінійними операторами; 
+        \item $S_2(H)$ є гільбертовим простором із скалярним добутком: 
+        $(A, B) = \sum\limits_{n = 1}^\infty \left(A e_n, B e_n\right)$, при чому сума цього ряду від вибору
+        ортонормованого базису не залежить. Зокрема, $S_2(H)$ --- банахів за нормою $\norm{\cdot}_2$;
+        \item $S_2(H)$ є незамкненою множиною в $L(H)$ (за нормою в $L(H)$).
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}\label{N:1_5_42}
+    Нехай $\{a_n\}$ --- числова послідовність; оператор $A:\ell_2 \rightarrow \ell_2$ визначений формулою:
+    $A \vec{x} = \left(a_1 x_1, a_2 x_2, \dots \right)$. З'ясувати:
+    \begin{enumerate}
+        \item за якою умовою на послідовність $\{a_n\}$ оператор $A$ буде оператором Гільберта-Шмідта;
+        \item за якою умовою на послідовність $\{a_n\}$ оператор $A$ буде компактним, але не оператором Гільберта-Шмідта?
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Лінійний оператор $A$ на сепарабельному гільбертовому просторі називається \underline{ядерним}, якщо він
+    може бути представлений як добуток: $A = BC$, де $B, C \in S_2(H)$. Множину всіх ядерних операторів позначимо
+    через $S_1(H)$.
+\end{theory}
+
+\begin{exercise}
+    Довести: $S_1(H) \subset S_2(H)$.
+\end{exercise}
+
+\begin{exercise}
+    За якої умови на $\{a_n\}$ оператор в $\ell_2$ із задачі \ref{N:1_5_42} буде:
+    \begin{enumerate}
+        \item ядерним;
+        \item оператором Гільберта-Шмідта, але не ядерним.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Довести:
+    \begin{enumerate}
+        \item $(A \in S_1(H)) \Rightarrow (A^* \in S_1(H))$;
+        \item $(A \in S_1(H)) \Rightarrow$ (число $Tr A = \sum\limits_{n = 1}^\infty (A e_n, e_n)$ є скінченним
+        і не залежить від вибору ортонормованого базису $\{e_n\}$);
+        \item $(A \in S_1(H); B \in L(H)) \Rightarrow (AB \in S_1(H); BA \in S_1(H))$; 
+        \item[г)*] $(A \in S_1(H)) \Rightarrow$ (ряд $\sum\limits_{n = 1}^\infty |(A e_n, e_n)|$ збіжний для будь-якого ортонормованого базису).
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A, B \in S_2(H)$. Довести: $Tr (AB) = Tr (BA)$.
+\end{exercise}
