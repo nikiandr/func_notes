@@ -119,6 +119,13 @@ $\norm{A_Z} = 1$ і, якщо $\mu (Z_1 \bigtriangleup Z_2) > 0$, $\norm{A_{Z_1}
 \noindent\ref{N:1_1_46}. Розглянути на $\ell_2$ функціонали $\varphi_n (\vec{\beta}) = \sum\limits_{k = 1}^{n} \alpha_k \beta_k$
 і застосувати теорему Банаха-Штейнгауза.
 
+\noindent\ref{N:1_1_48}. При кожному фіксованому $x: \varphi_x(y) = \varphi(x, y)$ --- лінійний обмежений функціонал на $Y$. Тому
+$|\varphi(x, y)| \leq \norm{\varphi_x} \cdot \norm{y}$. Далі для всіх $y$, що задовольняють нерівність $\norm{y} \leq 1$
+розглянемо (обмежені) функціонали $\psi_y (x) = \varphi(x, y)$ на просторі $X$. $\forall x \in X$ значення цієї
+сім'ї функціоналів: $\{\psi_y (x) | \norm{y} \leq 1\}$ є обмеженою множиною $(|\psi_y(x)| \leq \norm{\varphi_x})$ і тому за теоремою
+Банаха-Штейнгауза: $|\varphi(x, y)| = |\psi_y(x)| \leq K\norm{x}$. Якщо тепер відмовитись від обмеженості $\norm{y}$, то приходимо до
+шуканої нерівності.
+
 \noindent\ref{N:1_2_8}. Нехай $A: H_1 \to H_2$ --- ізоморфізм і $H_1$ --- сепарабельний
 гільбертів простір. Доведемо сепарабельність простору $H_2$. Нехай система $\{e_n\}$ ---
 ортонормована в $H_1$. Тоді система $\{A e_n\}$ --- ортонормована в $H_2$. Оскільки
@@ -184,13 +191,13 @@ $(H_2 \subset H_1) \Rightarrow (H_2 \perp (H_1 \ominus H_2)).$
 $(P_1 - P_2)^2 = P_1 - P_2$ та $P_1 \geq P_2$. Якщо $P_1 \geq P_2$, то $H_2 \subset H_1$,
 а тому $\forall x \in H$: $P_1 P_2 x = P_2 x$.
 
-\noindent\ref{N:1_3_22} б) $((I + A^* A)x = 0) \Rightarrow \left(0 = \dotprod{(I + A^* A)x}{x}
+\noindent\ref{N:1_3_22}. б) $((I + A^* A)x = 0) \Rightarrow \left(0 = \dotprod{(I + A^* A)x}{x}
 = \norm{x}^2 + \norm{Ax}^2\right) \Rightarrow (x=0) \Rightarrow (\mathrm{Ker}(I + A^* A) = \{0\})$.
 Оскільки $B = I + A^* A$ --- самоспряжений, то $\overline{\mathrm{Im}B} =
 (\mathrm{Ker}B)^\perp = H$. Замкненість $\mathrm{Im}B$ та обмеженість $B^{-1}$ є наслідком
 нерівності $\norm{Bx} \geq \norm{x}$ (обміркуйте!). 
 
-\noindent\ref{N:1_3_23} а) $\Rightarrow$ б): $\left(\exists \;A^{-1} \in L(H)\right) \Rightarrow
+\noindent\ref{N:1_3_23}. а) $\Rightarrow$ б): $\left(\exists \;A^{-1} \in L(H)\right) \Rightarrow
 \left(\exists\;(A^*)^{-1} = (A^{-1})^* \in L(H)\right)$;
 $\exists \;m>0$: $\norm{Ax} \geq m\norm{x}$. Тому $\dotprod{A^* A x}{x} = \norm{Ax}^2 \geq
 m^2 \norm{x}^2$, $\beta = m^2$;
@@ -200,16 +207,37 @@ m^2 \norm{x}^2$, $\beta = m^2$;
 Тому $\mathrm{Ker}A = \mathrm{Ker}A^* = \{0\}$, $\mathrm{Im}A = \mathrm{Im}A^* = H$ та
 $A^{-1}, (A^*)^{-1} \in L(H)$.
 
-\noindent\ref{N:1_3_25} Нехай $P_x$ --- ортопроектор на л.о.$\{x\}$. Тоді $(P_x Ax = 
+\noindent\ref{N:1_3_25}. Нехай $P_x$ --- ортопроектор на л.о.$\{x\}$. Тоді $(P_x Ax = 
 AP_x x = Ax) \Rightarrow (Ax = \lambda(x)x)$. Нехай $L = \text{л.о.}\{x,y\}$;
 $Bx = y$, $By = x$ та $Bz = z$ для $z \in L^\perp$. $BAx = \lambda(x)y; ABx = Ay = \lambda(y)y$.
 Тож $\lambda(x) = \lambda(y)$.
 
-\noindent\ref{N:1_3_33} $A^* x = \dotprod{x}{z}y$. Тепер скористайтесь задачею \ref{N:1_1_28}
+\noindent\ref{N:1_3_33}. $A^* x = \dotprod{x}{z}y$. Тепер скористайтесь задачею \ref{N:1_1_28}
 та теоремою Фреше-Рісса.
 
-\noindent\ref{N:1_3_39} Нехай $\varphi_y: x \mapsto \dotprod{Ax}{y} = \dotprod{x}{Ay}$.
+\noindent\ref{N:1_3_39}. Нехай $\varphi_y: x \mapsto \dotprod{Ax}{y} = \dotprod{x}{Ay}$.
 $\varphi_y \in H^*$ і при цьому $\norm{\varphi_y} = \norm{Ay}$. Якщо 
 $\underset{\norm{y}=1}{\sup} \norm{\varphi_y} = \infty$, то існують $y_n$ такі,
 що $\norm{y_n} = 1$, $\norm{\varphi_{y_n}} \to \infty$.
 Але $\forall x \in H$: $|\varphi_{y_n}(x)| \leq \norm{Ax}$ і треба скористатися теоремою Банаха-Штейнгауза.
+
+\noindent\ref{N:1_4_13}. в) $\Rightarrow$ а). $x_n \rightarrow 0$. Нехай $A x_n \not\rightarrow 0$. Тоді існує
+$x_{n_k} \rightarrow 0$ така, що $\norm{A x_{n_k}} \geq \delta > 0$. Тоді 
+$y_k = \frac{1}{\sqrt{\norm{x_{n_k}}}} x_{n_k} \rightarrow 0$, але $\{A y_k\}$ --- необмежена.
+
+\noindent\ref{N:1_4_14}. Використовуємо \ref{N:1_4_13}. $(x_n \xrightarrow[\text{сл}]{} x) \Rightarrow (Ax_n \xrightarrow[\text{сл}]{} Ax)$.
+
+\noindent\ref{N:1_4_16}. б). 
+$\left(x_n \xrightarrow[\text{сл}]{} x; \norm{x_n} \rightarrow \norm{x}\right) \Rightarrow \left(\norm{x_n - x}^2 = \norm{x_n}^2 + \norm{x}^2 - (x_n, x) - (x, x_n) \rightarrow 0\right)$.
+$\left(x_n \xrightarrow[\text{сл}]{} x; \overline{\lim\limits_{n \rightarrow \infty}} \norm{x_n} \leq \norm{x}\right)$
+$\Rightarrow \left(\overline{\lim\limits_{n \rightarrow 0}} \norm{x_n - x}^2 = \overline{\lim\limits_{n \rightarrow 0}} (\norm{x_n}^2 - \norm{x}^2) \leq 0\right)$
+$\Rightarrow (\norm{x_n - x} \rightarrow 0)$.
+
+\noindent\ref{N:1_4_22}. Позначимо через $A: X \rightarrow Y$ відображення $Ax = \lim\limits_{n \rightarrow \infty} A_n x$.
+$A(\alpha x + \beta y) = \lim\limits_{n \rightarrow \infty} A_n(\alpha x + \beta y) = \alpha Ax + \beta Ay$.
+$\exists C > 0: \forall n: \norm{A_n} \leq C$ (за теоремою Банаха-Штейнгауза). Тому 
+$\norm{Ax} = \lim\limits_{n \rightarrow \infty} \norm{A_n x} \leq C\norm{x}$. Тож $A \in L(X; Y)$.
+
+\noindent\ref{N:1_4_28}. Достатньо довести сильну фундаментальність $\{A_n\}$. Використовуємо \ref{N:1_3_21} б): 
+$(m \geq n) \Rightarrow (B = A_m - A_n \geq 0) \Rightarrow \left(\norm{A_m x - A_n x}^2 \leq 2C((A_m x, x) - (A_n x, x))\right)$ та
+збіжність $\{(A_n x, x)\}$ за класичною теоремою Вейєрштрасса. 
