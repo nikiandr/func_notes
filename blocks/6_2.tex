@@ -1,0 +1,81 @@
+% !TEX root = ../main.tex
+
+\begin{exercise}
+    Оператори $A: \ell_2 \to \ell_2$ дослідити на неперервну оборотність:
+    \begin{enumerate}
+        \item $A\vec{x} = (0, x_1, x_2, ...)$;
+        \item $A\vec{x} = (x_2, x_3, x_4, ...)$;
+        \item $A\vec{x} = (x_1+x_2, x_2, x_3, ...)$;
+        \item $A\vec{x} = (x_3, x_4, x_2, x_1, x_5, x_6, x_7, ...)$;
+        \item $A\vec{x} = (x_1+x_2, x_1 - x_2 + x_3, x_2 + x_3 + x_4, x_4, x_5, ...)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    $A \in L(X, Y)$. Довести, що якщо обернений оператор $\inv{A}$
+    існує, то він єдиний.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A, B \in L(X)$ і є неперервно оборотними.
+    Довести: $AB$ --- неперервно оборотний і при цьому $\inv{AB} = \inv{B} \inv{A}$.
+\end{exercise}
+
+\begin{exercise}
+    $A: C[0;1] \to C[0;1]$. Дослідити $A$ на неперервну оборотність та знайти $\inv{A}$ (якщо існує):
+    \begin{enumerate}
+        \item $(Ax)(t) = \int\limits_0^t x(s)ds$;
+        \item $(Ax)(t) = x(t) - \int\limits_0^t x(s)ds$;
+        \item $(Ax)(t) = x(t) - \int\limits_0^1 t s x(s) ds$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    При яких $\lambda \in \real$ оператор $(A_\lambda x)(t) = x(t) + \lambda \int\limits_0^1 (t+s) x(s) ds$,
+    що діє в просторі $C[0;1]$, має неперервний обернений? Знайти $\inv{A_\lambda}$.
+\end{exercise}
+
+\begin{exercise}
+    Оператор $A$ в просторі $L_2 [0;1]$ визначено формулою $(Ax)(t) = x(t) - \int\limits_0^t x(s) ds$.
+    Дослідити $A$ на неперервну оборотність та знайти $\inv{A}$, якщо він існує.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A, B \in L(X)$, $B$ --- неперервно оборотний.
+    Довести $\norm{AB} \geq \norm{A} \cdot \norm{\inv{B}}^{-1}$.
+\end{exercise}
+
+\begin{exercise}
+    $X$ --- банахів простір, $A \in L(X)$, $\left| \lambda\right| > \norm{A}$.
+    Довести: $A - \lambda I$ --- неперервно оборотний оператор.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H$ --- гільбертів простір, $A \in L(H)$, $\underset{\norm{x} = 1}{\inf} \norm{Ax} > 0$, $\mathrm{Ker} A^* = {0}$.
+    Довести: $A$ --- неперервно оборотний.
+\end{exercise}
+
+\begin{exercise}
+    Розглянемо в просторах $C[0;1]$ та $L_2 [0;1]$ оператор взяття первісної \\
+    $(Ax)(t) = \int\limits_0^t x(s) ds$. Довести, що у цього оператора немає
+    ані лівого, ані правого оберненого.
+\end{exercise}
+
+\begin{exercise}
+    Нехай оператор $A: C^1 [0;1] \to C[0;1]$ визначено формулою $(Ax)(t) = x^\prime(t)$.
+    Довести, що він не є оборотним. Знайти правий обернений оператор.
+\end{exercise}
+
+\begin{exercise}
+    Оператор $A$ в просторі $C[0;1]$ визначено формулою $(Ax)(t) = x(t) + \int\limits_0^1 x(s) ds$.
+    Довести його неперервну оборотність та знайти $\inv{A}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A: \vec{x} \mapsto (0, x_1, x_2, ...)$ --- оператор правого зсуву в $\ell_2$.
+    Нехай $B \in L(\ell_2)$, $\norm{B} < 1$. Довести, що оператор $A+B$ не є оборотним.
+\end{exercise}
+
+\begin{theory}
+    \ul{Наслідок:} множина оборотних операторів не щільна в $L(\ell_2)$.
+\end{theory}
