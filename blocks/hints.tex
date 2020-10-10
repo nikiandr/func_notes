@@ -241,3 +241,31 @@ $\norm{Ax} = \lim\limits_{n \rightarrow \infty} \norm{A_n x} \leq C\norm{x}$. Т
 \noindent\ref{N:1_4_28}. Достатньо довести сильну фундаментальність $\{A_n\}$. Використовуємо \ref{N:1_3_21} б): 
 $(m \geq n) \Rightarrow (B = A_m - A_n \geq 0) \Rightarrow \left(\norm{A_m x - A_n x}^2 \leq 2C((A_m x, x) - (A_n x, x))\right)$ та
 збіжність $\{(A_n x, x)\}$ за класичною теоремою Вейєрштрасса. 
+
+\noindent\ref{N:1_5_14}. $\exists \Delta = [\alpha,\beta] \subset [a,b]$ такий, що
+$(t \in [\alpha,\beta]) \Rightarrow (\inf|f(t)| > 0)$. Нехай $|f| \Big|_\Delta
+\geq \delta > 0$. Тоді оператор $\tilde{A}: C(\Delta) \to C(\Delta)$, що визначений
+формулою: $C(\Delta) \ni x(\cdot) \mapsto f \Big|_\Delta \cdot x(\cdot) \in C(\Delta)$
+не є компактним (обміркуйте) (образ кулі містить кулю). Розглянемо оператори 
+$B: C[a,b] \ni x \mapsto x \Big|_\Delta \in C(\Delta)$ та $\tilde{B}: C(\Delta) \to C[a,b]$,
+що будується так: $(\tilde{B}x)(t) = x(t)$, якщо $t\in \Delta$; $(\tilde{B}x)(t) = x(\beta)$,
+для $t\geq \beta$; $(\tilde{B}x)(t) = x(\alpha)$, для $t\leq \alpha$. Тоді
+$B \in L(C[a,b], C(\Delta))$; $\tilde{B} \in L(C(\Delta), C[a,b])$; $\tilde{A} = B \cdot A
+\cdot \tilde{B}$ і припущення про компактність $A$ приводить до суперечності.
+
+\noindent\ref{N:1_5_15}. г) $x_n(t) = t^{\frac{1}{n}}$ --- обмежена послідовність;
+$(Ax_n)(t)$ не має збіжної підпослідовності.
+
+\noindent\ref{N:1_5_17}. б) Нехай $Z$ --- обмежена множина в $L_2[0;1]$. Тоді $Z$
+складається з інтегровних на $[0;1]$ функцій і обмежена в $L_1[0;1]$ (Коші-Буняковський).
+$A(Z) \subset C[0;1]$; $A(Z)$ --- рівномірно обмежені за нормою $C[0;1]$ та одностайно
+неперервні: $\left|(Ax)(t_1) - (Ax)(t_2)\right| \leq \int\limits^1_0 |x| \cdot j_{[t_1,t_2]} ds \leq
+\sqrt{t_2 - t_1} \left(\int\limits^1_0 x^2(s) ds\right)^{\frac{1}{2}}$, (тут $t_2 < t_1$).
+Тому $A(Z)$ --- передкомпакт в $C[0;1]$. Але $\varepsilon$-сітка в $A(Z)$ за нормою $C[0;1]$ 
+також є $\varepsilon$-сіткою за нормою $L_2[0;1]$ $\left(\norm{x}_{L_2[0;1]} \leq 
+\norm{x}_{C[0;1]} \right)$. $A$ --- компактний.
+
+\noindent в) $A(B[0;1]) \supset \set{y(t) \cdot j_{[\frac{1}{2};1]} \mid y \in B[0; \frac{1}{2}]}$.
+
+\noindent ґ) $(B_1 x)(t) = \int\limits^t_0 s x(s) ds$; $(B_2 x)(t) = t x(t)$.
+$B_1$ --- компактний, $B_2$ --- обмежений, $A = B_2 \circ B_1$.
