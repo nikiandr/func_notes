@@ -1,0 +1,119 @@
+% !TEX root = ../main.tex
+
+\begin{theory}
+    Нехай $X$ --- комплексний банахів простір; $A \in L(X)$; $\lambda \in \complex$.
+    Для оператора $\lambda - A$ є наступні можливості:
+    \begin{enumerate}[label=\arabic*)]
+        \item $\uline{Ker(\lambda - A) = {0}}$; $\uline{Im(\lambda - A)} = X$. В цьому разі 
+        за теоремою Банаха про обернений оператор, $\lambda - A$ є неперервно оборотним 
+        оператором, а тому $\exists \inv{(\lambda - A)} \in L(X)$. Такі числа $\lambda$ 
+        називаються \ul{регулярними значеннями  оператора $A$}, а множина 
+        \ul{$\rho(A) = \rho_A$} всіх регулярних значень називається 
+        \ul{резольвентною множиною оператора $A$}.
+    \end{enumerate}
+    Операторнозначна функція $\rho_A \in \lambda \rightarrow \inv{(\lambda - A)} \in L(X)$ 
+    називається \ul{резольвентою оператора $A$} і позначається так:
+    $R_A(\lambda) = R(\lambda; A) = R_\lambda(A) = \inv{(\lambda - A)}$
+    \begin{enumerate}[label=\arabic*), resume]
+        \item $Ker(\lambda - A) \neq {0}$. В цьому разі існує ненульовий вектор $x_0$, 
+        для якого $Ax_0 = \lambda x_0$. $\lambda$ називається 
+        \ul{власним числом оператора $A$}; $x_0$ --- відповідним \ul{власним вектором}.
+        Множина $\sigma_\text{т}(A)$ всіх власних чисел A утворює 
+        \uline{<<точковий спектр>> оператора $A$}.
+        \item $Ker(\lambda - A) = {0}$; $Im(\lambda - A) \neq X$. 
+        У випадку нескінченновимірного простору X такі числа можуть існувати;
+        найчастіше їх поділяють на дві частини:
+        \begin{enumerate}
+            \item $\overline{Im(\lambda - A)} = X$;
+            \item $\overline{Im(\lambda - A)} \neq X$;
+        \end{enumerate}
+        У випадку 3а) такі числа утворюють \uline{<<неперервний спектр>> 
+        оператора $A$}: \ul{$\sigma_\text{н}(A)$}; у випадку 3б) такі $\lambda$ 
+        утворюють \uline{<<залишковий спектр>>} \ul{оператора $A$}
+        : \ul{$\sigma_\text{з}(A)$}. 
+    \end{enumerate}
+    Об'єднання $\sigma_\text{н}(A)
+    \bigvee \sigma_\text{з}(A) \bigvee \sigma_\text{т}(A) = 
+    \uline{\sigma(A)} = \uline{\sigma_A}$ називається 
+    \ul{спектром оператора} A. Тож $\complex = \rho(A) \bigvee \sigma(A)$.
+\end{theory}
+
+\begin{exercise}
+    \begin{enumerate}
+        \item Доведіть, що у випадку: $dim X < \infty$ має місце рівність: 
+        $\sigma_\text{т}(A) = \sigma(A)$ для будь-якого лінійного оператора 
+        $A: X \rightarrow X$.
+        \item Наведіть приклад комплексного банахова простору $X$ і 
+        оператора $A \in L(X)$, для якого: $Ker A = {0}$ та $Im A \neq X$
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(X)$; $|\lambda| > \norm{A}$. Доведіть, що $\lambda \in 
+    \rho(A)$.
+\end{exercise}
+
+\begin{theory}
+    Число $r(A) = \sup\{|\lambda| : \lambda \in \sigma(A)\}$ називається 
+    \ul{спектральним радіусом} оператора $A$. За результатом задачі 2 
+    маємо нерівність: $r(A) < \norm{A}$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $A \in L(X)$, де $X$ --- комплексний банахів простір. Доведіть: 
+    $\sigma(A)$ --- компакт в $\complex$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(X)$. Довести: $r(A) = \max\{|\lambda| : \lambda \in \sigma(A)\}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\{a_n\}$ --- обмежена числова послідовність в $\complex$; оператор $A: \ell_2 
+    \rightarrow \ell_2$ визначено формулою: $A\vec{x} = (a_1 x_1, a_2 x_2, ...)$. 
+    Знайти v, $r(A)$ та 
+    побудувати резольвенту $R_\lambda (A)$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $P$ - ортопроектор в гільбертовому просторі $H$. Знайти 
+    $\sigma_\text{т}(P)$, $\sigma_\text{н}(P)$, $\sigma_\text{з}(P)$; $R_\lambda(P)$.
+\end{exercise}
+
+\begin{exercise}
+    Для оператора $A \in L(C[0, 1])$ знайти 
+    $\sigma_\text{т}(A)$, $\sigma_\text{н}(A)$, $\sigma_\text{з}(A)$; $r(A)$, $R_\lambda(A)$, 
+    якщо:
+    \begin{enumerate}
+        \item $(Ax)(t) = tx(t)$;
+        \item $(Ax)(t) = a(t)x(t)$, де $a \in C[0, 1]$;
+        \item $(Ax)(t) = x(0) + tx(1)$;
+        \item $(Ax)(t) = \int\limits_0^t x(s) ds$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Для оператора $A \in L(\ell_2)$ знайти 
+    $\sigma_\text{т}(A)$, $\sigma_\text{н}(A)$, $\sigma_\text{з}(A)$, $r(A)$, якщо:
+    \begin{enumerate}
+        \item $A\vec{x} = (x_1 + x_2, x_2, x_3, ...)$;
+        \item $A\vec{x} = (x_3 , x_1, x_2, x_4, x_5, ...)$;
+        \item $A\vec{x} = (x_1 , x_2, x_3, 0, 0, ...)$;
+        \item $A\vec{x} = (-x_1, x_2, -x_3, ..., (-1)^n x_n, ...)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $H$ --- гільбертів простір. оператор $A \in L(H)$ визначений формулою: 
+    $Ax = (x, x_0)x_1$, де $x_0$, $x_1$ --- фіксовані вектори. Знайти
+    $\sigma_\text{т}(A)$, $\sigma_\text{н}(A)$, $\sigma_\text{з}(A)$, $r(A)$, $R_\lambda(A)$.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що для $\lambda, \mu \in \rho(A)$ виконуються рівності: 
+    \begin{enumerate}
+        \item $AR_\lambda(A) = R_\lambda(A)A$;
+        \item $R_\lambda(A) - R_\mu(A) = (\mu - \lambda)R_\lambda R_\mu = (\mu - \lambda) 
+        R_\mu R_\lambda$ (\ul{тотожність Гільберта}).
+    \end{enumerate}
+\end{exercise}
