@@ -48,7 +48,7 @@ $y_k = \frac{1}{\varphi(x_{n_k})}x_{n_k} \to 0$, $\varphi(y_k)=1 \; \forall \;k$
 замкнене в $X$.
 
 \noindent\ref{N:1_1_20}. Нехай $x_n \to 0$, але $\varphi(x_n) \not\to 0$.
-Тоді існує підпослідовність $x_{n_k}$ така, що $|\varphi(x_{n_k}| \geq \delta > 0$.
+Тоді існує підпослідовність $x_{n_k}$ така, що $|\varphi(x_{n_k})| \geq \delta > 0$.
 Тоді $y_k = \frac{1}{\sqrt{\norm{x_{n_k}}}} x_{n_k} \to 0$, але $|\varphi(y_k)|\to\infty$.
 
 \noindent\ref{N:1_1_21}. $\rho(x,\mathrm{Ker}\varphi) \geq \inf
@@ -69,7 +69,7 @@ $L = \set{y \mid \varphi(y) = a}$.
 
 \noindent\ref{N:1_1_26}. Якщо ряд $\sum\limits^\infty_{k=0} A^k$ збігається,
 то $\norm{A^k} \to 0$, $k \to \infty$. Якщо існує $n \in \mathbb{N}$, для
-якого $\norm{A^k} < 1$, то для $m \in \set{0,1,\dots,n-1}$ ряд
+якого $\norm{A^n} < 1$, то для $m \in \set{0,1,\dots,n-1}$ ряд
 $\sum\limits^\infty_{k=0} \norm{A^{m+kn}}$ збіжний, тому що $\norm{A^{m+kn}}
 \leq \norm{A^m} \cdot \norm{A^n}^k$. Абсолютна збіжність вихідного ряду є
 наслідком рівності $\sum\limits^\infty_{k=0} \norm{A^k} = 
@@ -164,7 +164,7 @@ $\varphi_n (y) = \left(y, \sum\limits_{k = 1}^n x_k\right)$.
 
 \noindent\ref{N:1_2_27}. Якщо $\inf \lambda_k > 0$, то нова норма еквівалентна стандартній в $\ell_2$.
 Якщо $\inf \lambda_k = 0$, то в разі повноти простору для функціоналів 
-$\varphi_k (y) = (\frac{1}{\lambda_k} \vec{e_k}, \vec{y})$ мали б суперечність із теоремою Банаха-Штейнгауза.
+$\varphi_k (y) = (\frac{1}{\lambda_k} \vec{e_k}, \vec{y})$ була б суперечність із теоремою Банаха-Штейнгауза.
 
 \noindent\ref{N:1_2_32}. Якщо послідовність функцій $\{f_n\}$ має обмежені у сукупності похідні, то ця
 система функцій одностайно неперервна. Крім того, умови 
@@ -173,7 +173,7 @@ $\int\limits_0^{2\pi} f_n^2 (x) dx = 1 \; \forall \;n \in \mathbb{N}$ разом
 За теоремою Арцела-Асколі: $\{f_n\}$ --- передкомпакт в $C[0; 2\pi]$, а тому й в $L_2 [0; 2\pi]$, що
 суперечить її ортонормованості.
 
-\noindent\ref{N:1_3_14}. Скористаємось тим, що $A^* A$ --- самоспряжений оператор та
+\noindent\ref{N:1_3_14}. б) Скористаємось тим, що $A^* A$ --- самоспряжений оператор та
 результатом задачі \hyperref[N:1_3_12_h]{\ref*{N:1_3_12} \ref*{N:1_3_12_h}}. $\norm{A^2}^2 = \norm{(A^2)^*A^2} = 
 \norm{(A^* A)^2} = \norm{A^* A}^2 = \norm{A}^4$.
 
@@ -236,7 +236,7 @@ $\Rightarrow (\norm{x_n - x} \rightarrow 0)$.
 \noindent\ref{N:1_4_22}. Позначимо через $A: X \rightarrow Y$ відображення $Ax = \lim\limits_{n \rightarrow \infty} A_n x$.
 $A(\alpha x + \beta y) = \lim\limits_{n \rightarrow \infty} A_n(\alpha x + \beta y) = \alpha Ax + \beta Ay$.
 $\exists C > 0: \forall n: \norm{A_n} \leq C$ (за теоремою Банаха-Штейнгауза). Тому 
-$\norm{Ax} = \lim\limits_{n \rightarrow \infty} \norm{A_n x} \leq C\norm{x}$. Тож $A \in L(X; Y)$.
+$\norm{Ax} = \lim\limits_{n \rightarrow \infty} \norm{A_n x} \leq C\norm{x}$. Тож $A \in L(X, Y)$.
 
 \noindent\ref{N:1_4_28}. Достатньо довести сильну фундаментальність $\{A_n\}$. Використовуємо \ref{N:1_3_21} б): 
 $(m \geq n) \Rightarrow (B = A_m - A_n \geq 0) \Rightarrow \left(\norm{A_m x - A_n x}^2 \leq 2C((A_m x, x) - (A_n x, x))\right)$ та
