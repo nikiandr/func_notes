@@ -1,0 +1,135 @@
+% !TEX root = ../main.tex
+
+\begin{exercise}
+    Довести, що для обмеженого оператора в гільбертовому просторі виконується
+    рівність $\sigma(A^{*}) = \set{\overline{\lambda} \mid \lambda \in \sigma (A)}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- комплексний банахів простір, $A \in L(X)$. Довести:
+    \begin{enumerate}
+        \item $\left( \lambda \in \sigma(A)\right) \Rightarrow \left( \lambda^n \in \sigma(A^n)\right)$;
+        \item $\sigma(A^n) = \set{\lambda^n \mid \lambda \in \sigma(A)}$ ($n\in \natur$);
+        \item $\sigma(p(A)) = \set{p(\lambda) \mid \lambda \in \sigma(A)}$, де $p(A) = a_0 A^n + a_1 A^{n-1} + ... + a_{n-1} A + a_n I$ ($a_k \in \complex$);
+        \item якщо $A$ --- неперервно оборотний, то $\left( \lambda \in \sigma(A)\right) \Rightarrow \left( \lambda^{-1} \in \sigma(\inv{A})\right)$.
+    \end{enumerate}
+    Які з цих тверджень мають місце і для дійсного банахового простору?
+\end{exercise}
+
+\begin{theory}
+    \begin{theorem*}
+        $r(A) = \underset{n \to \infty}{\lim} \sqrt[\leftroot{-3}\uproot{3}n]{\norm{A^n}}$
+    \end{theorem*}
+    \begin{theorem*}
+        $\left( A \in L(X)\right) \Rightarrow (\sigma(A) \neq \varnothing)$
+    \end{theorem*}
+\end{theory}
+
+\begin{exercise}
+    Нехай $A, B \in L(\ell_2)$ є відповідно операторами лівого та правого зсуву:
+    $A \vec{x} = (x_2, x_3, ...)$, $B\vec{x} = (0, x_1, x_2, x_3, ...)$.
+    Знайти $\sigma_\text{т}(A)$, $\sigma_\text{н}(A)$, $\sigma_\text{з}(A)$,
+    $\sigma_\text{т}(B)$, $\sigma_\text{н}(B)$, $\sigma_\text{з}(B)$.
+\end{exercise}
+
+\begin{exercise}
+    Для операторів $A \in L(L_2 [0;1])$ знайти $\sigma_\text{т}(A)$, $\sigma_\text{н}(A)$, $\sigma_\text{з}(A)$,
+    $r(A)$, $R_\Lambda(A)$, якщо:
+    \begin{enumerate}
+        \item $(Ax)(t) = t x(t)$;
+        \item $(Ax)(t) = a(t) x(t)$, де $a(\cdot) \in C[0;1]$;
+        \item $(Ax)(t) = \int\limits_0^t x(s) ds$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Оператор $A \in L(C[0; \frac{1}{2}])$ визначено формулою $(Ax)(t) = t x(t^2)$. Довести: $r(A) = 0$.
+\end{exercise}
+
+\begin{exercise}
+    Знайти спектральний радіус оператора $A \in L(X)$, визначеного формулою
+    $(Ax)(t) = \int\limits_0^t K(t, s) x(s) ds$, де $K \in C([0;1] \times [0;1])$ в разі, якщо:
+    \begin{enumerate}
+        \item $X = C[0;1]$;
+        \item $X = L_2 [0;1]$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Оператор $A \in L(C[0;1])$ визначено як $(Ax)(t) = x(t) + \int\limits_0^t e^{t-s} x(s) ds$.
+    Обчислити $r(A)$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- банахів простір, $A \in L(X)$. Довести, що спектральний радіус $A$ не зміниться, якщо
+    в $X$ перейти до еквівалентної норми.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що будь-який непорожній компакт в $\complex$ є спектром деякого обмеженого оператора.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- банахів простір, $A \in L(X)$, $\lambda \in \complex$. Довести,
+    що якщо існує така послідовність $\{ x_n\} \subset X$, для якої $\norm{x_n} = 1$ ($\forall n \in \natur$)
+    і $\underset{n \to \infty}{\lim} (A x_n - \lambda x_n) = 0$, то $\lambda \in \sigma (A)$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X$ --- банахів простір, $A, B \in L(X)$, $AB = BA$. Довести:
+    \begin{enumerate}
+        \item $r(A B) \leq r(A) \cdot r(B)$;
+        \item[б)*] $r(A+B) \leq r(A) + r(B)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A, B \in L(X)$. Довести:
+    \begin{enumerate}
+        \item $\left( 0 \notin \sigma(A)\right) \Rightarrow \left( \sigma(AB) = \sigma(BA)\right)$;
+        \item $\sigma(AB) \setminus \{ 0 \} = \sigma(BA) \setminus \{ 0 \}$;
+        \item $r(AB) = r(BA)$;
+        \item $\left( AB - BA = \lambda I \right) \Rightarrow \left( \lambda = 0\right)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(X)$, $A^2$ має власний вектор. Довести: $A$ має власний вектор.
+\end{exercise}
+
+\begin{exercise}
+    $A \in L(X)$, $| \lambda | > r(A)$. 
+    Довести: $\norm{R_\lambda (A)} \leq \left( | \lambda | - \norm{A}\right)^{-1}$.
+\end{exercise}
+
+\begin{exercise}
+    $A \in L(X)$, $\lambda \in \rho (A)$, $\mu \in \complex$, $|\mu| \leq \norm{R_\lambda (A)}^{-1}$.
+    Довести: $\lambda - \mu \in \rho (A)$.
+\end{exercise}
+
+\begin{exercise}
+    $A \in L(X)$. Чи може $R_\lambda (A)$ бути цілком неперервним оператором?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A, A_n \in L(X)$, $A_n \rightrightarrows A$. Довести:
+    \begin{enumerate}
+        \item $\left( \lambda \in \rho(A) \right) \Rightarrow \left( \exists \; N \; \forall \; n \geq N : \lambda \in \rho(A_n) \right)$;
+        \item $\forall \; \varepsilon\text{-окола } (\sigma(A))_\varepsilon \text{ спектра } A \; \exists \; N \; \forall \; n \geq N : \sigma(A_n) \subset (\sigma(A))_\varepsilon $.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    $A : C[0;1] \to C[0;1]$, $(Ax)(t) = x(t^2)$. Довести: $\sigma(A) \subset \set{\lambda \mid |\lambda| = 1}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$ --- самоспряжений оператор в гільбертовому просторі. Довести:
+    \begin{enumerate}
+        \item $r(A) = \norm(A)$;
+        \item $\sigma_\text{з}(A) = \varnothing$;
+        \item $\left( \mathrm{Im} (A - \lambda I) = H\right) \Rightarrow \left( \lambda \in \rho(A)\right)$;
+        \item $\sigma_\text{т}(A) \subset \left[-\norm{A}; \norm{A}\right]$;
+        \item $\sigma (A) \subset \left[-\norm{A}; \norm{A}\right]$.
+    \end{enumerate}
+\end{exercise}
