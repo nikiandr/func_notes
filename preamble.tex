@@ -36,9 +36,21 @@
 \setlist[enumerate]{nosep}
 
 
+\makeatletter
+\def\theorem@space@setup{\theorem@preskip=0pt
+\theorem@postskip=0pt}
+\def\thm@space@setup{\thm@preskip=0pt
+\thm@postskip=0pt}
+\makeatother
+
 \theoremstyle{plain} % Это стиль по умолчанию, его можно не переопределять.
 \newtheorem{theorem}{Теорема}
-\newtheorem*{theorem*}{Теорема}
+\newtheorem*{thm}{Теорема}
+\newenvironment{theorem*}{%
+  \begin{thm}
+}{%
+  \end{thm}
+}
 \newtheorem{proposition}{Твердження}
 
 \theoremstyle{remark}
