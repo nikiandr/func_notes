@@ -1,0 +1,79 @@
+% !TEX root = ../main.tex
+
+\begin{theory}
+    Нехай $A$ --- лінійний оператор в гільбертовому просторі $H$. 
+    Для оператора $A = I + T$ ($T$ --- компактний оператор) виконуються 
+    3 \ul{теореми Фредгольма}:
+    \begin{enumerate}
+        \item[\ul{т.1}] Рівняння $Ax = y$ має розв'язок для тих і 
+        тільки тих $y$, які ортогональні кожному розв'язку рівняння 
+        $A^*u = 0$ ($Im A \oplus Ker A^* = H$).
+        \item[\ul{т.2}] Виконується \ul{альтернатива}: або рівняння $Ax = y$ 
+        має і притому єдиний розв'язок при кожному $y \in H$ або рівняння 
+        $Ax = 0$ має ненульовий розв'язок ($0 \in \rho(A) \cup \sigma_t(A)$).
+        \item[\ul{т.3}] Рівняння $Ax = 0$ та $A^* u = 0$ мають і притому 
+        однакову скінченну кількість лінійно незалежних розв'язків 
+        ($dim Ker A = dim Ker A^* < \infty$)
+    \end{enumerate}
+\end{theory}
+
+\begin{exercise}
+    Довести теореми Фредгольма.
+\end{exercise}
+
+\begin{exercise}
+    При яких $\lambda \in \complex$ рівняння $x(t) = \lambda 
+    \intl{a}{b}e^{t-s}x(s)ds$ має ненульовий розв'язок в просторі 
+    $L_2[a, b]$.
+\end{exercise}
+
+\begin{exercise}
+    При яких $f \in L_2 [0, \pi]$ інтегральне рівняння $x(t) = 
+    \intl{0}{\pi} sin(t-s)x(s)ds + f(t)$ має розв'язок в просторі 
+    $L_2[0, \pi]$?
+\end{exercise}
+
+\begin{exercise}
+    Для оператора $A \in L(\ell_2)$ перевірити, які з теорем 1-3 
+    Фредгольма і за яких умов виконуються для рівняння $Ax = y$ у 
+    наступних випадках:
+    \begin{enumerate}
+        \item $Ax = (\lambda_1 x_1, \lambda_2 x_2, ...)$, де 
+        $\{\lambda_n\}_{n=1}^\infty$ --- обмежена послідовність;
+        \item $A$ --- оператор правого зсуву в $\ell_2$;
+        \item $A$ --- оператор лівого зсуву в $\ell_2$;
+        \item[г)*] $A$ --- сума операторів правого та лівого 
+        зсуву в $\ell_2$;
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\{e_n\}$ --- ортонормований базис гільбертового простору $H$; 
+    $\lambda_n \in \real$; $\lambda_n \rightarrow 0$; 
+    $A: H \rightarrow H$ --- 
+    такий лінійний оператор, що для кожного $x \in H$ має місце рівність:
+    $Ax = \suml{n=1}{\infty} \lambda_n \dotprod{x}{e_n}e_n$.
+
+    Довести, що $A$ --- цілком неперервний самоспряжений оператор.
+\end{exercise}
+
+\begin{theory}
+    \ul{Теорема Гільберта-Шмідта}. Нехай $H$ --- гільбертів простір, 
+    $A$ --- компактний самоспряжений оператор в $H$. Тоді існує ортонормована 
+    система векторів $\{e_n\}$ ($1 \leq n \leq N \leq \infty$) та 
+    числовий набір $\{\lambda_n\} \subset \real \backslash \{0\}$ 
+    ($1 \leq n \leq N \leq \infty$) такі, що $e_n$ --- власні вектори 
+    оператора $A$, що відповідають власним числам $\lambda_n$; 
+    $\lambda_n \rightarrow 0$ за умови $N = \infty$ і при цьому для кожного 
+    $x \in H$ виконуються рівності:
+    \begin{equation*}
+        x = \suml{n=1}{N}\dotprod{x}{e_n}e_n + \tilde{x}, \text{де } 
+        \tilde{x} \in KerA;
+    \end{equation*}
+    \begin{equation*}
+        Ax = \suml{n=1}{N}\lambda_n \dotprod{x}{e_n}e_n 
+        \text{ (при }
+        N = \infty
+        \text{ цей ряд називають \ul{рядом Шмідта})}
+    \end{equation*}
+\end{theory}
