@@ -57,7 +57,8 @@
 \end{exercise}
 
 \begin{theory}
-    \ul{Теорема Гільберта-Шмідта}. Нехай $H$ --- гільбертів простір, 
+    \begin{theorem*} [Гільберта-Шмідта]
+    Нехай $H$ --- гільбертів простір, 
     $A$ --- компактний самоспряжений оператор в $H$. Тоді існує ортонормована 
     система векторів $\{e_n\}$ ($1 \leq n \leq N \leq \infty$) та 
     числовий набір $\{\lambda_n\} \subset \real \backslash \{0\}$ 
@@ -67,7 +68,7 @@
     $x \in H$ виконуються рівності:
     \begin{equation*}
         x = \suml{n=1}{N}\dotprod{x}{e_n}e_n + \tilde{x}, \text{де } 
-        \tilde{x} \in KerA;
+        \tilde{x} \in \mathrm{Ker}A;
     \end{equation*}
     \begin{equation*}
         Ax = \suml{n=1}{N}\lambda_n \dotprod{x}{e_n}e_n 
@@ -75,4 +76,5 @@
         N = \infty
         \text{ цей ряд називають \ul{рядом Шмідта})}.
     \end{equation*}
+    \end{theorem*}
 \end{theory}
