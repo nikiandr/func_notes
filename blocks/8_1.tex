@@ -1,0 +1,100 @@
+% !TEX root = ../main.tex
+
+\begin{exercise}
+    Нехай $A$ --- компактний оператор в нескінченновимірному нормованому просторі.
+    Чи може власний підпростір, що відповідає ненульовому власному числу оператора $A$,
+    бути нескінченновимірним? Чи може власний підпростір, що відповідає нульовому власному числу,
+    бути нескінченновимірним?
+\end{exercise}
+
+\begin{exercise}
+    Нехай компактний самоспряжений оператор $A$ в нескінченновимірному
+    гільбертовому просторі має скінченну кількість власних чисел. Довести, що $\lambda = 0$
+    --- власне число оператора $A$.
+\end{exercise}
+
+\begin{theory}
+    \begin{theorem*}
+        Нехай $A$ --- компактний оператор в гільбертовому просторі. Тоді всі
+        ненульові точки $\sigma(A)$ є власними числами і відповідні власні підпростори є скінченновимірними,
+        $\sigma(A)$ не більш, ніж зліченний, і єдиною граничною точкою спектра може бути лише $\lambda = 0$.
+        Результат має місце і в банаховому просторі.
+    \end{theorem*}
+\end{theory}
+
+\begin{exercise}
+    Нехай $A$ --- компактний оператор в нескінченновимірному банаховому просторі.
+    Доведіть, що $0 \in \sigma (A)$.
+\end{exercise}
+
+\begin{exercise}
+    Чи може бути наступна множина спектром компактного оператора? В разі позитивної відповіді навести приклад.
+    \begin{enumerate}
+        \item $\{0; 1\}$;
+        \item $[0; 1]$;
+        \item $\set{\frac{1}{n} \mid n \in \natur}$;
+        \item $\set{1-\frac{1}{n} \mid n \in \natur}$;
+        \item $\{0\} \cup \set{\frac{1}{n} \mid n \in \natur}$;
+        \item $\{0; i\}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Навести приклади компактних операторів $A$ в нескінченновимірному
+    банаховому просторі, для яких:
+    \begin{enumerate}
+        \item $0 \in \sigma_{\text{т}} (A)$;
+        \item $0 \in \sigma_{\text{н}} (A)$;
+        \item $0 \in \sigma_{\text{з}} (A)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    В функціональному просторі $X$ розглядається інтегральний оператор 
+    $(Ax)(t) = \int\limits_0^t x(s) ds$. Довести його компактність і дослідити
+    $\sigma_{\text{т}} (A)$, $\sigma_{\text{н}} (A)$, $\sigma_{\text{з}} (A)$
+    у наступних випадках:
+    \begin{enumerate}
+        \item $X = C[0;1]$;
+        \item $X = L_2 [0;1]$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Компактний оператор $A$, який діє в банаховому просторі $X$, називається
+    \ul{оператором Вольтерра}, якщо $\sigma(A) = 0$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $K \in C([0;1] \times [0;1])$. Доведіть, що інтегральний оператор
+    $(Ax)(t) = \int\limits_0^t K(t,s) x(s)ds$ є оператором Вольтерра
+    в просторі $X$ у наступних випадках:
+    \begin{enumerate}
+        \item $X = C[0;1]$;
+        \item $X = L_2 [0;1]$. 
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Довести, що інтегральний оператор в $L_2[a;b]$
+    $(Ax)(t) = \int\limits_a^b K(t,s) x(s)ds$ з неперервним
+    <<ядром>> $K(t,s)$ є самоспряженим тоді й тільки тоді, коли
+    $K(t,s) = \overline{K(s,t)}$ для всіх $(t,s) \in [a;b] \times [a;b]$.
+\end{exercise}
+
+\begin{exercise}
+    Знайти спектр, власні числа та власні функції оператора $A$,
+    що визначений на $L_2[a;b]$, формулою $(Ax)(t) = \int\limits_a^b K(t,s) x(s)ds$, якщо:
+    \begin{enumerate}
+        \item $K(t,s) = \begin{cases}
+            t(1-s), & t \leq s \\
+            s(1-t), & s \leq t
+        \end{cases}$, $a = 0, b = 1$;
+        \item $K(t,s) = \begin{cases}
+            \sin(t)\sin(1-s), & t \leq s \\
+            \sin(1-t)\sin(s), & s \leq t
+        \end{cases}$, $a = 0, b = \pi$;
+        \item $K(t,s) = \cos(t-s)$, $a = 0, b = 2\pi$;
+        \item $K(t,s) = ts + t^2 s^2$, $a = 0, b = 1$.
+    \end{enumerate}
+\end{exercise}
