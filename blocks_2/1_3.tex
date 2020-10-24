@@ -1,0 +1,229 @@
+% !TEX root = ../main.tex
+
+\begin{exercise}
+    Довести наступні твердження для необмежених операторів:
+    \begin{enumerate}
+        \item $A + B = B + A$;
+        \item $A + (B + C) = (A + B) + C$;
+        \item $0 \cdot A \subset 0$;
+        \item $A(BC) = (AB)C$;
+        \item $(A+B)C = AC + AB$;
+        \item $A(B+C) \supset AB + AC$;
+        \item $\left( \exists \inv{A}, \inv{B} \right)  \Rightarrow 
+               \left( \inv{(AB)} = \inv{B}\inv{A} \right)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Побудувати лінійний оператор $A$ в гільбертовому просторі, для якого $\overline{D(A)} = H$,
+    $D(A^2) = \{0\}$.
+\end{exercise}
+
+\begin{theory}
+    Нехай $A$ --- замкнений оператор в комплексному банаховому просторі $X$.
+    Для числа $\lambda \in \complex$ оператор $\lambda I - A$ також є замкненим
+    (див. вправу \ref{N:2_1_6}). Якщо $\mathrm{Im}(\lambda I - A) = X$ та 
+    $\mathrm{Ker}(\lambda I - A) = \{0\}$, то існує обернений оператор $\inv{(\lambda I - A)}$,
+    який також є замкненим (див. вправу \ref{N:2_1_14}), а тому за теоремою Банаха оператор
+    $R(\lambda; A) = \inv{(\lambda I - A)}$ є обмеженим. Такі числа $\lambda$ називають
+    \ul{регулярними числами} оператора $A$. Множина всіх таких чисел утворює 
+    \ul{резольвентну множину} $\rho(A) \subset \complex$ оператора $A$, а її доповнення
+    в $\complex$ --- \ul{спектр} $\sigma(A)$ оператора $A$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $A$ --- замкнений оператор в комплексному банаховому просторі, $\rho(A)$ --- його
+    резольвентна множина. Довести:
+    \begin{enumerate}
+        \item тотожність Гільберта: $R_\lambda(A) - R_\mu(A) = (\mu - \lambda) R_\lambda(A)R_\mu(A)$,
+        ($\mu, \lambda \in \rho(A)$);
+        \item $\rho(A)$ --- відкрита множина в $\complex$;
+        \item операторнозначна функція $\rho(A) \ni \lambda \mapsto \inv{(\lambda I - A)}$ є аналітичною.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Навести приклад необмеженого замкненого оператора, для якого $\rho(A) = \complex$.
+\end{exercise}
+
+\begin{theory}
+    Нехай $A$ --- замкнений оператор в гільбертовому просторі $H$, $\overline{D(A)} = H$.
+    \ul{спряжений до $A$ оператор} $A^*$ визначено на множині $D(A^*) = \{
+        y \in H \mid \exists z \; \forall x \in D(A): \dotprod{Ax}{y} = \dotprod{x}{z}
+    \}$.
+    При цьому $A^*: y \mapsto z$.
+\end{theory}
+
+\begin{exercise}
+    Доведіть коректність означення спряженого оператора:
+    \begin{enumerate}
+        \item $\forall y \in D(A^*)$ відповідає єдиний вектор $z$;
+        \item перевірте лінійність оператора $A^*$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Доведіть замкненість оператора $A^*$.
+\end{exercise}
+
+\begin{exercise}
+    Розглянемо в гільбертовому просторі $H \oplus H$ \uline{оператор <<повороту на 90°>>}
+    $\tau: \pair{x}{y} \mapsto \pair{-y}{x}$.
+    Доведіть наступні властивості оператора $\tau$:
+    \begin{enumerate}
+        \item $\tau$ --- лінійне взаємно однозначне перетворення простору $H \oplus H$;
+        \item $\tau^2 = -\mathrm{id}$, $\tau^4 = \mathrm{id}$ 
+              ($\mathrm{id}$ --- тотожне перетворення в $H \oplus H$);
+        \item для кожного підпростору $M \subset H \oplus H$ виконуються властивості:
+              $\tau(M^\perp) = (\tau(M))^\perp$, $\overline{\tau(M)} = \tau(\overline{M})$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$ --- щільно визначений оператор в гільбертовому просторі $H$,
+    $\Gamma_A$ --- його графік. Довести: 
+    $\Gamma_{A^*} = (\tau(\Gamma_A))^\perp = \tau(\Gamma_A^\perp)$
+\end{exercise}
+
+\begin{exercise}
+    Нехай оператор $A$ --- щільно визначений в $H$. Тоді $A$ допускає замикання тоді 
+    й тільки тоді, коли $\overline{D(A^*)} = H$ і при цьому $(\overline{A})^* = A^*$, $A^{**} = \overline{A}$.
+\end{exercise}
+
+%73
+\begin{exercise}
+    Нехай $A$ --- оператор в $H$, $D_A = H$. Тоді $A^*$ --- обмежений оператор.
+\end{exercise}
+
+\begin{exercise}(\ul{Теорема Банаха про замкнений графік в гільбертовому просторі})
+    Нехай $A: H \to H$ --- замкнений оператор, $D(A) = H$. Тоді $A \in L(H)$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$, $B$ --- оператори в $H$, $\overline{D(A)} = H$, $A \subset B$.
+    Довести:
+    \begin{enumerate}
+        \item $B^* \subset A^*$;
+        \item якщо $B$ допускає замикання, то $A$ також.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Оператор $A: H \to H$ називається \ul{симетричним}, якщо для всіх $x,y \in D(A)$
+    виконується умова $(Ax,y) = (x, Ay)$ та \ul{самоспряженим}, якщо $A = A^*$.
+\end{theory}
+
+\begin{exercise}
+    Якщо $\overline{D(A)} = H$, то симетричність оператора $A$ рівносильна умові
+    $A \subset A^*$. Доведіть.
+\end{exercise}
+
+\begin{exercise}
+    Якщо оператор $A: H \to H$ --- самоспряжений, то $A$ --- симетричний і замкнений. Доведіть.
+\end{exercise}
+
+\begin{exercise}
+    Якщо $A$ --- симетричний, $D(A) = H$, то $A$ --- самоспряжений та обмежений. Доведіть.
+\end{exercise}
+
+\begin{exercise}
+    Для оператора $A$ із задачі \ref{N:2_1_18} знайти $D(A^*)$ та $A^*$.
+\end{exercise}
+
+\begin{exercise}
+    Оператор $A$ в просторі $L_2[0;1]$ визначено формулою $(Ax)(t) = x(t^2)$ з областю визначення
+    $D(A) = \left\{ x \in L_2[0;1] \mid \exists \intl{0}{1} x^2(t^2) dt \right\}$. Довести:
+    \begin{enumerate}
+        \item $\overline{D(A)} = L_2[0;1]$;
+        \item $A$ --- лінійний необмежений оператор;
+        \item знайти $D(A^*)$ та $A^*$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$ --- щільно визначений оператор в $H$.
+    \begin{enumerate}
+        \item Довести: $(\mathrm{Im}A)^\perp = \mathrm{Ker}A^*$;
+        \item Чи можна стверджувати що $(\mathrm{Ker}A)^\perp = \overline{\mathrm{Im}A^*}$?
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Довести наступні твердження для необмежених операторів, що щільно визначені в гільбертовому
+    просторі:
+    \begin{enumerate}
+        \item $(\lambda A)^* = \overline{\lambda} A^*$;
+        \item $(A + B)^* \supset A^* + B^*$;
+        \item ($A$ --- обмежений) $\Rightarrow \left( (A+B)^* = A^* + B^* \right)$;
+        \item $(AB)^* \supset B^* A^*$;
+        \item ($A$ --- обмежений) $\Rightarrow \left( (AB)^* = B^* A^* \right)$;
+        \item $\left( \exists \inv{A}, A^*, (\inv{A})^* \right) \Rightarrow
+               \left( \exists \inv{(A^*)} = (\inv{A})^* \right)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Оператор $A$ діє в $L_2[0;1]$, $(Ax)(t) = \frac{dx}{dt}$,
+    $D(A) = \left\{
+        x \in C^1[0;1] \mid x(0) = x(1) = 0
+    \right\}.$
+    \begin{enumerate}
+        \item Довести: $\overline{D(A)} = L_2[0;1]$;
+        \item $A$ --- необмежений оператор. Довести;
+        \item знайти $D(A^*)$ та $A^*$. 
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    В просторі комплекснозначних функцій $L_2[0;1]$ розглянемо оператор $A = i \frac{d}{dt}$
+    з областю визначення
+    $D(A) = \left\{
+        x \in C^\infty[0;1] \mid x(0) = x(1) = 0
+    \right\}.$
+    Доведіть, що оператор $A$ --- симетричний, але не самоспряжений.
+\end{exercise}
+
+\begin{exercise}
+    Оператор $A$ в $L_2[0;1]$ визначено формулою $(Ax)(t) = t x(0)$, $D(A) = C[0;1]$.
+    Знайти $D(A^*)$ та $A^*$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$ --- симетричний оператор в $H$, $\overline{\mathrm{Im}A} = H$.
+    Доведіть: $\exists \inv{A}$, $\inv{A}$ --- симетричний.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A \in L(H)$, $A$ --- самоспряжений, $\exists \inv{A}$ (необов'язково обмежений).
+    Доведіть: $\inv{A}$ --- самоспряжений.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що наступні три умови еквіваленті:
+    \begin{enumerate}
+        \item $A^*$ --- самоспряжений оператор в $H$;
+        \item $\overline{A} = A^*$;
+        \item $\overline{A}$ --- самоспряжений оператор в $H$.
+    \end{enumerate}
+    Оператор, що задовольняє будь-яку з цих умов (а тому --- всі) називається
+    \ul{суттєво самоспряженим}.
+\end{exercise}
+
+\begin{theory}
+    Оператор $A: H \to H$ називається \ul{дисипативним}, якщо виконується умова
+    $(x \in D(A)) \Rightarrow (\mathfrak{Re}\dotprod{Ax}{x} \leq 0)$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $A$ --- дисипативний оператор в $H$, $\overline{D(A)} = H$.
+    Тоді $A$ допускає замикання і $\overline{A}$ також дисипативний.
+\end{exercise}
+
+\begin{exercise}
+    $A,B \in L(X,Y)$, де $X$, $Y$ --- банахові простори, $B \in K(X,Y)$ (компактний оператор),
+    $\mathrm{Im} A \subset \mathrm{Im} B$. Доведіть: $A$ --- компактний оператор, якщо:
+    \begin{enumerate}
+        \item $\mathrm{Ker} B = \{0\}$;
+        \item $\mathrm{Ker} B \neq \{0\} $.
+    \end{enumerate}    
+\end{exercise}
