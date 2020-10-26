@@ -238,7 +238,8 @@ $A(\alpha x + \beta y) = \lim\limits_{n \rightarrow \infty} A_n(\alpha x + \beta
 $\exists C > 0: \forall n: \norm{A_n} \leq C$ (за теоремою Банаха-Штейнгауза). Тому 
 $\norm{Ax} = \lim\limits_{n \rightarrow \infty} \norm{A_n x} \leq C\norm{x}$. Тож $A \in L(X, Y)$.
 
-\noindent\ref{N:1_4_28}. Достатньо довести сильну фундаментальність $\{A_n\}$. Використовуємо \ref{N:1_3_21} б): 
+\noindent\ref{N:1_4_28}. Достатньо довести сильну фундаментальність послідовності $\{A_n\}$. Використовуємо задачу \ref{N:1_3_21} б):
+
 $(m \geq n) \Rightarrow (B = A_m - A_n \geq 0) \Rightarrow \left(\norm{A_m x - A_n x}^2 \leq 2C((A_m x, x) - (A_n x, x))\right)$ та
 збіжність $\{(A_n x, x)\}$ за класичною теоремою Вейєрштрасса. 
 
@@ -291,27 +292,29 @@ $(Ax_n \xrightarrow[\text{сл}]{} Ax; \norm{A x_n} \rightarrow \norm{A x}) \Rig
 $(x_n \xrightarrow[\text{сл}]{} 0) \Rightarrow \left( (C x_n, x_n) \rightarrow 0 \right)$ (дивись \ref{N:1_5_26}).
 $(0 \leq (B x_n , x_n) \leq (C x_n, x_n)) \Rightarrow ((B x_n, x_n) \rightarrow 0)$. Аналогічно:
 $(y_n \xrightarrow[\text{сл}]{} 0) \Rightarrow ((B y_n, y_n) \rightarrow 0)$.
-$(B x_n, y_n) = \frac{1}{4}\left( (B(x_n+y_n), x_n+y_n) - (B(x_n - y_n), x_n - y_n)\right)$. Тому 
-$(x_n \xrightarrow[\text{сл}]{} 0, y_n \xrightarrow[\text{сл}]{} 0) \Rightarrow ((B x_n, y_n) \rightarrow 0)$. Далі скористатися \ref{N:1_5_26}.
+
+\noindent$(B x_n, y_n) = \frac{1}{4}\left( (B(x_n+y_n), x_n+y_n) - (B(x_n - y_n), x_n - y_n)\right)$. 
+
+\noindentТому $(x_n \xrightarrow[\text{сл}]{} 0, y_n \xrightarrow[\text{сл}]{} 0) \Rightarrow ((B x_n, y_n) \rightarrow 0)$. Далі скористатися \ref{N:1_5_26}.
 
 \noindent\ref{N:1_5_33}.
-\begin{minipage}{0.25\textwidth}
-    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-        \clip(-2.,-2.) rectangle (2.,2.);
-        \draw [line width=.25pt] (0.,0.) circle [radius = 1.cm];
-        \draw [->,line width=.2pt] (0.,0.) -- (0.705637350341705,0.7085731647492289);
-        \draw [->,line width=.2pt] (0.705637350341705,0.7085731647492289) -- (0.24804622428767287,1.3468866592154136);
-        \begin{scriptsize}
-        \draw[color=black] (0.40565960486893554,0.27) node {$x$};
-        \draw[color=black] (0.5490845250768417,1.101728558923356) node {$z$};
-        \end{scriptsize}
-    \end{tikzpicture}
-\end{minipage}
-\begin{minipage}{0.7\textwidth}
+%\begin{minipage}{0.25\textwidth}
+%    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+%        \clip(-2.,-2.) rectangle (2.,2.);
+%        \draw [line width=.25pt] (0.,0.) circle [radius = 1.cm];
+%        \draw [->,line width=.2pt] (0.,0.) -- (0.705637350341705,0.7085731647492289);
+%        \draw [->,line width=.2pt] (0.705637350341705,0.7085731647492289) -- (0.24804622428767287,1.3468866592154136);
+%        \begin{scriptsize}
+%        \draw[color=black] (0.40565960486893554,0.27) node {$x$};
+%       \draw[color=black] (0.5490845250768417,1.101728558923356) node {$z$};
+%        \end{scriptsize}
+%    \end{tikzpicture}
+%\end{minipage}
+%\begin{minipage}{0.7\textwidth}
     $y(t)$ --- крива на сфері $\{x \mid \norm{x} = 1\}; y(t_0) = x$. $\frac{d}{dt} \norm{A y(t)}^2 \Big|_{t = t_0} = 0$
     (в т. $t_0$ функція $\norm{A y(t)}$ приймає найбільше значення). Тож $\dotprod{A \dot{y} (t_0)}{A x} = 0$.
     $\dot{y} (t_0)$ --- дотичний вектор до сфери в т. $x$. Тож $\dot{y} (t_0) \perp x$. 
-\end{minipage}
+%\end{minipage}
 Він переходить у вектор $A \dot{y} (t_0) \in \{Ax\}^{\perp}$. Залишилося зауважити, що кожний вектор $z$ з $\{x\}^{\perp}$ є дотичним вектором
 гладкої кривої (кола), що є перетином сфери з л.о. $\{x, z\}$. При розв'язанні задачі використана лише обмеженість оператора $A$.
 
