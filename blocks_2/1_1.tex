@@ -1,3 +1,128 @@
 % !TEX root = ../main.tex
 
-\label{N:2_1_6}
+\begin{theory}
+    Нехай $X$, $Y$ --- нормовані простори над полем $K$. Надалі розглядаються лінійні оператори
+    з $X$ в $Y$, що визначені не обов'язково на всьому просторі.
+    Через $D_A = D(A)$ позначимо область визначення оператора $A$.
+    $D_A$ --- підпростір $X$, не обов'язково замкнений. При цьому виконується умова:
+    $\left( x, y \in D_A, \alpha, \beta \in K\right) \Rightarrow \left( \alpha x + \beta y \in D_A, A(\alpha x + \beta y) = \alpha Ax + \beta Ay\right)$.
+    Такі оператори позначаємо або $A : X \supset D_A \to Y$ або $A : X \to Y$.
+
+    \noindent Для пари лінійних просторів розглянемо (зовнішню) пряму суму $X \dot{+} Y$.
+    У декартовому добутку $X \times Y$ запроваджуються \ul{покомпонентні операції}:
+    $\pair{x_1}{y_1} + \pair{x_2}{y_2} = \pair{x_1 + x_2}{y_1 + y_2}$, $\lambda \pair{x}{y} = \pair{\lambda x}{\lambda y}$.
+    Якщо $X$ та $Y$ --- нормовані простори, то в просторі $X \dot{+} Y$ можна задавати \ul{норму} різними способами, наприклад, 
+    $\norm{\pair{x}{y}} = \norm{x}_X + \norm{y}_Y$. У подальшому розглядатимемо саме такий варіант, якщо не сказано про інший.
+\end{theory}
+
+\begin{exercise}
+    Нехай $X$, $Y$ --- нормовані простори над спільним полем ($\real$ або $\complex$), норму в $X \dot{+} Y$ задано як $\norm{\pair{x}{y}} = \norm{x}_X + \norm{y}_Y$.
+    \begin{enumerate}
+        \item Перевірити аксіоми норми $\norm{\cdot}$ в $X \dot{+} Y$;
+        \item Довести, що у випадку повних просторів $X$ та $Y$ простір $X \dot{+} Y$ за заданою нормою також буде повним.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    В разі, якщо простори $X$ та $Y$ --- гільбертові, в прямій сумі $X \dot{+} Y$ запроваджується
+    \ul{скалярний добуток} за правилом $\dotprod{\pair{x_1}{y_1}}{\pair{x_2}{y_2}} = \dotprod{x_1}{x_2}_X + \dotprod{y_1}{y_2}_Y$.
+    Використовується позначення $X \oplus Y$ замість $X \dot{+} Y$.
+    \ul{Відповідна норма}: $\norm{\pair{x}{y}} = \sqrt{\norm{x}_X^2 + \norm{y}_Y^2}$.
+\end{theory}
+
+\begin{exercise}
+    Перевірити, що для гільбертових просторів $X$ та $Y$ запропонована вище формула дійсно визначає скалярний добуток,
+    що перетворює $X \oplus Y$ в гільбертів простір і при цьому норми $\norm{\pair{x}{y}}_1 = \norm{x}_X + \norm{y}_Y$ та
+    $\norm{\pair{x}{y}}_2 = \sqrt{\norm{x}_X^2 + \norm{y}_Y^2}$ еквівалентні.
+\end{exercise}
+
+\begin{theory}
+    \ul{Графіком} лінійного оператора $A : X \supset D_A \to Y$ називається множина
+    $\Gamma_A = \set{\pair{x}{Ax} \mid x \in D_A} \subset X \dot{+} Y$.
+\end{theory}
+
+\begin{exercise}
+    Перевірте, що $\Gamma_A$ --- підпростір (не обов'язково замкнений) $X \dot{+} Y$.
+\end{exercise}
+
+\begin{theory}
+    Лінійний оператор $A : X \supset D_A \to Y$ називається \ul{замкненим},
+    якщо його графік $\Gamma_A$ --- замкнений підпростір $X \dot{+} Y$.
+\end{theory}
+
+\begin{exercise}
+    Доведіть, що замкненість лінійного оператора $A : X \to Y$ рівносильна умові:
+    $(x_n \in D_A, x_n \to x, A x_n \to y) \Rightarrow (x \in D_A, y = Ax)$.
+\end{exercise}
+
+\begin{theory}
+    Лінійний оператор $A : X \supset D_A \to Y$ називається \ul{обмеженим}, якщо
+    існує константа $C > 0$ така, що для кожного $x \in D_A$: $\norm{Ax} \leq C \norm{x}$.
+    Якщо такої константи немає, то оператор $A$ називається \ul{необмеженим}.
+\end{theory}
+
+\begin{exercise}
+    Нехай $A : X \supset D_A \to Y$ --- обмежений оператор. Довести, що $A$ є замкненим
+    тоді й тільки тоді, коли $D_A$ --- замкнений підпростір в $X$. Зокрема, кожний оператор з $L(X,Y)$ є замкненим.
+\end{exercise}
+
+\begin{theory}
+    \ul{Сумою} двох лінійних операторів $B, C : X \to Y$ називається оператор $A : X \to Y$,
+    для якого $D_A = D_B \cap D_C$ і для кожного $x \in D_A$ виконується рівність $Ax = Bx + Cx$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $B, C : X \to Y$, $B$ --- замкнений, $C$ --- обмежений і при цьому $D_B \subset D_C = \overline{D_C}$.
+    Доведіть, що оператор $B + C$ є замкненим і при цьому $D_{B+C} = D_B$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $X = Y = C[a; b]$, $A = \frac{d}{dt}$, $D_A = \set{x \in X \mid x^\prime \in X}$.
+    Доведіть: $A$ --- необмежений замкнений оператор в $X$.
+\end{exercise}
+
+\begin{exercise}
+    Дослідити на замкненість оператор $B = \frac{d^2}{d t^2}$, що заданий в просторі $X = C[0;1]$
+    з областю визначення $D_B = \set{x \in X \mid x^{\prime\prime} \in X}$.
+\end{exercise}
+
+\begin{exercise}
+    Розглянемо оператор $A : C[0;1] \to C[0;1]$, що визначений формулою $(Ax)(t) = \frac{d^2x }{d t^2} + x(t)$
+    з областю визначення $D_A = \set{x \in C^2 [0;1] \mid x(0) = x^\prime(0) = 0}$.
+    Довести: $A$ --- необмежений замкнений оператор.
+\end{exercise}
+
+\begin{exercise}
+    Оператор $A : C[0;1] \to C[0;1]$ визначено формулою $(Ax)(t) = \frac{1}{t} x(t)$,
+    область визначення $D_A = \set{x \in C[0;1] \mid \exists \; \underset{t \to 0+}{\lim} \frac{1}{t} x(t)}$.
+    Довести: $A$ --- необмежений замкнений оператор.
+\end{exercise}
+
+\begin{exercise*}
+    В просторі $X = C[a;b]$ оператор $A$ визначено формулою $(Ax)(t) = a_0 x^{(n)}(t) + a_1 x^{(n-1)}(t) + ... + a_n x(t)$, 
+    $D_A = \set{x \in X \mid x^{(n)} \in X}$, $a_0, a_1, ..., a_n \in \real$, $a_0 \neq 0$, $n \in \natur$.
+    Довести: $A$ --- необмежений замкнений оператор.
+\end{exercise*}
+
+\begin{exercise}
+    Чи можна стверджувати, що кожний підпростір в $X \dot{+} Y$ є графіком деякого лінійного оператора $A : X \to Y$?
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A : X \to Y$ --- замкнений оператор. Чи є правильними наступні твердження:
+    \begin{enumerate}
+        \item $\mathrm{Ker} A$ --- замкнений підпростір в $X$;
+        \item $\mathrm{Im} A$ --- замкнений підпростір в $X$?
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$ --- замкнений оператор з $X$ в $Y$, $\mathrm{Ker} A = \{ 0\}$,
+    тож існує $A^{-1} : Y \to X$. Довести: $A^{-1}$ --- замкнений оператор.
+\end{exercise}
+
+\begin{theory}
+    \textbf{Теорема Банаха про замкнений графік.}
+    Нехай $X, Y$ --- банахові простори, $A : X \to Y$ --- замкнений лінійний оператор, $D(A) = X$.
+    Тоді $A \in L(X, Y)$. 
+\end{theory}
