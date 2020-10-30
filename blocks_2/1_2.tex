@@ -1,5 +1,107 @@
 % !TEX root = ../main.tex
 
-\label{N:2_1_14}
+\begin{exercise}
+    $X$ --- банахів простір, $Y$ --- замкнений підпростір, 
+    $P$ --- проектор $X$ на $Y$ паралельно $Z$ ($Z = Ker P$). 
+    Довести: $P$ --- обмежений тоді й тільки тоді, коли $Z$ --- 
+    замкнений підпростір в $X$.
+\end{exercise}
 
-\label{N:2_1_18}
+\begin{exercise}
+    Нехай $X$, $Y$ --- замкнені підпростори в банаховому просторі $Z$, 
+    $Z = X \dotplus Y$. Довести, що існує число $K$, для якого при всіх $z \in Z$ 
+    виконуються нерівності: $\norm{x} \leq K\norm{z}$; $\norm{x} \leq K\norm{z}$ (тут 
+    $x \in X$, $y \in Y$, $z = x + y$). 
+\end{exercise}
+
+\begin{exercise}
+    Розглянемо оператори $i_X$: $X \ni x \rightarrow 
+    \sumpair{x}{0} \in X \dotplus Y$;
+    $i_Y$: $Y $\reflectbox{$\in$}$ y \rightarrow 
+    \sumpair{0}{y} \in X \dotplus Y$;
+    $P_X$: $X \dotplus Y $\reflectbox{$\in$}$ \sumpair{x}{y} \rightarrow 
+    x \in X $;
+    $P_Y$: $X \dotplus Y $\reflectbox{$\in$}$ \sumpair{x}{y} \rightarrow 
+    y \in Y $. $X$ та $Y$ --- нормовані простори.
+    \begin{enumerate}
+        \item Перевірити, що для норми $\norm{\sumpair{x}{y}} = 
+        \norm{x}_X + \norm{y}_Y$ в $X \dotplus Y$ оператори $i_X$, $i_Y$, 
+        $P_X$, $P_Y$ --- обмежені і знайти їх норми;
+        \item нехай $\norm{\cdot}_1$ --- інша норма на $X \dotplus Y$; 
+        оператори $i_X$, $i_Y$, $P_X$, $P_Y$ --- обмежені. Чи можна 
+        стверджувати, що $\norm{\cdot}_1 \sim \norm{\cdot}$?
+        \item нехай $\norm{\cdot}_1$ --- інша норма на $X \dotplus Y$;
+        $X$, $Y$, $X \dotplus Y$ --- банахові. Виконуються умови: 
+        $\norm{\sumpair{x}{0}}_2 = \norm{x}_X$; $\norm{\sumpair{0}{y}} 
+        = \norm{y}_Y$. Чи можна 
+        стверджувати, що $\norm{\cdot}_2 \sim \norm{\cdot}$?
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}\label{N:2_1_18}
+    Нехай $\{a_n\}$ --- числова послідовність; оператор $A: \ell_2 
+    \rightarrow \ell_2$ визначено умовою: $A\vec{x} = 
+    (a_1x_1, a_2x_2, ...)$. Нехай $\inf\{|\frac{a_n}{n}|\} > 0$ та 
+    $D(A) = \{\vec{x} \in \ell_2 | \suml{n=1}{\infty}|a_n|^2|x_n|^2 
+    < \infty\}$. Довести лінійність, необмеженість, замкненість оператора 
+    $A$ та його щільну визначеність ($\overline{D(A)} = \ell_2$).
+\end{exercise}
+
+\begin{exercise}
+    Вивести теорему Банаха про обернений оператор з теореми Банаха про 
+    замкнений графік.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що функціонал $\varphi: x \rightarrow x(0)$, що діє в 
+    $L_2[0, 1]$ з областю визначення $D(\varphi) = C[0, 1]$ не є 
+    замкненим.
+\end{exercise}
+
+\begin{theory}
+    Нехай $A, B$ --- лінійні оператори з $X$ в $Y$. Оператор $B: X 
+    \rightarrow Y$ називається \ul{розширенням} $A$, якщо $\Gamma_A 
+    \subset \Gamma_B$. Позначення: $A \subset B$. В разі, якщо 
+    $\Gamma_B = \overline{\Gamma_A}$, оператор $B$ називається 
+    \ul{замиканням} оператора $A$, а оператор $A$ є такий, що 
+    \ul{допускає замикання}. Позначення: $B = \overline{A}$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $A, B: X \rightarrow Y$ --- лінійні оператори. Доведіть:
+    \begin{enumerate}
+        \item $(A \subset B) \Leftrightarrow (D(A) \subset D(B); 
+        \text{для }x \in D(A): Ax = Bx)$;
+        \item ($A$ допускає замикання) $\Leftrightarrow$ (існує 
+        замкнений оператор $B$, такий, що $A \subset B$)
+        \item Замикання оператора $A$ --- це найменше замкнене 
+        розширення $A$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A: X \supset D(A) \ni x \rightarrow Ax \in Y$. Довести 
+    еквівалентність двох тверджень:
+    \begin{enumerate}
+        \item $A$ допускає замикання;
+        \item виконується умова: ($D(A) \ni x_n \rightarrow 0; 
+        Ax_n \rightarrow y$) $\Rightarrow$ (y = 0).
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A: X \rightarrow Y$ --- обмежений оператор. Тоді $A$ допускає 
+    замикання і $D(\overline{A}) = \overline{D(A)}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай оператор $A: X \rightarrow Y$ допускає замикання. Довести:
+    $D(\overline{A}) \subset \overline{D(A)}; Im(\overline{A}) \subset 
+    \overline{ImA}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A: \ell_2 \rightarrow \ell_2$ визначений формулою $A: e_n 
+    \rightarrow ne_1$, де $e_n = (\underbrace{0, ..., 0}_{n-1}, 1, 0, ...)$. 
+    Знайти $D(A)$ і довести, що $A$ не допускає замикання.
+\end{exercise}
