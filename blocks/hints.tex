@@ -369,4 +369,50 @@ $\frac{1}{\lambda^2} \int\limits_0^t ds \int\limits_0^s \mathrm{e}^{\frac{1}{\la
 $\int\limits_0^t ds \int\limits_0^s \mathrm{e}^{\frac{1}{\lambda}(s-\tau)} x(\tau) d\tau = \int_0^t d\tau \int_{\tau}^t \mathrm{e}^{\frac{1}{\lambda}(s - \tau)}x(\tau)ds = \lambda \int\limits_0^t (\mathrm{e}^{\frac{t - \tau}{\lambda}} - 1)x(\tau)d\tau$.
 \underline{Відповідь}: $(R_{\lambda} x)(t) = \frac{1}{\lambda}x(t)+\frac{1}{\lambda^2}\int_0^t \mathrm{e}^{\frac{t-s}{\lambda}x(s)ds}$.
 
-\noindent\ref{N:1_7_25} Скористайтесь задачею \ref{N:1_6_6}.
+\noindent\ref{N:1_7_25}. Скористайтесь задачею \ref{N:1_6_6}.
+
+\noindent\ref{N:1_7_27}. а) безпосередній наслідок результату задачі \ref{N:1_6_6}.
+
+\noindent б) Нехай $\varepsilon > 0$ і $F = \complex \setminus (\sigma(A))_{\varepsilon}$. $F$ --- замкнена множина в $\complex$.
+$\lambda \mapsto R_{\lambda} (A)$ --- неперервна функція на $F$ та $\lim\limits_{\lambda \rightarrow \infty} R_{\lambda} (A) = 0$.
+Тому $\inf\limits_F \{ \norm{R_{\lambda} (A)}^{-1} \} > 0$ і $\exists N, \forall n \geq N: \rho (A_n) \subset F$.
+
+\noindent\ref{N:1_7_28}. $0 \in \rho(A); \norm{A^{-1}} = 1$. Тому $(|\lambda| < 1) \Rightarrow (|\lambda - 0| < \norm{R(0; A)}^{-1}) \Rightarrow (\lambda \in \rho(A))$.
+
+\noindent\ref{N:1_7_30}. б) Припустимо спочатку, що $M > 0$ та $M > |m|$. Тоді $M = \sup\limits_{\norm{x} = 1} \dotprod{Ax}{x} = \sup\limits_{\norm{x} = 1} |\dotprod{Ax}{x}| = \norm{A} = r(A)$.
+Оскільки $\sigma(A)$ --- замкнена множина в $\mathbb{R}$, то $M \in \sigma(A)$.
+Всі інші варіанти розташування $m$ і $M$ в $\mathbb{R}$ паралельним перенесенням зводяться до розглянутого і при цьому
+$(\lambda \in \sigma(A)) \Leftrightarrow (\lambda + c \in \sigma (cI + A))$. Перетворення $A \mapsto B = -A$ переводять $m_A$ в 
+$M_B$ і $(\lambda \in \sigma(B)) \Leftrightarrow (-\lambda \in \sigma(A))$.
+
+\noindent\ref{N:1_7_33}. $\lambda \neq 0; A A^* x = \lambda x (x \neq 0)$. Тоді
+$
+    \begin{cases}
+        A^* A (A^* x) = \lambda A^* x
+        \\A^* x \neq 0,
+    \end{cases}
+$, $\lambda \in \sigma(A^* A)$. 
+
+\noindent $\lambda = 0$. Контрприклад: $A$ --- оператор правого зсуву в $\ell_2$.
+
+\noindent\ref{N:1_8_6}. $\sigma (A) = \{0\}$; в $X = C[0; 1]: 0 \in \sigma_{\text{з}}(A)$, тому що 
+$\mathrm{Ker} A = \{0\}$ та $\mathrm{Im} A \subset \{x \in X \big| x(0) = 0\}$;
+в $X = L_2 [0; 1]: 0 \in \sigma_{\text{к}} (A)$, тому що $(\int\limits_0^t x(s) ds = 0 \text{ в } L_2[0; 1]) \Rightarrow$
+$(\int\limits_0^t x(s) ds = 0, \forall t \in [0, 1]$, оскільки функція $\int\limits_0^t x(s) ds$ неперервна по $t) \Rightarrow$
+$(\forall $ числовий проміжок $\Delta \subset [0, t]: \int\limits_{\Delta} x(s)ds = 0) \Rightarrow$
+$(\forall $ лебегова множина $A \subset [0, 1): \int\limits_A x(s) ds = 0) \Rightarrow$
+$(x(\cdot) = \frac{d(0)}{d \lambda_1} = 0$ (м. с.)).
+
+\noindent Інший шлях: $y(t) = \int\limits_0^t x(s) ds$ --- абсолютно неперервна, а тому $x(t) = y'(t)$ (м. с.).
+Крім того, $\mathrm{Im} A$ містить всі поліноми $p (\cdot)$, для яких $p(0) = 0$, а тому $\overline{\mathrm{Im}A} = L_2 [0; 1]$
+(обміркуйте!).
+
+\noindent\ref{N:1_8_9}. а) $A$ --- компактний самоспряжений оператор в $L_2 [0; 1]$. Тому крім $0$ всі точки спектра --- власні числа.
+Нехай $\lambda \neq 0$. $\lambda x(t) = (1-t)\int\limits_0^t s x(s) ds + t \int\limits_t^1 (1-s) x(s) ds$. Права частина --- неперервна
+по $t$ функція. Тоді $x \in C[0;1]$. Але тоді права частина --- неперервно диференційовна функція. Тому $x \in C^1 [0; 1]$. І далі: $x \in C^2 [0; 1]$.
+Двічі диференціюємо і приходимо до крайової задачі: $\lambda x'' + x = 0; x(0) = x(1) = 0$.
+
+\noindent\ref{N:1_8_12}. Скористаємось 1-ою теоремою Фредгольма і розглянемо супутнє рівняння: $x(t) - \int\limits_0^{\pi} \sin (s-t)x(s) ds = 0$.
+$x(t) = \cos t \cdot \int\limits_0^{\pi} \sin s \cdot x(s) ds - \sin t \int\limits_0^{\pi} \cos s \cdot x(s) ds$. $x(t) = A \cos t + B \sin t$.
+Одержимо: $A = B = 0$. Тому вихідне рівняння має розв'язок при кожному $f \in L_2 [0; \pi]$.
+
