@@ -2,7 +2,7 @@
 
 \begin{exercise}
     $X$ --- банахів простір, $Y$ --- замкнений підпростір, 
-    $P$ --- проектор $X$ на $Y$ паралельно $Z$ ($Z = Ker P$). 
+    $P$ --- проектор $X$ на $Y$ паралельно $Z$ ($Z = \mathrm{Ker} P$). 
     Довести: $P$ --- обмежений тоді й тільки тоді, коли $Z$ --- 
     замкнений підпростір в $X$.
 \end{exercise}
@@ -17,20 +17,20 @@
 \begin{exercise}
     Розглянемо оператори $i_X$: $X \ni x \rightarrow 
     \sumpair{x}{0} \in X \dotplus Y$;
-    $i_Y$: $Y $\reflectbox{$\in$}$ y \rightarrow 
+    $i_Y$: $Y \ni y \rightarrow 
     \sumpair{0}{y} \in X \dotplus Y$;
-    $P_X$: $X \dotplus Y $\reflectbox{$\in$}$ \sumpair{x}{y} \rightarrow 
+    $P_X$: $X \dotplus Y \ni \sumpair{x}{y} \rightarrow 
     x \in X $;
-    $P_Y$: $X \dotplus Y $\reflectbox{$\in$}$ \sumpair{x}{y} \rightarrow 
+    $P_Y$: $X \dotplus Y \ni \sumpair{x}{y} \rightarrow 
     y \in Y $. $X$ та $Y$ --- нормовані простори.
     \begin{enumerate}
         \item Перевірити, що для норми $\norm{\sumpair{x}{y}} = 
         \norm{x}_X + \norm{y}_Y$ в $X \dotplus Y$ оператори $i_X$, $i_Y$, 
-        $P_X$, $P_Y$ --- обмежені і знайти їх норми;
-        \item нехай $\norm{\cdot}_1$ --- інша норма на $X \dotplus Y$; 
+        $P_X$, $P_Y$ --- обмежені, і знайти їх норми;
+        \item Нехай $\norm{\cdot}_1$ --- інша норма в $X \dotplus Y$, 
         оператори $i_X$, $i_Y$, $P_X$, $P_Y$ --- обмежені. Чи можна 
         стверджувати, що $\norm{\cdot}_1 \sim \norm{\cdot}$?
-        \item нехай $\norm{\cdot}_1$ --- інша норма на $X \dotplus Y$;
+        \item Нехай $\norm{\cdot}_2$ --- інша норма в $X \dotplus Y$,
         $X$, $Y$, $X \dotplus Y$ --- банахові. Виконуються умови: 
         $\norm{\sumpair{x}{0}}_2 = \norm{x}_X$; $\norm{\sumpair{0}{y}} 
         = \norm{y}_Y$. Чи можна 
@@ -54,7 +54,7 @@
 
 \begin{exercise}
     Довести, що функціонал $\varphi: x \rightarrow x(0)$, що діє в 
-    $L_2[0, 1]$ з областю визначення $D(\varphi) = C[0, 1]$ не є 
+    $L_2[0; 1]$ з областю визначення $D(\varphi) = C[0; 1]$, не є 
     замкненим.
 \end{exercise}
 
@@ -63,7 +63,7 @@
     \rightarrow Y$ називається \ul{розширенням} $A$, якщо $\Gamma_A 
     \subset \Gamma_B$. Позначення: $A \subset B$. В разі, якщо 
     $\Gamma_B = \overline{\Gamma_A}$, оператор $B$ називається 
-    \ul{замиканням} оператора $A$, а оператор $A$ є такий, що 
+    \ul{замиканням} оператора $A$, а оператор $A$ є таким, що 
     \ul{допускає замикання}. Позначення: $B = \overline{A}$.
 \end{theory}
 
@@ -72,8 +72,8 @@
     \begin{enumerate}
         \item $(A \subset B) \Leftrightarrow (D(A) \subset D(B); 
         \text{для }x \in D(A): Ax = Bx)$;
-        \item ($A$ допускає замикання) $\Leftrightarrow$ (існує 
-        замкнений оператор $B$, такий, що $A \subset B$)
+        \item ($A$ допускає замикання) $\Leftrightarrow$ ($\exists$ 
+        замкнений оператор $B$ такий, що $A \subset B$);
         \item Замикання оператора $A$ --- це найменше замкнене 
         розширення $A$.
     \end{enumerate}
@@ -84,8 +84,8 @@
     еквівалентність двох тверджень:
     \begin{enumerate}
         \item $A$ допускає замикання;
-        \item виконується умова: ($D(A) \ni x_n \rightarrow 0; 
-        Ax_n \rightarrow y$) $\Rightarrow$ (y = 0).
+        \item виконується умова: $(D(A) \ni x_n \rightarrow 0; 
+        Ax_n \rightarrow y) \Rightarrow (y = 0)$.
     \end{enumerate}
 \end{exercise}
 
@@ -96,8 +96,8 @@
 
 \begin{exercise}
     Нехай оператор $A: X \rightarrow Y$ допускає замикання. Довести:
-    $D(\overline{A}) \subset \overline{D(A)}; Im(\overline{A}) \subset 
-    \overline{ImA}$.
+    $D(\overline{A}) \subset \overline{D(A)}$, $\mathrm{Im}(\overline{A}) \subset 
+    \overline{\mathrm{Im}A}$.
 \end{exercise}
 
 \begin{exercise}
