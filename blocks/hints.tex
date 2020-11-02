@@ -322,7 +322,7 @@ $(y_n \xrightarrow[\text{сл}]{} 0) \Rightarrow ((B y_n, y_n) \rightarrow 0)$.
 $B$ за допомогою послідовності $x_n(t) = t^n$.
 
 \noindent\ref{N:1_6_25}. Нехай $\vec{x}$ задовольняє рівняння: $(A+B) \vec{x} = \vec{e_1}$.
-Тоді $B \vec{x} = (1, -x_1, -x_2, \dots); \norm{B} \geq 1$.
+Тоді $B \vec{x} = (1, -x_1, -x_2, \dots)$; $\norm{B} \geq 1$.
 
 \noindent\ref{N:1_6_28}. З умов задачі: $B$ --- неперервна лінійна бієкція $Y$ на $Z$. Тому
 $B^{-1} \in L(Z, Y)$. $A = B^{-1} \circ (BA)$.
@@ -343,6 +343,7 @@ $B^{-1} \in L(Z, Y)$. $A = B^{-1} \circ (BA)$.
  $\lambda \alpha x_1 - \alpha \dotprod{x_1}{x_0} x_1 - \frac{1}{\lambda}\dotprod{x''}{x_0}x_1 = x' = (x, x_1)x_1$.
  $\alpha(\lambda - (x_1, x_0))x_1 = \frac{1}{\lambda}(x'', x_0)x_1 + (x, x_1)x_1$.
  Якщо $x_1 \neq 0$, то $\alpha = \frac{1}{\lambda - (x_1, x_0)}\left(\frac{1}{\lambda}(x'', x_0)+(x, x_1)\right)$.
+ 
  Тому $R_{\lambda} (A): x \mapsto \left(\frac{1}{\lambda(\lambda - (x_1, x_0))}(x, x_0)+\frac{\lambda - \norm{x_0}^2}{\lambda}(x, x_1)\right)x_1 + \frac{1}{\lambda}(x - (x, x_1)x_1)$.
  
 \noindent\ref{N:1_7_14}. а) Якщо $\lambda \notin [0; 1]$, то рівняння $(\lambda - t)y(t) = x(t)$ має в $L_2 [0; 1]$
@@ -399,8 +400,8 @@ $, $\lambda \in \sigma(A^* A)$.
 $\mathrm{Ker} A = \{0\}$ та $\mathrm{Im} A \subset \{x \in X \big| x(0) = 0\}$;
 в $X = L_2 [0; 1]: 0 \in \sigma_{\text{к}} (A)$, тому що $(\int\limits_0^t x(s) ds = 0 \text{ в } L_2[0; 1]) \Rightarrow$
 $(\int\limits_0^t x(s) ds = 0, \forall t \in [0, 1]$, оскільки функція $\int\limits_0^t x(s) ds$ неперервна по $t) \Rightarrow$
-$(\forall $ числовий проміжок $\Delta \subset [0, t]: \int\limits_{\Delta} x(s)ds = 0) \Rightarrow$
-$(\forall $ лебегова множина $A \subset [0, 1): \int\limits_A x(s) ds = 0) \Rightarrow$
+$(\forall $ числового проміжку $\Delta \subset [0, t]: \int\limits_{\Delta} x(s)ds = 0) \Rightarrow$
+$(\forall $ лебегової множини $A \subset [0, 1): \int\limits_A x(s) ds = 0) \Rightarrow$
 $(x(\cdot) = \frac{d(0)}{d \lambda_1} = 0$ (м. с.)).
 
 \noindent Інший шлях: $y(t) = \int\limits_0^t x(s) ds$ --- абсолютно неперервна, а тому $x(t) = y'(t)$ (м. с.).
