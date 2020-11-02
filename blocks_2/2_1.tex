@@ -1,0 +1,87 @@
+% !TEX root = ../main.tex
+
+\begin{theory}
+    Нехай $X$ --- банахів простір (над полем $\real$ або $\complex$),
+    $T(t)$ --- однопараметрична сім'я обмежених лінійних операторів в $X$, $t \in [0; +\infty)$.
+    Сім'я операторів $T(t)$ називається \uline{(однопараметричною) операторною півгрупою}, якщо
+    виконуються властивості:
+    \begin{enumerate}[label = \arabic*)]
+        \item $T(0) = I$;
+        \item $T(t+s) = T(t) T(s)$ $(t, s \geq 0)$.
+    \end{enumerate}
+    Якщо, додатково, виконується умова \uline{сильної неперервності}:
+    \begin{enumerate}[label = \arabic*)]
+        \item[3)] $\forall \; x \in X$ функція $[0; +\infty) \ni t \mapsto T(t)x \in X$ є неперервною,
+    \end{enumerate}
+    то операторна півгрупа називається \uline{$c_0$-півгрупою}.
+    Якщо замість 3) виконується умова 
+    \begin{enumerate}[label = \arabic*)]
+        \item[3$^\prime$)] $[0; +\infty) \ni t \mapsto T(t) \in L(X)$ --- неперервна операторна функція,
+    \end{enumerate} 
+    то півгрупу $T(t)$ називають \uline{неперервною за нормою} або
+    \ul{рівномірно неперервною}.
+    \noindent\uline{Генератор} $A$ $c_0$-півгрупи $T(t)$ визначається двома умовами:
+    \begin{enumerate}
+        \item $D(A) = \left\{ x \in X \mid \exists \; \underset{t\to 0+0}{\lim} \frac{1}{t} (T(t)x - x)\right\}$;
+        \item для $x \in D(A)$ $Ax := \underset{t\to 0+0}{\lim} \frac{1}{t} (T(t)x - x)$.
+    \end{enumerate}
+    Інше позначення генератора --- $A = T^\prime (0)$.
+
+    \noindent $c_0$-півгрупа називається \uline{$c_0$-півгрупою стиску},
+    якщо для всіх $t \geq 0$ виконується умова $\norm{T(t)} \leq 1$.
+\end{theory}
+
+\begin{exercise}
+    Довести наступні твердження:
+    \begin{enumerate}
+        \item Рівномірно неперервна оператора півгрупа $T(t)$ є $c_0$-півгрупою;
+        \item Якщо $T(t)$ --- $c_0$-півгрупа в банаховому просторі $X$, то існують числа $M, \; \omega \in \real$,
+        для яких при всіх $t \geq 0$ виконується нерівність $\norm{T(t)} \leq M e^{\omega t}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$ --- генератор $c_0$-півгрупи $T(t)$ в банаховому просторі $X$. Доведіть наступні твердження:
+    \begin{enumerate}
+        \item $A$ --- лінійний оператор;
+        \item $\overline{D(A)} = X$;
+        \item $A$ --- замкнений оператор в $X$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $A$ --- генератор $c_0$-півгрупи $T(t)$ в банаховому просторі $X$. Довести:
+    \begin{enumerate}
+        \item $\forall \; x \in D(A)$ при всіх $t \geq 0$: $T(t)x \in D(A)$ і при цьому $\exists \; \frac{d}{dt} T(t)x = A T(t)x = T(t) Ax$;
+        \item $\forall \; x \in D(A)$ при всіх $t \geq 0$ має місце формула $T(t)x - x = \int\limits_0^t T(s) Ax ds$;
+        \item $\forall \; x \in D(A)$ при всіх $t \geq 0$: $\int\limits_0^t T(s)x ds \in D(A)$ і при цьому $T(t)x - x = A \int\limits_0^t T(s)x ds$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $T(t)$, $S(t)$ --- дві операторні $c_0$-півгрупи в $X$, $T^\prime(0) = S^\prime(0)$. Доведіть:
+    для кожного $t \geq 0$ виконується рівність $T(t) = S(t)$. 
+\end{exercise}
+
+\begin{exercise}
+    Нехай для операторної півгрупи $T(t)$ в банаховому просторі $X$ крім умов
+    $1$) та $2$) виконується умова $\tilde{3}$): $\norm{T(t) - I} \to 0$ при $t\to 0 + 0$ (неперервність за нормою в нулі).
+    Доведіть: $T(t)$ --- рівномірно неперервна півгрупа.
+\end{exercise}
+
+\begin{exercise}
+    Нехай для операторної півгрупи $T(t)$ в банаховому просторі $X$ крім умов
+    $1$) та $2$) виконується умова $\hat{3}$): $\forall x \in X : \norm{T(t)x - x} \to 0$ при $t\to 0 + 0$ (сильна неперервність в нулі).
+    Доведіть: $T(t)$ --- $c_0$-півгрупа.
+\end{exercise}
+
+\begin{theory}
+    Для обмеженого, визначеного на всьому банаховому просторі $X$ оператора
+    $A \in L(X)$ запроваджується оператор $e^{tA}$ за формулою
+    $e^{tA} = \sum\limits_{n=0}^{\infty} \frac{1}{n!} t^n A^n$ ($A^0 = I$).
+\end{theory}
+
+\begin{exercise}
+    Перевірте коректність означення $e^{tA}$, $A \in L(X)$:
+    збіжність відповідного ряду і включення $e^{tA} \in L(X)$.
+\end{exercise}
