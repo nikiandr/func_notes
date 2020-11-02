@@ -1,0 +1,61 @@
+% !TEX root = ../main.tex
+
+\begin{exercise}
+    Довести наступний \ul{критерій $c_0$ півгруп, неперервних за 
+    нормою}:
+    \begin{enumerate}
+        \item ($A \in L(X)$) $\Rightarrow$ ($T(t) = e^{tA}$ 
+        --- рівномірно неперервна півгрупа);
+        \item ($T(t)$ --- рівномірно неперервна півгрупа) $\Rightarrow$ 
+        ($A = T^{\prime}(0) \in L(X)$ : $T(t) = e^{tA}$ $\forall t \geq 0$);
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $T(t)$ --- $c_0$-півгрупа в $X$; $\lambda \in K$ ($K$ --- основне поле). Доведіть, 
+    що оператори $S(t) = e^{-\lambda t}T(t)$ утворюють $c_0$-півгрупу і при цьому 
+    $S^{\prime}(0) = T^{\prime}(0) - \lambda I$. 
+\end{exercise}
+
+\begin{exercise}
+    Нехай $T(t)$ --- $c_0$-півгрупа; $\norm{T(t)} \leq Me^{\omega t}$ $\forall t \geq 0$;
+    $A = T^{\prime}(0)$. Для $\lambda \in \complex$, що задовольняє нерівність $Re\lambda > 0$,
+    розглянемо \ul{перетворення Лапласа $R_\lambda$ півгрупи $T(t)$} $R_\lambda : 
+    X \rightarrow X$ визначено формулою $R_\lambda x = \intl{0}{\infty}e^{-\lambda t} T(t)
+    x dt$. Доведіть, що:
+    \begin{enumerate}
+        \item $\forall x \in X$, $Re \lambda > \omega$ оператор 
+        $R_\lambda$ є коректно визначеним оператором з $L(X)$;
+        \item ($Re \lambda > \omega$) $\Rightarrow$ ($\inv{(\lambda - A)}x = R_\lambda x$ 
+        для $x \in X$), тобто ($Re \lambda > \omega$) $\Rightarrow$ ($\lambda \in \rho(A)$
+        та $R(\lambda; A) = R_\lambda$).
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $K = \complex$. Довести:
+    \begin{enumerate}
+        \item Якщо $T(t)$ --- $c_0$-півгрупа стиску, то ($Re\lambda > 0$) $\Rightarrow$
+        ($\lambda \in \rho(A)$; $\norm{\inv{\lambda - A}} \leq \frac{1}{Re \lambda}$);
+        \item Якщо $T(t)$ --- довільна $c_0$-півгрупа; $\norm{T(t)} \leq Me^{\omega t}$ 
+        ($t \geq 0$), то ($Re \lambda > \omega$) $\Rightarrow$ 
+        ($\norm{\inv{\lambda - A}} \leq \frac{M}{Re\lambda - \omega}$).
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    \ul{Теорема Хіллє - Іосіди}. Лінійний оператор $A$ в банаховому просторі $X$ є 
+    генератором $c_0$-півгрупи стиску тоді й тільки тоді, коли він задовольняє 
+    наступні умови:
+    \begin{enumerate}
+        \item $\overline{D(A)} = X$; $A$ --- замкнений оператор;
+        \item $(0, +\infty) \subset \rho(A)$ і при цьому для всіх $\lambda > 0$: 
+        $\norm{R(\lambda; A)} \leq \frac{1}{\lambda}$.
+    \end{enumerate}
+    \ul{Теорема Хіллє-Іосіди-Міллдера-Феллера-Філліпса}. Лінійний оператор $A$ в банаховому 
+    просторі $X$ є генератором $c_0$-півгрупи тоді й тільки тоді, коли він задовольняє 
+    такі умови:
+    \begin{enumerate}
+        \item 
+    \end{enumerate}
+\end{theory}
