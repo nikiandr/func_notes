@@ -1,0 +1,87 @@
+% !TEX root = ../main.tex
+
+\begin{exercise}
+    Нехай $T(t)$ --- $c_0$-півгрупа в банаховому просторі $X$, $A = T'(0)$.
+    Довести:
+    \begin{enumerate}
+        \item $\overline{ D(A^2) } = X$;
+        \item $\forall n \in \natur$: $\overline{ D(A^n) } = X$;
+        \item[в)*] $\bigcap\limits^\infty_{n=1} D(A^n)$ --- щільна множина в $X$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $T(t)$ --- $c_0$-півгрупа в $X$, $A = T'(0)$, $x \in X$.
+    Довести: $\lambda\inv{(\lambda - A)} x \to x$, $\lambda \to +\infty$ $(\lambda \in \real)$.
+\end{exercise}
+
+\begin{theory}
+    $c_0$-півгрупа називається \ul{рівномірно обмеженою}, якщо існує число $M>0$ таке,
+    що при всіх $t \geq 0$ виконується нерівність $\norm{T(t)} \leq M$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $c_0$-півгрупа $T(t)$ рівномірно обмежена в банаховому просторі $X$,
+    $A = T'(0)$. Довести:
+    \begin{enumerate}
+        \item $\mathrm{Im}A \cap \mathrm{Ker}A = \{0\}$;
+        \item $\overline{\mathrm{Im}A} \cap \mathrm{Ker}A = \{0\}$.
+    \end{enumerate}
+    Наведіть приклад $c_0$-півгрупи в $\real^2$, для якої $\mathrm{Im}A \cap \mathrm{Ker}A \neq \{0\}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $T(t)$ --- $c_0$-півгрупа в $X$, для якої виконується умова $\forall x \in X$
+    $\exists \underset{t \to +\infty}{\lim} T(t)x = T(\infty)x$, $A = T'(0)$.
+    Довести:
+    \begin{enumerate}
+        \item $\overline{\mathrm{Im}A} = \mathrm{Ker}(T(\infty))$;
+        \item $\mathrm{Im} T(\infty) = \mathrm{Ker} A$;
+        \item $X = \mathrm{Ker}A \dotplus \overline{\mathrm{Im}A}$;
+        \item $\mathrm{Im}A = \set{x \mid \intl{0}{\infty}T(t)xdt \text{ --- збігається}}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Позначимо через $X = C[0;+\infty]$ лінійний простір обмежених і рівномірно неперервних
+    функцій на $[0;+\infty)$ (дійсно- або комплекснозначних). Оператори $T(t)$ задамо на $X$
+    формулою: $(T(t)x)(s) = x(s+t)$, $(t \geq 0)$. Довести:
+    \begin{enumerate}
+        \item $X$ --- банахів простір з нормою $\norm{x} = \underset{t \geq 0}{\sup} |x(t)|$;
+        \item $T(t)$ --- лінійні обмежені оператори і утворюють в $X$ $c_0$-півгрупу стиску;
+        \item $(T'(0)x)(s) = x'(s)$ і при цьому $D(T'(0)) = \set{x\in X \mid x' \in X}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $u, f$ --- вектор-функції на $[0; \infty)$ зі значеннями в $X$,
+    $f$ --- неперервна, $u$ --- диференційовна і при цьому при $t \geq 0$ виконується рівність
+    $\frac{d}{dt}u(t) = A u(t) +f(t)$, де $A$ --- генератор $c_0$-півгрупи $T(t)$, $u(0) = x \in X$.
+    Довести: при всіх $t \geq 0$: $u(t) = T(t)x +\intl{0}{t} T(t-s)f(x) ds$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $T(t), S(t)$ --- дві $c_0$-півгрупи на банаховому просторі $X$, $T(t)S(t) = S(t)T(t)$
+    для кожного $t \geq 0$. Довести:
+    \begin{enumerate}
+        \item $\forall s,t \geq 0$: $T(t)S(s) = S(s)T(t)$;
+        \item оператори $V(t) = S(t)T(t)$ утворюють $c_0$-півгрупу в $X$;
+        \item Знайти зв'язок $V'(0)$ з $T'(0)$ та $S'(0)$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    $c_0$-півгрупа $V(t)$ називається \ul{добутком} $T(t)$ та $S(t)$.
+\end{theory}
+
+\begin{exercise}
+    Через $C_0 (\real^2)$ позначимо лінійний простір неперервних на $\real^2$ функцій $u$,
+    для яких $\underset{\norm{\vec{x}}\to \infty}{\lim} u(\vec{x}) = 0$,
+    $\norm{u} = \underset{\real^2}{\sup} |u(x,y)|$. Оператори $T(t)$ та $S(t)$ на $C_0 (\real^2)$
+    задано формулами $(T(t)u)(x,y) = u(x+t, y)$, $(S(t)u)(x,y) = u(x, y+t)$, ($t\geq 0$).
+    \begin{enumerate}
+        \item Перевірити, що $C_0 (\real^2)$ --- банахів простір; $T(t)$, $S(t)$ --- $c_0$-півгрупи на
+        $C_0 (\real^2)$, $T(t)S(t) = S(t)T(t)$.
+        \item Описати $c_0$-півгрупу $V(t) = T(t)S(t)$ і знайти $T'(0)$, $S'(0)$, $V'(0)$.
+    \end{enumerate}
+\end{exercise}
