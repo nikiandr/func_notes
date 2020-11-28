@@ -11,8 +11,10 @@
 \end{exercise}
 
 \begin{exercise}
-    Нехай $K(t) = \sum\limits_{n \in \integers} C_n e^{i n t}$. Розглянемо в $L_2[-\pi; \pi]$
-    оператор $A$ за формулою $(Ax)(t) = \int\limits^\pi_{-\pi} K(t-s) x(s) ds$.
+    Нехай $K(t) = \sum\limits_{n \in \integers} c_n e^{i n t}$, $c_n \in \real$ та ряд
+    $\sum\limits_{n \in \integers} |c_n|$ збігається.
+    Розглянемо в $L_2[-\pi; \pi]$
+    оператор $A$, заданий формулою $(Ax)(t) = \int\limits^\pi_{-\pi} K(t-s) x(s) ds$.
     \begin{enumerate}
         \item Довести: $A$ --- самоспряжений оператор Гільберта-Шмідта; функції \\$\varphi_n(t) = 
         \frac{1}{\sqrt{2\pi}} e^{i n t}$, $n \in \integers$ є власними функціями оператора $A$;
@@ -45,7 +47,7 @@
 \end{exercise}
 
 \begin{theory}
-    \ul{Підказ}: якщо для $A\in L(K)$ $\forall x \; \dotprod{Ax}{x} \leq 0$,
+    \ul{Підказ}: якщо для $A\in L(H)$ $\forall \; x \; \dotprod{Ax}{x} \leq 0$,
     то $(x=Ax) \Rightarrow (x=0)$.
 \end{theory}
 

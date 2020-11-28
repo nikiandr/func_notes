@@ -123,7 +123,7 @@ $\norm{A_Z} = 1$ і, якщо $\mu (Z_1 \bigtriangleup Z_2) > 0$, $\norm{A_{Z_1}
 $|\varphi(x, y)| \leq \norm{\varphi_x} \cdot \norm{y}$. Далі для всіх $y$, що задовольняють нерівність $\norm{y} \leq 1$
 розглянемо (обмежені) функціонали $\psi_y (x) = \varphi(x, y)$ на просторі $X$. $\forall x \in X$ значення цієї
 сім'ї функціоналів: $\{\psi_y (x) | \norm{y} \leq 1\}$ є обмеженою множиною $(|\psi_y(x)| \leq \norm{\varphi_x})$ і тому за теоремою
-Банаха-Штейнгауза: $|\varphi(x, y)| = |\psi_y(x)| \leq K\norm{x}$. Якщо тепер відмовитись від обмеженості $\norm{y}$, то приходимо до
+Банаха-Штейнгауза: $|\varphi(x, y)| = |\psi_y(x)| \leq K\norm{x}$. Якщо тепер відмовитись від обмеженості $\{\norm{y}\}$, то приходимо до
 шуканої нерівності.
 
 \noindent\ref{N:1_2_8}. Нехай $A: H_1 \to H_2$ --- ізоморфізм і $H_1$ --- сепарабельний
@@ -261,7 +261,7 @@ $(Ax_n)(t)$ не має збіжної підпослідовності.
 складається з інтегровних на $[0;1]$ функцій і обмежена в $L_1[0;1]$ (Коші-Буняковський).
 $A(Z) \subset C[0;1]$; $A(Z)$ --- рівномірно обмежені за нормою $C[0;1]$ та одностайно
 неперервні: $\left|(Ax)(t_1) - (Ax)(t_2)\right| \leq \int\limits^1_0 |x| \cdot j_{[t_1,t_2]} ds \leq
-\sqrt{t_2 - t_1} \left(\int\limits^1_0 x^2(s) ds\right)^{\frac{1}{2}}$, (тут $t_2 < t_1$).
+\sqrt{t_2 - t_1} \left(\int\limits^1_0 x^2(s) ds\right)^{\frac{1}{2}}$, (тут $t_1 < t_2$).
 Тому $A(Z)$ --- передкомпакт в $C[0;1]$. Але $\varepsilon$-сітка в $A(Z)$ за нормою $C[0;1]$ 
 також є $\varepsilon$-сіткою за нормою $L_2[0;1]$ $\left(\norm{x}_{L_2[0;1]} \leq 
 \norm{x}_{C[0;1]} \right)$. $A$ --- компактний.
@@ -282,7 +282,9 @@ $C[a; b]$. Оскільки $Z$ --- повний простір, а передк
 $\mathrm{Im} A \subset \overline{\bigcup\limits_{n = 1}^{\infty} \mathrm{Im} A_n}$ --- сепарабельний підпростір в $H$.
 Розгляньте оператор $I$ у несепарабельному просторі.
 
-\noindent\ref{N:1_5_26}. б) $\Rightarrow$ в). Нехай $y_n \equiv y$. Тоді 
+\noindent\ref{N:1_5_26}. б) $\Rightarrow$ в). Нехай $y_n \equiv y$. Тоді
+$(x_n \xrightarrow[\text{сл}]{} x) \Rightarrow (Ax_n \xrightarrow[\text{сл}]{} Ax)$.
+Тепер з \ref{N:1_4_13} $A\in L(H_1, H_2)$. Тепер нехай $y_n = Ax_n$. Тоді: 
 $(x_n \xrightarrow[\text{сл}]{} x, Ax_n \xrightarrow[\text{сл}]{} Ax) \Rightarrow (\norm{A x_n} \rightarrow \norm{A x})$. Далі скористаємося \ref{N:1_4_16} б).
 $(Ax_n \xrightarrow[\text{сл}]{} Ax; \norm{A x_n} \rightarrow \norm{A x}) \Rightarrow (A x_n \rightarrow A x)$.
 
@@ -322,7 +324,7 @@ $(y_n \xrightarrow[\text{сл}]{} 0) \Rightarrow ((B y_n, y_n) \rightarrow 0)$.
 $B$ за допомогою послідовності $x_n(t) = t^n$.
 
 \noindent\ref{N:1_6_25}. Нехай $\vec{x}$ задовольняє рівняння: $(A+B) \vec{x} = \vec{e_1}$.
-Тоді $B \vec{x} = (1, -x_1, -x_2, \dots)$; $\norm{B} \geq 1$.
+Тоді $B \vec{x} = (1, -x_1, -x_2, \dots)$; $\norm{B} > 1$.
 
 \noindent\ref{N:1_6_28}. З умов задачі: $B$ --- неперервна лінійна бієкція $Y$ на $Z$. Тому
 $B^{-1} \in L(Z, Y)$. $A = B^{-1} \circ (BA)$.
@@ -331,15 +333,15 @@ $B^{-1} \in L(Z, Y)$. $A = B^{-1} \circ (BA)$.
 Тоді $A_n^{-1} = (I+A^{-1}C_n)^{-1} A^{-1}$, якщо $\norm{C_n} \leq \frac{1}{2} \norm{A^{-1}}^{-1}$, і при цьому має місце
 оцінка: $\norm{A_n^{-1}} < 2\norm{A^{-1}}$.
 Достатність умови. Якщо $A_n$ --- неперервно оборотний, то $(\norm{C_n}<\frac{1}{M}) \Rightarrow (\norm{C_n} < \norm{A_n^{-1}}^{-1}) \Rightarrow (A$
- --- неперервно оборотний (тут $M = \sup\limits_{n \geq N} \norm{A_n^{-1}}$).
+ --- неперервно оборотний) (тут $M = \sup\limits_{n \geq N} \norm{A_n^{-1}}$).
 
 \noindent\ref{N:1_7_9}. Оператор $A$ компактний. Якщо $\dim H \geq 2$, то $\mathrm{Ker} A = \{0\}$ і $\sigma (A) = \sigma_T (A)$.
  Власні вектори $x$ --- або ортогональні $x_0$ або колінеарні $x_1$. Тому 
  $(\dotprod{x_0}{x_1} = 0) \Rightarrow (\sigma (A) = \{0\})$; 
  $(\dotprod{x_0}{x_1} \neq 0) \Rightarrow (\sigma(A) = \{0; \dotprod{x_1}{x_0}\})$. $r(A) = |\dotprod{x_1}{x_0}|$. 
  Резольвенту $R_{\lambda} (A)$ при $\lambda \notin \{0; (x_1, x_0)\}$ шукаємо як розв'язок рівняння: $\lambda y - \dotprod{y}{x_0} x_1 = x$.
- Покладемо: $x = x' + x''$, де $x' \in$ л. о. $\{x_1\}$; $x'' \perp x_1$; $y = \alpha x_1 + y''$, де $y'' \perp x_{\perp}$;
- $x'' = x - \dotprod{x}{x_{\perp}}x_{\perp}$. Маємо: $y'' = \frac{1}{\lambda} x''$; 
+ Покладемо: $x = x' + x''$, де $x' \in$ л. о. $\{x_1\}$; $x'' \perp x_1$; $y = \alpha x_1 + y''$, де $y'' \perp x_{1}$;
+ $x'' = x - \dotprod{x}{x_{1}}x_{1}$. Маємо: $y'' = \frac{1}{\lambda} x''$; 
  $\lambda \alpha x_1 - \alpha \dotprod{x_1}{x_0} x_1 - \frac{1}{\lambda}\dotprod{x''}{x_0}x_1 = x' = (x, x_1)x_1$.
  $\alpha(\lambda - (x_1, x_0))x_1 = \frac{1}{\lambda}(x'', x_0)x_1 + (x, x_1)x_1$.
  Якщо $x_1 \neq 0$, то $\alpha = \frac{1}{\lambda - (x_1, x_0)}\left(\frac{1}{\lambda}(x'', x_0)+(x, x_1)\right)$.
@@ -348,7 +350,7 @@ $B^{-1} \in L(Z, Y)$. $A = B^{-1} \circ (BA)$.
  
 \noindent\ref{N:1_7_14}. а) Якщо $\lambda \notin [0; 1]$, то рівняння $(\lambda - t)y(t) = x(t)$ має в $L_2 [0; 1]$
  (єдиний) розв'язок: $y(t) = \frac{1}{\lambda - t}x(t)$, тому що $\frac{1}{\lambda - t}$ --- обмежена функція на $[0; 1]$.
- Якщо $\lambda \in [0; 1]$, то рівняння $(\lambda - t)y(t) = \frac{1}{(\lambda - t)^{\frac{1}{3}}} \in L_2[0; 1]$ немає розв'язку в $L_2[0,1]$,
+ Якщо $\lambda \in [0; 1]$, то рівняння $(\lambda - t)y(t) = \frac{1}{(\lambda - t)^{\frac{1}{3}}} \in L_2[0; 1]$ не має розв'язку в $L_2[0,1]$,
  тому що $y(t) = \frac{1}{(\lambda - t)^{\frac{4}{3}}}$ майже скрізь.
  $\{(\lambda - t)x(t) \big| x(\cdot) \in L_2 [0;1]\}$ --- щільний підпростір в $L_2 [0; 1]$, оскільки він містить всі неперервні функції
  $y \in C[0; 1]$, для яких $y(\lambda) = 0$ та існує $y'(\lambda)$. Тож:
@@ -357,9 +359,9 @@ $B^{-1} \in L(Z, Y)$. $A = B^{-1} \circ (BA)$.
 \noindent в) Оскільки $A$ --- компактний оператор; $\dim L_2  [0; 1] = \infty$, то $\sigma(A) \ni 0$ і всі ненульові точки $\sigma(A)$ --- 
 власні числа. Для $\lambda \neq 0$ розглянемо рівняння $(\lambda x)(t) = \int\limits_0^t x(s) ds$. Оскільки $x \in L_2 [0;1]$, то $\int\limits_0^t x(s) ds$ ---
 неперервна функція від $t$. Тому $x \in C[0;1]$, а отже $\int\limits_0^t x(s) ds$ --- неперервно диференційовна.
-Позначимо: $z(t) = \int\limits_0^t x(s) ds$. $\lambda z' - z = 0$; $z(t) = C \mathrm{e}^{\frac{1}{\lambda}t}$. Але $z(0) = 0$. Тож $C = 0$/
+Позначимо: $z(t) = \int\limits_0^t x(s) ds$. $\lambda z' - z = 0$; $z(t) = C \mathrm{e}^{\frac{1}{\lambda}t}$. Але $z(0) = 0$. Тож $C = 0$.
 $\sigma(A) = \{0\}$. $\mathrm{Im} A$ --- щільний в $L_2 [0;1]$, тому що $C[0;1] \subset \mathrm{Im}A$. $\sigma_{\text{н}} (A) = \sigma(A) = \{0\}$.
-$R_{\lambda} (A)$ знаходимо з рівняння: $(\lambda y)(t) - \int\limits_0^t x(s) ds = x(t) (\lambda \neq 0)$. Спочатку робимо "халтуру": нехай $x(\cdot)$ та
+$R_{\lambda} (A)$ знаходимо з рівняння: $(\lambda y)(t) - \int\limits_0^t x(s) ds = x(t) (\lambda \neq 0)$. Спочатку робимо <<халтуру>>: нехай $x(\cdot)$ та
 $y(\cdot)$ диференційовні функції. Тоді заміною $z(t) = \int\limits_0^t x(s) ds$ приводимо рівняння до такого: $\lambda z' - z = x$; 
 $z(t) = C\mathrm{e}^{-\frac{1}{\lambda} t} + \frac{1}{\lambda} \int\limits_0^t \mathrm{e}^{\frac{1}{\lambda}(t-s)} x(s) ds$;
 $z(0) = 0$. Тому $z(t) = \frac{1}{\lambda} \int\limits_0^t \mathrm{e}^{\frac{1}{\lambda}(t-s)} x(s) ds$; 
@@ -368,7 +370,7 @@ $y(t) = z'(t) = \frac{1}{\lambda}x(t) + \frac{1}{\lambda^2} \int\limits_0^t \mat
 $(\lambda y)(t) - \int\limits_0^t y(s) ds = x(t) + \frac{1}{\lambda} \int\limits_0^t \mathrm{e}^{\frac{1}{\lambda}(t-s)} x(s) ds - \frac{1}{\lambda} \int\limits_0^t x(s) ds - $
 $\frac{1}{\lambda^2} \int\limits_0^t ds \int\limits_0^s \mathrm{e}^{\frac{1}{\lambda}(s-\tau)} x(\tau) d\tau = x(t)$, тому що:
 $\int\limits_0^t ds \int\limits_0^s \mathrm{e}^{\frac{1}{\lambda}(s-\tau)} x(\tau) d\tau = \int_0^t d\tau \int_{\tau}^t \mathrm{e}^{\frac{1}{\lambda}(s - \tau)}x(\tau)ds = \lambda \int\limits_0^t (\mathrm{e}^{\frac{t - \tau}{\lambda}} - 1)x(\tau)d\tau$.
-\underline{Відповідь}: $(R_{\lambda} x)(t) = \frac{1}{\lambda}x(t)+\frac{1}{\lambda^2}\int_0^t \mathrm{e}^{\frac{t-s}{\lambda}x(s)ds}$.
+\underline{Відповідь}: $(R_{\lambda} x)(t) = \frac{1}{\lambda}x(t)+\frac{1}{\lambda^2}\int_0^t \mathrm{e}^{\frac{t-s}{\lambda}}x(s)ds$.
 
 \noindent\ref{N:1_7_25}. Скористайтесь задачею \ref{N:1_6_6}.
 
@@ -380,7 +382,7 @@ $\lambda \mapsto R_{\lambda} (A)$ --- неперервна функція на $
 
 \noindent\ref{N:1_7_28}. $0 \in \rho(A); \norm{A^{-1}} = 1$. Тому $(|\lambda| < 1) \Rightarrow (|\lambda - 0| < \norm{R(0; A)}^{-1}) \Rightarrow (\lambda \in \rho(A))$.
 
-\noindent\ref{N:1_7_30}. б) Припустимо спочатку, що $M > 0$ та $M > |m|$. Тоді $M = \sup\limits_{\norm{x} = 1} \dotprod{Ax}{x} = \sup\limits_{\norm{x} = 1} |\dotprod{Ax}{x}| = \norm{A} = r(A)$.
+\noindent\ref{N:1_7_30}. б) Припустимо спочатку, що та $M > |m|$. Тоді $M = \sup\limits_{\norm{x} = 1} \dotprod{Ax}{x} = \sup\limits_{\norm{x} = 1} |\dotprod{Ax}{x}| = \norm{A} = r(A)$.
 Оскільки $\sigma(A)$ --- замкнена множина в $\mathbb{R}$, то $M \in \sigma(A)$.
 Всі інші варіанти розташування $m$ і $M$ в $\mathbb{R}$ паралельним перенесенням зводяться до розглянутого і при цьому
 $(\lambda \in \sigma(A)) \Leftrightarrow (\lambda + c \in \sigma (cI + A))$. Перетворення $A \mapsto B = -A$ переводять $m_A$ в 
@@ -398,7 +400,7 @@ $, $\lambda \in \sigma(A^* A)$.
 
 \noindent\ref{N:1_8_6}. $\sigma (A) = \{0\}$; в $X = C[0; 1]: 0 \in \sigma_{\text{з}}(A)$, тому що 
 $\mathrm{Ker} A = \{0\}$ та $\mathrm{Im} A \subset \{x \in X \big| x(0) = 0\}$;
-в $X = L_2 [0; 1]: 0 \in \sigma_{\text{к}} (A)$, тому що $(\int\limits_0^t x(s) ds = 0 \text{ в } L_2[0; 1]) \Rightarrow$
+в $X = L_2 [0; 1]: 0 \in \sigma_{\text{н}} (A)$, тому що $(\int\limits_0^t x(s) ds = 0 \text{ в } L_2[0; 1]) \Rightarrow$
 $(\int\limits_0^t x(s) ds = 0, \forall t \in [0, 1]$, оскільки функція $\int\limits_0^t x(s) ds$ неперервна по $t) \Rightarrow$
 $(\forall $ числового проміжку $\Delta \subset [0, t]: \int\limits_{\Delta} x(s)ds = 0) \Rightarrow$
 $(\forall $ лебегової множини $A \subset [0, 1): \int\limits_A x(s) ds = 0) \Rightarrow$
@@ -417,9 +419,9 @@ $(x(\cdot) = \frac{d(0)}{d \lambda_1} = 0$ (м. с.)).
 $x(t) = \cos t \cdot \int\limits_0^{\pi} \sin s \cdot x(s) ds - \sin t \int\limits_0^{\pi} \cos s \cdot x(s) ds$. $x(t) = A \cos t + B \sin t$.
 Одержимо: $A = B = 0$. Тому вихідне рівняння має розв'язок при кожному $f \in L_2 [0; \pi]$.
 
-\noindent\ref{N:2_1_10}. Для перевірки необмеженості оператора $A$ розгляньте послідовність $x_n (t) = \sin (nt)$.
+\noindent\ref{N:2_1_10}. Для перевірки необмеженості $A$ розгляньте послідовність $x_n (t) = \sin (nt)$.
 Якщо $x_n \rightrightarrows x$; $y_n = A x_n \rightrightarrows y$ на $[0; 1]$, то $x_n (t) = t y_n(t) \rightrightarrows t y(t)$
 на $[0; 1]$; $\lim\limits_{t \rightarrow 0+} \frac{1}{t} x(t) = y(0)$; $(t \in (0; 1]) \Rightarrow (y(t) = \frac{1}{t} x(t))$.
 
 \noindent\ref{N:2_1_27}. $H = L_2 [0; 1]$. $(A u)(t) = j_{\Delta} \cdot u'(t)$; 
-$D(A) = \{u$ --- поліном; $u(0) = 0\}$; $\Delta$ --- числовий відрізок $[a; b] \subset [0; 1]$; $j_{\Delta}$ --- індикатор $\Delta$.
+$D(A) = \{u$ --- поліном; $u(0) = 0\}$; $\Delta$ --- числовий відрізок $[a; b] \subset [0; 1]$, $[a; b] \neq [0; 1]$ ; $j_{\Delta}$ --- індикатор $\Delta$.

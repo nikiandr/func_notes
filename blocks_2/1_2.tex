@@ -1,7 +1,7 @@
 % !TEX root = ../main.tex
 
 \begin{exercise}
-    $X$ --- банахів простір, $Y$ --- замкнений підпростір, 
+    $X$ --- банахів простір, $Y$ --- замкнений підпростір в $X$, 
     $P$ --- проектор $X$ на $Y$ паралельно $Z$ ($Z = \mathrm{Ker} P$). 
     Довести: $P$ --- обмежений тоді й тільки тоді, коли $Z$ --- 
     замкнений підпростір в $X$.
@@ -10,18 +10,18 @@
 \begin{exercise}
     Нехай $X$, $Y$ --- замкнені підпростори в банаховому просторі $Z$, 
     $Z = X \dotplus Y$. Довести, що існує число $K$, для якого при всіх $z \in Z$ 
-    виконуються нерівності: $\norm{x} \leq K\norm{z}$; $\norm{x} \leq K\norm{z}$ (тут 
+    виконуються нерівності: $\norm{x} \leq K\norm{z}$; $\norm{y} \leq K\norm{z}$ (тут 
     $x \in X$, $y \in Y$, $z = x + y$). 
 \end{exercise}
 
 \begin{exercise}
-    Розглянемо оператори $i_X$: $X \ni x \rightarrow 
+    Розглянемо оператори $i_X$: $X \ni x \mapsto 
     \pair{x}{0} \in X \dotplus Y$;
-    $i_Y$: $Y \ni y \rightarrow 
+    $i_Y$: $Y \ni y \mapsto 
     \pair{0}{y} \in X \dotplus Y$;
-    $P_X$: $X \dotplus Y \ni \pair{x}{y} \rightarrow 
+    $P_X$: $X \dotplus Y \ni \pair{x}{y} \mapsto 
     x \in X $;
-    $P_Y$: $X \dotplus Y \ni \pair{x}{y} \rightarrow 
+    $P_Y$: $X \dotplus Y \ni \pair{x}{y} \mapsto 
     y \in Y $. $X$ та $Y$ --- нормовані простори.
     \begin{enumerate}
         \item Перевірити, що для норми $\norm{\pair{x}{y}} = 
@@ -53,7 +53,7 @@
 \end{exercise}
 
 \begin{exercise}
-    Довести, що функціонал $\varphi: x \rightarrow x(0)$, що діє в 
+    Довести, що функціонал $\varphi: x \mapsto x(0)$, що діє в 
     $L_2[0; 1]$ з областю визначення $D(\varphi) = C[0; 1]$, не є 
     замкненим.
 \end{exercise}
@@ -80,7 +80,7 @@
 \end{exercise}
 
 \begin{exercise}
-    Нехай $A: X \supset D(A) \ni x \rightarrow Ax \in Y$. Довести 
+    Нехай $A: X \supset D(A) \ni x \mapsto Ax \in Y$. Довести 
     еквівалентність двох тверджень:
     \begin{enumerate}
         \item $A$ допускає замикання;
@@ -102,6 +102,6 @@
 
 \begin{exercise}
     Нехай $A: \ell_2 \rightarrow \ell_2$ визначений формулою $A: e_n 
-    \rightarrow ne_1$, де $e_n = (\underbrace{0, ..., 0}_{n-1}, 1, 0, ...)$. 
+    \mapsto ne_1$, де $e_n = (\underbrace{0, ..., 0}_{n-1}, 1, 0, ...)$. 
     Знайти $D(A)$ і довести, що $A$ не допускає замикання.
 \end{exercise}
