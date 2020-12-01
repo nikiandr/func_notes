@@ -1,0 +1,130 @@
+% !TEX root = ../main.tex
+
+\begin{theory}
+    Функція $v \in L_2[a;b]$ (нагадаємо: елементи
+    $L_2[a;b]$ --- це класи еквівалентних функцій, тому
+    $v$ --- це представник відповідного класу) називається
+    \uline{узагальненою похідною} функції $u \in L_2[a;b]$,
+    якщо для кожної функції $w \in C_0^1 [a;b] = \set{w \in C^1[a;b] \mid \supp{w} \subset (a; b)}$
+    має місце рівність $$\int\limits_a^b v \cdot w dx = -\int\limits_a^b u \cdot w^\prime dx$$
+    Множина функцій з $L_2[a;b]$, для яких існує узагальнена похідна, утворює
+    підпростір в $L_2[a;b]$, який позначається $H^1[a;b] = W_2^1[a;b]$.
+    Узагальнена похідна функції $v$ позначається через $v^\prime$.
+\end{theory}
+
+\begin{exercise}
+    Довести, що для функції $u \in H^1[a;b]$ узагальнена похідна єдина,
+    тобто $(u' = v_1, u' = v_2) \Rightarrow (v_1 = v_2 \text{ майже скрізь})$.
+\end{exercise}
+
+\begin{exercise}
+    Перевірити, що множина $H^1[a;b]$ --- лінійний простір, щільний в $L_2[a;b]$ (звичайно, за нормою $L_2[a;b]$).
+\end{exercise}
+
+\begin{exercise}
+    Для функцій $u_1, u_2 \in H^1[a;b]$ покладемо
+    $\dotprod{u_1}{u_2}_H = \int\limits_a^b u_1 u_2 dx +\int\limits_a^b u_1^{\prime} u_2^{\prime} dx$.
+    Доведіть:
+    \begin{enumerate}
+        \item $\dotprod{\cdot}{\cdot}_H$ --- скалярний добуток в $H^1[a;b]$;
+        \item множина неперервно диференційовних функцій $C^1[a;b]$ щільна в $H^1[a;b]$ за нормою, породженою цим скалярним добутком;
+        \item $H_1[a;b]$ --- гільбертів простір за цим скалярним добутком.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Довести сепарабельність гільбертового простору $H^1[a;b]$.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що вкладення $C^1[a;b] \to C[a;b]$ є компактним лінійним оператором.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що вкладення $H_1[a;b] \to L_2[a;b]$ є
+    \begin{enumerate}
+        \item обмеженим лінійним оператором;
+        \item компактним лінійний оператором.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    \begin{enumerate}
+        \item Довести вкладення $A: H^1[a;b] \to C[a;b]$, тобто що кожний
+        клас функцій $[u]$, що є елементом простору $H^1[a;b]$, містить і при тому
+        єдину неперервну функцію.
+        \item Довести, що відображення $A$, що переводить клас $[u]$
+        у відповідну неперервну функцію, є обмеженим лінійним оператором:
+        $A \in L(H^1[a;b], C[a;b])$.
+        \item[в)*] Довести, що $A$ --- компактний лінійний оператор. 
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\{ f_\alpha\}$ --- передкомпактна множина в $C[a;b]$.
+    \begin{enumerate}
+        \item Довести, що для фіксованої функції $g \in L_2[a;b]$
+        множина $\{ f_\alpha \cdot g\}$ передкомпактна в $L_2[a;b]$.
+        \item Нехай $g \in H^1[a;b]$. Чи можна стверджувати, що множина
+        $\{ f_\alpha \cdot g\}$ передкомпактна в $H^1[a;b]$?
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Чи буде множина $M = \left\{ \frac{1}{n} \sin{(nt)}\right\}_{n=1}^{\infty}$
+    передкомпактною в:
+    \begin{enumerate}
+        \item $C[0;1]$;
+        \item $C^1[0;1]$;
+        \item $H^1[0;1]$?
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Довести, що вказаний функціонал на $H^1[-\pi; \pi]$
+    є лінійним обмеженим і знайти його норму.
+    \begin{enumerate}
+        \item $\varphi(x) = \int\limits_{-\pi}^{\pi} (x(t) \sin(t) + x'(t) \cos(t)) dt$;
+        \item $\varphi(x) = \int\limits_{-\pi}^{\pi} (x(t) \cos(t) + x'(t) \sin(t)) dt$;
+        \item[в)*] $\varphi(x) = x(0)$ ($\varphi([u]) = u(0)$).
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    $x \in H^1[a;b]$, $y \in C^1[a;b]$. Довести: $xy \in H^1[a;b]$.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що $\mathring{H}^1[a;b] = \set{x \in H^1[a;b] \mid x(a) = x(b) = 0}$
+    є замкненим підпростором в $H^1[a;b]$. Знайти $\left(\mathring{H}^1[a;b]\right)^{\perp}$. 
+\end{exercise}
+
+\begin{exercise}
+    Довести, що множина $M = \left\{ x \in H^1[a;b] \mid \int\limits_a^b x(t) = 0\right\}$
+    є замкненим підпростором в $H^1[a;b]$. Знайти $M^{\perp}$.
+\end{exercise}
+
+\begin{exercise}
+    Які з функцій $\sgn t$, $|t|$ не лежать в $H^1[-\pi; \pi]$?
+\end{exercise}
+
+\begin{exercise}
+    Довести, що вкладення $H^1[0; \pi]$ в $C[0; \pi]$ є строгим:
+    $\exists \; x \in C[0; \pi]$ такий, що $x \notin H^1[0;\pi]$.
+\end{exercise}
+
+\begin{exercise}
+    Оператор $A$ в $H = H^1[0;1]$ визначено формулою $(Ax)(t) = t x(t)$.
+    Знайти $\norm{A}$, $\mathrm{Ker}{A}$. Чи вірно, що $\mathrm{Im}{A} = H$,
+    $\overline{\mathrm{Im}{A}} = H$?
+\end{exercise}
+
+\begin{exercise}
+    Оператор $H^1[0;1] \to L_2[0;1]$ визначено формулою $Ax = x'$.
+    \begin{enumerate}
+        \item Знайти $\mathrm{Im}{A}$, $\mathrm{Ker}{A}$, $\norm{A}$.
+        \item Довести, що оператор $A$ є замкненим.
+        \item Довести, що оператор $A$ є обмеженим.
+        \item Чи буде оператор $A$ компактним?
+    \end{enumerate}
+\end{exercise}
