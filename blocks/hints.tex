@@ -227,11 +227,26 @@ $y_k = \frac{1}{\sqrt{\norm{x_{n_k}}}} x_{n_k} \rightarrow 0$, але $\{A y_k\}
 
 \noindent\ref{N:1_4_14}. Використовуємо \ref{N:1_4_13}. $(x_n \xrightarrow[\text{сл}]{} x) \Rightarrow (Ax_n \xrightarrow[\text{сл}]{} Ax)$.
 
+\noindent\ref{N:1_4_15}. а) \ul{в)$\Rightarrow$а)} Скористаємось ізометричним вкладенням $Y \subset 
+Y^{**}$. Якщо $x_n \rightarrow 0$, але $Ax_n \nrightarrow 0$, то $\exists \delta > 0$ та 
+$\{x_{n_k}\}$ такі, що $\norm{Ax_{n_k}} \geq \delta$. Тоді $z_k = 
+\frac{x_{n_k}}{\norm{x_{n_k}}} \rightarrow 0$, але послідовність $y_k = Az_k$ --- необмежена 
+в $Y^{**}$, при тому, що за умовою в) $\{y_k\}$ --- слабко збіжна послідовность функціоналів на 
+банаховому просторі $Y^*$. Повнотою просторів $X$ та $Y$ не користуємось.
+
+\noindent\ref{N:1_4_15}. б) Оскільки для $\forall \varphi \in Y^*$ для $x_1, x_2 \in X$ 
+виконується рівність: $\varphi(A(x_1 + x_2)) = \varphi(Ax_1 + Ax_2)$, то, застосовуючи Гана-Банаха, 
+$A(x_1 + x_2) = Ax_1 + Ax_2$. Аналогічно $A(\lambda x) = \lambda Ax$. Обмеженість оператора $A$ 
+довести з використанням імплікації \ul{в) $\Rightarrow$ а)} пункту а).
+
 \noindent\ref{N:1_4_16}. б) 
 $\left(x_n \xrightarrow[\text{сл}]{} x; \norm{x_n} \rightarrow \norm{x}\right) \Rightarrow (\norm{x_n - x}^2 = \norm{x_n}^2 + \norm{x}^2 - (x_n, x) - (x, x_n) \\ \rightarrow 0)$.
 $\left(x_n \xrightarrow[\text{сл}]{} x; \overline{\lim\limits_{n \rightarrow \infty}} \norm{x_n} \leq \norm{x}\right)$
 $\Rightarrow \left(\overline{\lim\limits_{n \rightarrow 0}} \norm{x_n - x}^2 = \overline{\lim\limits_{n \rightarrow 0}} (\norm{x_n}^2 - \norm{x}^2) \leq 0\right)$
 $\Rightarrow (\norm{x_n - x} \rightarrow 0)$.
+
+\noindent\ref{N:1_4_20} в) Нехай $\varphi(y) = \lim\limits_{n \rightarrow \infty} \dotprod{y}{x_n}$. 
+$\varphi \in H^*$(теорема Банаха-Штейнгауза). Далі застосувати теорему Рісса.
 
 \noindent\ref{N:1_4_22}. Позначимо через $A: X \rightarrow Y$ відображення $Ax = \lim\limits_{n \rightarrow \infty} A_n x$.
 $A(\alpha x + \beta y) = \lim\limits_{n \rightarrow \infty} A_n(\alpha x + \beta y) = \alpha Ax + \beta Ay$.
@@ -320,6 +335,12 @@ $(y_n \xrightarrow[\text{сл}]{} 0) \Rightarrow ((B y_n, y_n) \rightarrow 0)$.
 Він переходить у вектор $A \dot{y} (t_0) \in \{Ax\}^{\perp}$. Залишилося зауважити, що кожний вектор $z$ з $\{x\}^{\perp}$ є дотичним вектором
 гладкої кривої (кола), що є перетином сфери з л.о. $\{x, z\}$. При розв'язанні задачі використана лише обмеженість оператора $A$.
 
+\noindent \ref{N:1_5_44} a) $\{a_n\}$ задовольняє умову: $\exists \{b_n\}, 
+\{c_n\}$ такі, що $\sum\limits_{n=1}^{\infty}|b_n|^2 < \infty$, 
+$\sum\limits_{n=1}^{\infty}|c_n|^2 < \infty$ і при цьому $a_n = b_nc_n$.
+Доведіть, що ця умова еквівалентна збіжності ряду $\sum\limits_{n=1}^\infty 
+|a_n|$.
+
 \noindent\ref{N:1_6_22}. б) $X = L_2 [0; 1]$. Нехай $B: \int\limits_0^t x(s) ds \mapsto x(t)$. Доведіть необмеженість
 $B$ за допомогою послідовності $x_n(t) = t^n$.
 
@@ -339,7 +360,7 @@ $B^{-1} \in L(Z, Y)$. $A = B^{-1} \circ (BA)$.
  Власні вектори $x$ --- або ортогональні $x_0$ або колінеарні $x_1$. Тому 
  $(\dotprod{x_0}{x_1} = 0) \Rightarrow (\sigma (A) = \{0\})$; 
  $(\dotprod{x_0}{x_1} \neq 0) \Rightarrow (\sigma(A) = \{0; \dotprod{x_1}{x_0}\})$. $r(A) = |\dotprod{x_1}{x_0}|$. 
- Резольвенту $R_{\lambda} (A)$ при $\lambda \notin \{0; (x_1, x_0)\}$ шукаємо як розв'язок рівняння: $\lambda y - \dotprod{y}{x_0} x_1 = x$.
+ Резольвенту $R_{\lambda} (A)$ при $\lambda \notin \{0; (x_1, x_02)\}$ шукаємо як розв'язок рівняння: $\lambda y - \dotprod{y}{x_0} x_1 = x$.
  Покладемо: $x = x' + x''$, де $x' \in$ л. о. $\{x_1\}$; $x'' \perp x_1$; $y = \alpha x_1 + y''$, де $y'' \perp x_{1}$;
  $x'' = x - \dotprod{x}{x_{1}}x_{1}$. Маємо: $y'' = \frac{1}{\lambda} x''$; 
  $\lambda \alpha x_1 - \alpha \dotprod{x_1}{x_0} x_1 - \frac{1}{\lambda}\dotprod{x''}{x_0}x_1 = x' = (x, x_1)x_1$.
@@ -425,3 +446,30 @@ $x(t) = \cos t \cdot \int\limits_0^{\pi} \sin s \cdot x(s) ds - \sin t \int\limi
 
 \noindent\ref{N:2_1_27}. $H = L_2 [0; 1]$. $(A u)(t) = j_{\Delta} \cdot u'(t)$; 
 $D(A) = \{u$ --- поліном; $u(0) = 0\}$; $\Delta$ --- числовий відрізок $[a; b] \subset [0; 1]$, $[a; b] \neq [0; 1]$ ; $j_{\Delta}$ --- індикатор $\Delta$.
+
+\noindent\ref{N:2_2_20} \ul{а) $\Rightarrow$ б)} Скористатись \ref{N:2_2_8} і 
+довести: $\exists \lim\limits_{t\rightarrow 0+0}\frac{1}{t}\norm{T(t) - I}$.
+
+\noindent \ul{а) $\Rightarrow$ в)} Скористатись \ref{N:2_2_8}. 
+$\norm{\lambda A \inv{(\lambda - A)}} = \norm{\sum\limits_{n=0}^\infty 
+(\frac{1}{\lambda}A)^{n+1}} \leq \frac{\lambda \norm{A}}{\lambda - \norm{A}}$.
+
+\noindent \ul{в) $\Rightarrow$ а)} Оператори $A_\lambda = \lambda A \inv{(\lambda - A)} = 
+\lambda^2 \inv{(\lambda - A)} - \lambda I \in L(X)$ рівномірно обмежені за 
+нормою на $(\omega, +\infty)$; для $x \in D(A)$: $A_\lambda x \rightarrow 
+Ax$, $\lambda \rightarrow +\infty$. Тому $\forall x \in X$ $\exists Bx 
+= \lim\limits_{\lambda \rightarrow +\infty} A_\lambda x$. 
+Тож $(A \subset B;$ $B \in L(X))$ $\Rightarrow$ ($A = B$).
+
+\noindent\ref{N:2_2_21} \ul{a) $\Rightarrow$ б)} $\left(f, g \in D(A)\right)$ 
+$\Rightarrow$ $\left(\exists \left.\frac{d}{ds}\right|_{s=0}T(s)f, 
+\left.\frac{d}{ds}\right|_{s=0}T(s)g\right)$ $\Rightarrow$ 
+$(\exists \left.\frac{d}{ds}\right|_{s=0}T(s)(f\cdot g) = Af \cdot g + f \cdot Ag)$
+
+\ul{б) $\Rightarrow$ а)} $(f, g\in D(A))$ $\Rightarrow$ $\frac{d}{dt}(T(t)f \cdot T(t)g) = 
+T(t)f AT(t)g + AT(t)f\cdot T(t)g =$ $=A(T(t)f\cdot T(t)g)$.
+З корректності відповідної задачі Коші робимо висновок:
+$T(t)f \cdot T(t)g = T(t)(f \cdot g)$.
+
+Для довільних $f, g \in X$: $\exists f_n, g_n \in D(A)$ такі, що $f_n \rightrightarrows f$, 
+$g_n \rightrightarrows g$. Тоді $f_n g_n \rightrightarrows fg$ і застосувати граничний перехід.
