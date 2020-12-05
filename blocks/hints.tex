@@ -473,3 +473,20 @@ $T(t)f \cdot T(t)g = T(t)(f \cdot g)$.
 
 Для довільних $f, g \in X$: $\exists f_n, g_n \in D(A)$ такі, що $f_n \rightrightarrows f$, 
 $g_n \rightrightarrows g$. Тоді $f_n g_n \rightrightarrows fg$ і застосувати граничний перехід.
+
+\noindent\ref{N:2_2_24} $(x\in D(A)) \Rightarrow \left( x\in D(T'(0))\right)
+\Rightarrow (\exists AT(t)x = T'(0)T(t)x = T(t)T'(0)x = T(t)Ax)$.
+Далі: $\lambda > \omega$, де $\norm{T(t)} \leq M e^{\omega t}$.
+$(x\in D(A)) \Rightarrow
+\left( x\in D(T''(0))\right)\Rightarrow \left( \intl{0}{\infty} e^{-\lambda t}T(t)x dt =
+\frac{1}{\lambda}x + \frac{1}{\lambda} \intl{0}{\infty} e^{-\lambda t}T'(0)T(t)x dt =
+\frac{1}{\lambda}x + \frac{1}{\lambda} \intl{0}{\infty} e^{-\lambda t}AT(t)x dt
+\right)$.
+Оскільки $\exists \overline{A}$, то отримуємо для $x \in D(A)$ рівність:
+$\lambda \intl{0}{\infty} e^{-\lambda t}T(t)x dt - \intl{0}{\infty} e^{-\lambda t}\overline{A}T(t)x dt = x$.
+Збіжність невласного інтеграла та замкненість $\overline{A}$ дають:\\
+$(*)\qquad (\lambda - \overline{A})\intl{0}{\infty} e^{-\lambda t}T(t)x dt = x$.\\
+Оскільки оператор
+$R_\lambda: x \mapsto \intl{0}{\infty} e^{-\lambda t}T(t)x dt$ обмежений,
+то (з урахуванням замкненості оператора $\lambda - \overline{A}$) одержимо рівність $(*)$
+для всіх $x \in X$. Тому $D(T'(0))\subset D(\overline{A})$; $\overline{A} = T'(0)$
