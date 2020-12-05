@@ -103,6 +103,26 @@ $\vec{c} \in \ell_\infty$. При цьому $\varphi(\vec{x}) = \sum\limits^\in
 \underset{n\to \infty}{\lim} \varphi\left(\sum\limits^n_{k=1} x_k \vec{e}_k\right)$.
 Тож $\varphi = A \vec{c}$.
 
+\noindent б) Позначимо $e_n = (\underbrace{0,\dots, 0}_{n-1},1,0,\dots) \in c_0$.
+Нехай $\varphi \in c_0^*$; $a_n \coloneqq \varphi(e_n)$. Доведіть збіжність ряду $\suml{n=1}{\infty}|a_n|$.
+Одержимо відображення $A\!: c_0^* \ni \varphi \mapsto (\varphi(e_1),\varphi(e_2),\dots) \!\in \ell_1$. % тут пара мануальных фиксов для предотвражения оверфулла
+При цьому $\suml{n=1}{m}|a_n| = \varphi\left(\suml{n=1}{m}(\pm e_n)\right) \leq \norm{\varphi}$;
+$\norm{A(\varphi)}_{\ell_1} \leq \norm{\varphi}$. Очевидно: $A$ --- лінійний оператор,
+$(x\in c_0; \norm{x}\leq 1, \varepsilon >0) \Rightarrow (\exists y \in c_0; y= \suml{k=1}{m}\alpha_k e_k,
+|\alpha_k| \leq 1, \norm{x-y}\leq \varepsilon)$.
+$|\varphi(x)| \leq \varepsilon\norm{\varphi} + \suml{k=1}{m}|\alpha_k| |\varphi(e_k)| \leq
+\varepsilon \norm{\varphi} + \norm{A\varphi}_{\ell_1}$.
+Тож $\norm{A\varphi}_{\ell_1} = \norm{\varphi}$. Перевіримо: $\mathrm{Im}A = \ell_1$.
+Нехай $(a_1, a_2, \dots) \in \ell_1$. Перевірте, що $c_0 \ni x = (x_1, x_2, \dots) \mapsto
+\suml{n=1}{\infty}a_n x_n \in \real$ --- коректно визначений обмежений функціонал на $c_0$.
+Тоді $A: c_0^* \to \ell_1$ ізоморфізм лінійних просторів із збереженням норми.
+
+\noindent\ref{N:1_1_36} $\sup\{\mathfrak{Re}\varphi(x) \mid \norm{x} = 1\} \leq
+\sup\set{ |\varphi(x)| \mid \norm{x}=1 } = \norm{\varphi}$.
+З іншого боку, $\left(\varphi(x) = |\varphi(x)| e^{i \alpha}\right) \Rightarrow
+\left( \norm{e^{-i \alpha}x} = \norm{x}; \varphi(e^{-i \alpha} x) = |\varphi(x| \right)$.
+Звідси зробіть висновок про протилежну нерівність.
+
 \noindent\ref{N:1_1_42}. а) $\norm{\tilde{x}} = \sup\left\{|\varphi(x)| \mid
 \varphi\in X^*; \norm{\varphi}=1\right\} \leq \norm{x}$. За теоремою Гана-Банаха 
 $\exists\varphi\in X^*$, $\norm{\varphi} = 1$, для якого досягається рівність
