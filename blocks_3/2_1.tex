@@ -1,0 +1,135 @@
+% !TEX root = ../main.tex
+
+\begin{theory}
+    % \ul{Основні функції}\\
+    \ul{Основні функції} - це фінітні функції $\varphi: \real \to \real$ класу $C^\infty$.
+    \ul{Фінітність функції} $\varphi$ --- це обмеженість її носія, тобто $\forall\varphi\;\exists[a,b]:
+    \supp \varphi = \overline{\set{x \mid \varphi(x)\neq 0}} \subset [a,b]$. Множину основних
+    функцій позначаємо через $\mathcal{D}$.\\
+    \ul{Збіжність послідовності} $\varphi_n$ основних функцій до (основної функції) $\varphi$
+    розуміємо в наступному сенсі --- виконуються дві умови:
+    \begin{enumerate}
+        \item $\exists [a,b]: \forall n: \supp\varphi_n \subset [a,b]$;
+        \item $\forall m \in \{0\} \cup \natur$:
+        $\varphi_n^{(m)} \underset{\real}{\rightrightarrows} \varphi^{(m)}, n\to\infty$
+    \end{enumerate}
+    (рівномірна збіжність на $\real$ послідовності самих функцій $\varphi_n$ та їх похідних
+    до відповідних похідних функції $\varphi$). Позначення: $\varphi_n \underset{\mathcal{D}}{\to} \varphi$.
+\end{theory}
+
+\begin{exercise}
+    Нехай $f(x) = \begin{cases}
+        e^{-\frac{1}{1-x^2}}, & |x| < 1 \\
+        0, & |x| \geq 1
+    \end{cases}$
+    \begin{enumerate}
+        \item Доведіть, що $f \in \mathcal{D}$;
+        \item Доведіть, що послідовність функцій $\varphi_n(x)=\frac{1}{n}f(x)$ збігається
+              в $\mathcal{D}$ до функції $\varphi \equiv 0$;
+        \item Доведіть, що $\mathcal{D}$ --- лінійний простір.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Доведіть, що в $\mathcal{D}$ не існує такої метрики $\rho$, що збіжність
+    $\varphi_n \underset{\mathcal{D}}{\to} \varphi$ рівносильна збіжності за цією метрикою:
+    $\rho(\varphi_n,\varphi) \to 0$.
+\end{exercise}
+
+\begin{exercise}
+    Доведіть, що $\mathcal{D}$ \ul{повний} відносно вказаної збіжності в наступному сенсі:
+    якщо для послідовності $\varphi_n \in \mathcal{D}$ виконуються умови:
+    \begin{enumerate}
+        \item $\exists [a,b]: \forall n: \supp\varphi_n \subset [a,b]$;
+        \item $\forall m \in \{0\} \cup \natur$: послідовність $\varphi_n^{(m)}$ рівномірно
+        збігається при $n\to\infty$ на $\real$,
+    \end{enumerate}
+    то існує функція $\varphi \in \mathcal{D}$, до якої $\varphi_n$ збігається
+    в сенсі $\mathcal{D}$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\varphi \in \mathcal{D}$, $\varphi \not\equiv 0$. Чи збігається в $\mathcal{D}$ послідовність:
+    \begin{enumerate}
+        \item $\varphi_n(x) = \frac{1}{n}\varphi\left(\frac{x}{n}\right)$;
+        \item $\varphi_n(x) = \varphi(x+n)$?
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    $\varphi \in \mathcal{D}$. Довести, що наступні умови еквівалентні:
+    \begin{enumerate}
+        \item $\exists \psi \in \mathcal{D}:\; \varphi = \psi'$;
+        \item $\int\limits_{\real} \varphi(x) dx = 0$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Довести, що кожну функцію $\varphi \in \mathcal{D}$ можна представити у вигляді:
+    $\varphi(x) = \varphi_0(x) \int\limits_{\real} \varphi(y) dy  + \psi'(x)$, де
+    $\psi \in \mathcal{D}$, а $\varphi_0$ --- довільна функція в $\mathcal{D}$, для
+    якої виконується рівність $\int\limits_{\real} \varphi_0(x) dx = 1$.
+\end{exercise}
+
+\begin{exercise}
+    Нехай $\varphi_n, \psi_n, \varphi, \psi \in \mathcal{D}$;
+    $\varphi_n \underset{\mathcal{D}}{\to} \varphi$, $\psi_n \underset{\mathcal{D}}{\to} \psi$.
+    Доведіть:
+    \begin{enumerate}
+        \item $\varphi_n +\psi_n \underset{\mathcal{D}}{\to} \varphi +\psi$;
+        \item $\varphi_n \psi_n \underset{\mathcal{D}}{\to} \varphi \psi$;
+        \item $\forall m \in \natur$: $\varphi_n^{(m)} \underset{\mathcal{D}}{\to} \varphi^{(m)}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Функцію $f: \real \to \real$ називають <<\ul{звичайною}>>, якщо вона є інтегровною
+    відносно міри $\lambda_1$ на кожному обмеженому проміжку. Логічне позначення множини
+    всіх таких функцій: $L_{1,\mathrm{loc}}(\real)$ (точніше, елементи $L_{1,\mathrm{loc}}(\real)$
+    --- це класи функцій, що співпадають майже скрізь)
+\end{theory}
+
+\begin{exercise}
+    Нехай $f \in L_{1,\mathrm{loc}}(\real)$; $\varphi, \varphi_n \in \mathcal{D}$;
+    $\varphi_n \underset{\mathcal{D}}{\to} \varphi$. Доведіть:
+    \begin{enumerate}
+        \item $\lim\limits_{n\to\infty} \intl{\real}{} f\cdot \varphi_n \,dx
+              = \intl{\real}{} f\cdot \varphi \,dx$;
+        \item $L_{1,\mathrm{loc}}(\real)$ --- лінійний простір;
+        \item $\ln|x| \in L_{1,\mathrm{loc}}(\real)$;
+        \item $\frac{1}{x} \not\in L_{1,\mathrm{loc}}(\real)$;
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    % \ul{Узагальнені функції}\\
+    \ul{Узагальненою функцією} $f$ називається лінійний неперервний функціонал на $\mathcal{D}$.
+    Неперервність означає, що виконується імплікація: $(\varphi, \varphi_n \in \mathcal{D};
+    \varphi_n \underset{\mathcal{D}}{\to} \varphi)  \Rightarrow (f(\varphi_n) \to f(\varphi))$.
+    Значення $f(\varphi)$ позначається також $\pair{f}{\varphi}$. Множину узагальнених
+    функцій позначаємо через $\mathcal{D}'$.
+\end{theory}
+
+\begin{exercise}
+    Перевірити, що $\mathcal{D}'$ --- лінійний простір відносно стандартних операцій:
+    $\pair{f_1 + f_2}{\varphi} \coloneqq \pair{f_1}{\varphi} + \pair{f_2}{\varphi}$;
+    $\pair{\lambda f}{\varphi} \coloneqq \lambda \pair{f}{\varphi}$.
+\end{exercise}
+
+\begin{exercise}
+    Довести, що наступні функціонали на $\mathcal{D}$ є узагальненими функціями:
+    \begin{enumerate}
+        \item $\pair{f}{\varphi} = \varphi(0)$;
+        \item $\pair{f}{\varphi} = \varphi'(0) + \varphi(1)$;
+        \item $\pair{f}{\varphi} = \intl{0}{1} (\sgn x) \varphi'(x) dx$;
+        \item $\pair{f}{\varphi} = \varphi''(1) + \intl{\real}{} e^x \varphi'(x) dx$;
+        \item $\pair{f}{\varphi} = \intl{-1}{\infty} ln|x| \cdot \varphi''(x) dx$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{theory}
+    Узагальнена функція $f$ називається \ul{регулярною}, якщо існує звичайна
+    функція $g$, для якої при всіх $\varphi \in \mathcal{D}$ має місце
+    рівність $\pair{f}{\varphi} = \intl{\real}{} g\cdot \varphi \,dx$.
+    В протилежному випадку $f$ називається \ul{нерегулярною}.
+\end{theory}
