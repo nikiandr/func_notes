@@ -117,6 +117,20 @@ $|\varphi(x)| \leq \varepsilon\norm{\varphi} + \suml{k=1}{m}|\alpha_k| |\varphi(
 \suml{n=1}{\infty}a_n x_n \in \real$ --- коректно визначений обмежений функціонал на $c_0$.
 Тоді $A: c_0^* \to \ell_1$ ізоморфізм лінійних просторів із збереженням норми.
 
+\noindent\ref{N:1_1_31}. Нехай $A = \{\varphi_n\}$ --- щільна злічена множина в $X^*$.
+Вектори $x_n$ в $X$ вибрано з умови: $\norm{x_n} = 1$;
+$|\varphi_n(x_n)| \geq \frac{1}{2}\norm{\varphi_n}$.
+Доведемо, що множина $D = \left\lbrace \suml{k=1}{m} \alpha_k x_k \mid 
+\alpha_k \in \rational, m \in \natur\right\rbrace$ щільна в $X$.
+$L = \overline{D}$ --- замкнений підпростір в $X$. Якщо $L \neq X$, то $\exists \varphi \in X^*$,
+$\varphi \neq 0$, для якого $L \subset \mathrm{Ker}\varphi$ (див \ref{N:1_1_47}).
+Беремо $\varepsilon > 0$ і нехай $\varphi_n \in A$, такий, що $\norm{\varphi_n - \varphi} < \varepsilon$.
+Тоді $|(\varphi-\varphi_n)(x_n)| = |\varphi_n(x_n)| \geq \frac{1}{2} \norm{\varphi_n}$.
+Тому $\norm{\varphi-\varphi_n} \geq |(\varphi-\varphi_n)(x_n)| = |\varphi_n(x_n)| \geq
+\frac{1}{2}\norm{\varphi_n}$;\; $\norm{\varphi_n} <2\varepsilon$;
+$\norm{\varphi} \leq \norm{\varphi_n} + \norm{\varphi - \varphi_n} < 3 \varepsilon$ і,
+враховуючи довільність $\varepsilon > 0$, $\varphi = 0$, що суперечить вибору $\varphi$.
+
 \noindent\ref{N:1_1_36}. $\sup\{\mathfrak{Re}\varphi(x) \mid \norm{x} = 1\} \leq
 \sup\set{ |\varphi(x)| \mid \norm{x}=1 } = \norm{\varphi}$.
 З іншого боку, $\left(\varphi(x) = |\varphi(x)| e^{i \alpha}\right) \Rightarrow
@@ -556,3 +570,35 @@ $(*)\qquad (\lambda - \overline{A})\intl{0}{\infty} e^{-\lambda t}T(t)x dt = x$.
 $R_\lambda: x \mapsto \intl{0}{\infty} e^{-\lambda t}T(t)x dt$ обмежений,
 то (з урахуванням замкненості оператора $\lambda - \overline{A}$) одержимо рівність $(*)$
 для всіх $x \in X$. Тому $D(T'(0))\subset D(\overline{A})$; $\overline{A} = T'(0)$
+
+\noindent\ref{N:3_1_4}. В просторі $H^1[a,b]$ щільною є підмножина функцій з $C^1[a,b]$
+(але за нормою $H^1[a,b]$). Далі достатньо довести існування зліченної сім'ї функцій в
+$C^1[a,b]$, яка щільна за нормою $C^1[a,b]$ (збіжність за нормою $C^1[a,b]$ індукує
+збіжність за нормою $H^1[a,b]$).
+$\forall \varepsilon >0$ існує многочлен $p(x)$ з раціональними коефіцієнтами, для
+якого $\sup\limits_{a\leq x\leq b}|u'(x)-p(x)| \leq \varepsilon$. Тоді для многочлена
+$q(x) = u(a) + \intl{a}{x}p(t)dt$:\; $\sup\limits_{a\leq x \leq b}|u(x) - q(x)| \leq \varepsilon(b-a)$.
+Далі прийдіть до висновку, що многочлени з раціональними коефіцієнтами утворюють зліченну
+щільну підмножину в $H^1[a,b]$.
+
+\noindent\ref{N:3_1_15}. Оскільки вкладення $A: H^1[0; \pi] \to C[0; \pi]$ є компактним
+оператором, то $\mathrm{Im} A$ є зліченним об'єднанням передкомпактних множин в $C[0; \pi]$.
+Оскільки $\dim C[0; \pi] = \infty$, то передкомпакти в $C[0; \pi]$ ніде не щільні і в разі
+рівності $\mathrm{Im} A = C[0;\pi]$ приходимо до суперечності з теоремою Бера.
+(інформація із задачника: $f(t) = \suml{n=1}{\infty} \frac{\sin(nt)}{n\sqrt{n}} \not\in \mathrm{Im}A$)
+
+\noindent\ref{N:3_1_17}. Нехай $y(t) = \intl{a}{t} x(s) ds$. Перевірте обмеженість
+оператора $B: L_2[a,b] \ni x \mapsto y \in L_2[a,b]$ і зробіть звідси висновок, щільною
+$\mathrm{Im}A = L_2[a,b]$; $\mathrm{Ker}A = \real \cdot \mathds{1} = \{\mathrm{const}\}$.
+$A$ --- обмежений; рівність $\norm{A} = 1$ та відсутність компактності перевірте за допомогою
+послідовності $x_n(t) = \frac{1}{n}\sin(\pi n t)$.
+
+\noindent\ref{N:3_2_12}. д) $\pair{f}{\varphi} = \underset{\varepsilon \to 0+}{\lim}
+\intl{\varepsilon}{+\infty} \frac{\varphi(x) + \varphi(-x) - 2\varphi(0)}{x^2} dx$.
+Оскільки $\varphi(x) = \varphi(0) + x\varphi'(0) + \frac{1}{2}x^2 (\varphi''(0) + \alpha(x))$,
+де $\alpha(x) \to 0$, $x\to 0$,
+то $\frac{\varphi(x) + \varphi(-x) - 2\varphi(0)}{x^2} = 
+\varphi''(0) + \frac{\alpha(x) + \alpha(-x)}{2} \to \varphi''(0)$, $x \to 0$.\\
+$\varphi(x) = \varphi(0) + x\varphi'(0) + \frac{1}{2}x^2\varphi''(\nu(x)\cdot x)$, $0 < \nu(x) < 1$.
+Тому  $\pair{f}{\varphi} = \frac{1}{2}\intl{0}{+\infty} (\varphi''(\nu(x)x) + \varphi''(\nu(-x)(-x)))dx$,
+звідки одержуємо неперервність функціонала $f$.
