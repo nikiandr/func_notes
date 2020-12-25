@@ -117,7 +117,7 @@ $|\varphi(x)| \leq \varepsilon\norm{\varphi} + \suml{k=1}{m}|\alpha_k| |\varphi(
 \suml{n=1}{\infty}a_n x_n \in \real$ --- коректно визначений обмежений функціонал на $c_0$.
 Тоді $A: c_0^* \to \ell_1$ ізоморфізм лінійних просторів із збереженням норми.
 
-\noindent\ref{N:1_1_36} $\sup\{\mathfrak{Re}\varphi(x) \mid \norm{x} = 1\} \leq
+\noindent\ref{N:1_1_36}. $\sup\{\mathfrak{Re}\varphi(x) \mid \norm{x} = 1\} \leq
 \sup\set{ |\varphi(x)| \mid \norm{x}=1 } = \norm{\varphi}$.
 З іншого боку, $\left(\varphi(x) = |\varphi(x)| e^{i \alpha}\right) \Rightarrow
 \left( \norm{e^{-i \alpha}x} = \norm{x}; \varphi(e^{-i \alpha} x) = |\varphi(x| \right)$.
@@ -138,6 +138,17 @@ $\norm{A_Z} = 1$ і, якщо $\mu (Z_1 \bigtriangleup Z_2) > 0$, $\norm{A_{Z_1}
 
 \noindent\ref{N:1_1_46}. Розглянути на $\ell_2$ функціонали $\varphi_n (\vec{\beta}) = \sum\limits_{k = 1}^{n} \alpha_k \beta_k$
 і застосувати теорему Банаха-Штейнгауза.
+
+\noindent\ref{N:1_1_47}. Відношення еквівалентності: $(x \sim y) \Leftrightarrow (x - y \in L)$
+приводить до фактор-множини $\faktor{X}{_L} \coloneqq \faktor{X}{_\sim}$, на якій коректно запроваджувати
+лінійні операції: $[x] + [y] \coloneqq [x+y]$; $\lambda [x] = [\lambda x]$ ( тут $[x]$ --- клас еквівалентності $x$)
+В фактор-просторі $\faktor{X}{_L}$ коректно запроваджується норма $\norm{[x]} = \inf\set{\norm{x} \mid x \in [x]}$
+(перевірте аксіоми норми!). Розмірність $\faktor{X}{_L} = \mathrm{codim} L \geq 1$. Тому за теоремою
+Гана-Банаха на $\faktor{X}{_L}$ існує обмежений ненульовий лінійний функціонал $\alpha$.
+На $X$ функціонал будуємо за правилом $\varphi(x) \coloneqq \lambda([x])$.
+$(x \in L) \Rightarrow ([x] = [0]) \Rightarrow (\varphi(x) = \alpha([0]) = 0)$.
+Тому $\varphi$ --- коректно визначено $(x-y \in L) \Rightarrow (\varphi(x) = \varphi(y))$,
+$\varphi \in X^*$, $\norm{\varphi} = \alpha$.
 
 \noindent\ref{N:1_1_48}. При кожному фіксованому $x: \varphi_x(y) = \varphi(x, y)$ --- лінійний обмежений функціонал на $Y$. Тому
 $|\varphi(x, y)| \leq \norm{\varphi_x} \cdot \norm{y}$. Далі для всіх $y$, що задовольняють нерівність $\norm{y} \leq 1$
@@ -211,6 +222,14 @@ $(H_2 \subset H_1) \Rightarrow (H_2 \perp (H_1 \ominus H_2)).$
 $(P_1 - P_2)^2 = P_1 - P_2$ та $P_1 \geq P_2$. Якщо $P_1 \geq P_2$, то $H_2 \subset H_1$,
 а тому $\forall x \in H$: $P_1 P_2 x = P_2 x$.
 
+\noindent\ref{N:1_3_20}. a) Нехай  $\dim H_1 > \dim H_2$, $P_2$ --- ортопроектор на $H_2$.
+$P_2 \big|_{H_1} : H_1 \to H_2$, $\mathrm{Ker}\left(P_2 \big|_{H_1}\right) \neq \{0\}$.
+Тож існує $x \neq 0$: $x \in H_1$, $P_2 x = 0$. Тому $(P_1 - P_2)x = x$ і $\norm{P_1 - P_2} \geq 1$.
+
+\noindent б) $H \in \real^3$; $H_1 = \text{л.о.}\{\vec\imath,\vec\jmath\}$; $H_2 = \{\vec k\}$.
+$P_1 - P_2: a\vec\imath + b\vec\jmath + c\vec k \mapsto a\vec\imath + b\vec\jmath - c\vec k$.
+$\norm{(P_1 - P_2)\vec x} = \norm{\vec x}$.
+
 \noindent\ref{N:1_3_22}. б) $((I + A^* A)x = 0) \Rightarrow \left(0 = \dotprod{(I + A^* A)x}{x}
 = \norm{x}^2 + \norm{Ax}^2\right) \Rightarrow (x=0) \Rightarrow (\mathrm{Ker}(I + A^* A) = \{0\})$.
 Оскільки $B = I + A^* A$ --- самоспряжений, то $\overline{\mathrm{Im}B} =
@@ -265,7 +284,7 @@ $\left(x_n \xrightarrow[\text{сл}]{} x; \overline{\lim\limits_{n \rightarrow \
 $\Rightarrow \left(\overline{\lim\limits_{n \rightarrow 0}} \norm{x_n - x}^2 = \overline{\lim\limits_{n \rightarrow 0}} (\norm{x_n}^2 - \norm{x}^2) \leq 0\right)$
 $\Rightarrow (\norm{x_n - x} \rightarrow 0)$.
 
-\noindent\ref{N:1_4_20} в) Нехай $\varphi(y) = \lim\limits_{n \rightarrow \infty} \dotprod{y}{x_n}$. 
+\noindent\ref{N:1_4_20}. в) Нехай $\varphi(y) = \lim\limits_{n \rightarrow \infty} \dotprod{y}{x_n}$. 
 $\varphi \in H^*$(теорема Банаха-Штейнгауза). Далі застосувати теорему Рісса.
 
 \noindent\ref{N:1_4_22}. Позначимо через $A: X \rightarrow Y$ відображення $Ax = \lim\limits_{n \rightarrow \infty} A_n x$.
@@ -355,11 +374,38 @@ $(y_n \xrightarrow[\text{сл}]{} 0) \Rightarrow ((B y_n, y_n) \rightarrow 0)$.
 Він переходить у вектор $A \dot{y} (t_0) \in \{Ax\}^{\perp}$. Залишилося зауважити, що кожний вектор $z$ з $\{x\}^{\perp}$ є дотичним вектором
 гладкої кривої (кола), що є перетином сфери з л.о. $\{x, z\}$. При розв'язанні задачі використана лише обмеженість оператора $A$.
 
-\noindent \ref{N:1_5_44} a) $\{a_n\}$ задовольняє умову: $\exists \{b_n\}, 
+\noindent \ref{N:1_5_44}. a) $\{a_n\}$ задовольняє умову: $\exists \{b_n\}, 
 \{c_n\}$ такі, що $\sum\limits_{n=1}^{\infty}|b_n|^2 < \infty$, 
 $\sum\limits_{n=1}^{\infty}|c_n|^2 < \infty$ і при цьому $a_n = b_nc_n$.
 Доведіть, що ця умова еквівалентна збіжності ряду $\sum\limits_{n=1}^\infty 
 |a_n|$.
+
+\noindent\ref{N:1_6_16}. в) $x(t) - t\intl{0}{1}sx(s)ds = y(t)$;\; $x(t) = y(t) +Ct$;\\
+$y(t) +Ct = y(t) + t \intl{0}{1}s(y(s) + Cs)ds$;\\
+$C = \intl{0}{1}sy(s)ds + C \intl{0}{1}s^2ds$;\;
+$C = \frac{3}{2} \intl{0}{1}sy(s)ds$.\; Тож:
+$x(t) = y(t) + \frac{3}{2}t\intl{0}{1}sy(s)ds$. 
+
+\noindent\ref{N:1_6_17} $x(t) + \lambda \intl{0}{1}(t+s)x(s)ds = y(t)$;\;
+$a \coloneqq \intl{0}{1} x(s) ds$;\; $b \coloneqq \intl{0}{1} sx(s)ds$.\\
+Тоді: $x(t) = y(t) - (at +b)\lambda$;\;
+$y(t) - \lambda(at + b) + \lambda\intl{0}{1}(t+s)(y(s) - \lambda(as+b))ds = y(t)$;
+$\lambda_1 = 0$; Нехай $\lambda \neq 0$
+\[\begin{cases}
+    - a + \intl{0}{1}(y(s) - \lambda(as + b))ds = 0\\
+    - b + \intl{0}{1}s(y(s) - \lambda(as + b))ds = 0
+\end{cases}\]
+\[\begin{cases}
+    a(1 + \frac{\lambda}{2}) + b\lambda = \intl{0}{1}y(s)ds\\
+    a(\frac{\lambda}{3}) + b(1 + \frac{\lambda}{2}) = \intl{0}{1} sy(s)ds.
+\end{cases}
+\quad (*)\]
+$\Delta = (1 + \frac{\lambda}{2})^2 - \frac{\lambda^2}{3} \neq 0$; \;
+$\lambda^2 - 12\lambda -12 \neq 0$, при
+$\lambda \not\in \{6 \pm 4\sqrt{3}\}$\\
+Тож при $\lambda \not\in \{6 \pm 4\sqrt{3}\}$ існує неперервний обернений.
+Якщо $\lambda \not\in \{0, 6 \pm 4\sqrt{3}\}$, то знаходимо $a$ та $b$ із системи $(*)$
+і $x(t) = y(t) - \lambda(at+b)$.
 
 \noindent\ref{N:1_6_22}. б) $X = L_2 [0; 1]$. Нехай $B: \int\limits_0^t x(s) ds \mapsto x(t)$. Доведіть необмеженість
 $B$ за допомогою послідовності $x_n(t) = t^n$.
@@ -467,7 +513,7 @@ $x(t) = \cos t \cdot \int\limits_0^{\pi} \sin s \cdot x(s) ds - \sin t \int\limi
 \noindent\ref{N:2_1_27}. $H = L_2 [0; 1]$. $(A u)(t) = j_{\Delta} \cdot u'(t)$; 
 $D(A) = \{u$ --- поліном; $u(0) = 0\}$; $\Delta$ --- числовий відрізок $[a; b] \subset [0; 1]$, $[a; b] \neq [0; 1]$ ; $j_{\Delta}$ --- індикатор $\Delta$.
 
-\noindent\ref{N:2_2_20} \ul{а) $\Rightarrow$ б)} Скористатись \ref{N:2_2_8} і 
+\noindent\ref{N:2_2_20}. \ul{а) $\Rightarrow$ б)} Скористатись \ref{N:2_2_8} і 
 довести: $\exists \lim\limits_{t\rightarrow 0+0}\frac{1}{t}\norm{T(t) - I}$.
 
 \noindent \ul{а) $\Rightarrow$ в)} Скористатись \ref{N:2_2_8}. 
@@ -481,7 +527,7 @@ Ax$, $\lambda \rightarrow +\infty$. Тому $\forall x \in X$ $\exists Bx
 = \lim\limits_{\lambda \rightarrow +\infty} A_\lambda x$. 
 Тож $(A \subset B;$ $B \in L(X))$ $\Rightarrow$ ($A = B$).
 
-\noindent\ref{N:2_2_21} \ul{a) $\Rightarrow$ б)} $\left(f, g \in D(A)\right)$ 
+\noindent\ref{N:2_2_21}. \ul{a) $\Rightarrow$ б)} $\left(f, g \in D(A)\right)$ 
 $\Rightarrow$ $\left(\exists \left.\frac{d}{ds}\right|_{s=0}T(s)f, 
 \left.\frac{d}{ds}\right|_{s=0}T(s)g\right)$ $\Rightarrow$ 
 $(\exists \left.\frac{d}{ds}\right|_{s=0}T(s)(f\cdot g) = Af \cdot g + f \cdot Ag)$
@@ -494,7 +540,7 @@ $T(t)f \cdot T(t)g = T(t)(f \cdot g)$.
 Для довільних $f, g \in X$: $\exists f_n, g_n \in D(A)$ такі, що $f_n \rightrightarrows f$, 
 $g_n \rightrightarrows g$. Тоді $f_n g_n \rightrightarrows fg$ і застосувати граничний перехід.
 
-\noindent\ref{N:2_2_24} $(x\in D(A)) \Rightarrow \left( x\in D(T'(0))\right)
+\noindent\ref{N:2_2_24}. $(x\in D(A)) \Rightarrow \left( x\in D(T'(0))\right)
 \Rightarrow (\exists AT(t)x = T'(0)T(t)x = T(t)T'(0)x = T(t)Ax)$.
 Далі: $\lambda > \omega$, де $\norm{T(t)} \leq M e^{\omega t}$.
 $(x\in D(A)) \Rightarrow
