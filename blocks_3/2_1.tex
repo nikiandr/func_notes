@@ -2,15 +2,15 @@
 
 \begin{theory}
     % \ul{Основні функції}\\
-    \ul{Основні функції} - це фінітні функції $\varphi: \real \to \real$ класу $C^\infty$.
-    \ul{Фінітність функції} $\varphi$ --- це обмеженість її носія, тобто $\forall\varphi\;\exists[a,b]:
+    \ul{Основні функції} --- це фінітні функції $\varphi: \real \to \real$ класу $C^\infty$.
+    \ul{Фінітність функції} $\varphi$ --- це обмеженість її носія, тобто $\exists\;[a,b]:
     \supp \varphi = \overline{\set{x \mid \varphi(x)\neq 0}} \subset [a,b]$. Множину основних
     функцій позначаємо через $\mathcal{D}$.\\
     \ul{Збіжність послідовності} $\varphi_n$ основних функцій до (основної функції) $\varphi$
     розуміємо в наступному сенсі --- виконуються дві умови:
     \begin{enumerate}
-        \item $\exists [a,b]: \forall n: \supp\varphi_n \subset [a,b]$;
-        \item $\forall m \in \{0\} \cup \natur$:
+        \item $\exists \;[a,b]: \forall n: \supp\varphi_n \subset [a,b]$;
+        \item $\forall \; m \in \{0\} \cup \natur$:
         $\varphi_n^{(m)} \underset{\real}{\rightrightarrows} \varphi^{(m)}, n\to\infty$
     \end{enumerate}
     (рівномірна збіжність на $\real$ послідовності самих функцій $\varphi_n$ та їх похідних
@@ -21,7 +21,7 @@
     Нехай $f(x) = \begin{cases}
         e^{-\frac{1}{1-x^2}}, & |x| < 1 \\
         0, & |x| \geq 1
-    \end{cases}$
+    \end{cases}$.
     \begin{enumerate}
         \item Доведіть, що $f \in \mathcal{D}$;
         \item Доведіть, що послідовність функцій $\varphi_n(x)=\frac{1}{n}f(x)$ збігається
@@ -40,8 +40,8 @@
     Доведіть, що $\mathcal{D}$ \ul{повний} відносно вказаної збіжності в наступному сенсі:
     якщо для послідовності $\varphi_n \in \mathcal{D}$ виконуються умови:
     \begin{enumerate}
-        \item $\exists [a,b]: \forall n: \supp\varphi_n \subset [a,b]$;
-        \item $\forall m \in \{0\} \cup \natur$: послідовність $\varphi_n^{(m)}$ рівномірно
+        \item $\exists \; [a,b]: \forall n: \supp\varphi_n \subset [a,b]$;
+        \item $\forall \; m \in \{0\} \cup \natur$: послідовність $\varphi_n^{(m)}$ рівномірно
         збігається при $n\to\infty$ на $\real$,
     \end{enumerate}
     то існує функція $\varphi \in \mathcal{D}$, до якої $\varphi_n$ збігається
@@ -59,7 +59,7 @@
 \begin{exercise}
     $\varphi \in \mathcal{D}$. Довести, що наступні умови еквівалентні:
     \begin{enumerate}
-        \item $\exists \psi \in \mathcal{D}:\; \varphi = \psi'$;
+        \item $\exists \; \psi \in \mathcal{D}:\; \varphi = \psi'$;
         \item $\int\limits_{\real} \varphi(x) dx = 0$.
     \end{enumerate}
 \end{exercise}
@@ -78,7 +78,7 @@
     \begin{enumerate}
         \item $\varphi_n +\psi_n \underset{\mathcal{D}}{\to} \varphi +\psi$;
         \item $\varphi_n \psi_n \underset{\mathcal{D}}{\to} \varphi \psi$;
-        \item $\forall m \in \natur$: $\varphi_n^{(m)} \underset{\mathcal{D}}{\to} \varphi^{(m)}$.
+        \item $\forall \; m \in \natur$: $\varphi_n^{(m)} \underset{\mathcal{D}}{\to} \varphi^{(m)}$.
     \end{enumerate}
 \end{exercise}
 
@@ -86,7 +86,7 @@
     Функцію $f: \real \to \real$ називають <<\ul{звичайною}>>, якщо вона є інтегровною
     відносно міри $\lambda_1$ на кожному обмеженому проміжку. Логічне позначення множини
     всіх таких функцій: $L_{1,\mathrm{loc}}(\real)$ (точніше, елементи $L_{1,\mathrm{loc}}(\real)$
-    --- це класи функцій, що співпадають майже скрізь)
+    --- це класи функцій, рівних майже скрізь).
 \end{theory}
 
 \begin{exercise}
@@ -131,5 +131,5 @@
     Узагальнена функція $f$ називається \ul{регулярною}, якщо існує звичайна
     функція $g$, для якої при всіх $\varphi \in \mathcal{D}$ має місце
     рівність $\pair{f}{\varphi} = \intl{\real}{} g\cdot \varphi \,dx$.
-    В протилежному випадку $f$ називається \ul{нерегулярною}.
+    В протилежному випадку $f$ називається \ul{нерегулярною (сингулярною)}.
 \end{theory}
