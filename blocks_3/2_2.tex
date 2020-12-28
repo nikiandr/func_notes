@@ -1,0 +1,193 @@
+% !TEX root = ../main.tex
+\begin{exercise}\label{N:3_2_11}
+    Доведіть, що якщо $f_1, f_2 \in L_{1, loc}(\real)$ та для 
+    $\forall \; \varphi \in \mathcal{D}$ має місце рівність 
+    $\int\limits_{\real} f_1 \cdot \varphi dx = \int\limits_{\real} f_2 \cdot \varphi dx$,
+    то $f_1 = f_2$ майже скрізь, тобто $f_1 = f_2$ в сенсі простору $L_{1, loc}(\real)$.
+\end{exercise}
+\begin{theory}
+    Результат задач \ref{N:3_2_8}\ref{N:3_2_8a} та \ref{N:3_2_11} дає підставу казати
+    про вкладення простору $L_{1, loc}(\real)$ в $\mathcal{D}'$. Таким чином, маємо трійку просторів
+    $\mathcal{D} \subset L_{1, loc}(\real) \subset \mathcal{D}'$.
+\end{theory}
+
+\begin{exercise}\label{N:3_2_12}
+    Перевірити, чи є наступні функціонали узагальненими функціями і в разі позитивної відповіді перевірити,
+    чи є вони сингулярними.
+    \begin{enumerate}
+        \item $\pair{f}{\varphi} = \varphi(0)$;
+        \item $\pair{f}{\varphi} = \varphi(a)$ ($a \in \real$);
+        \item $\pair{f}{\varphi} = \suml{n=1}{\infty}\varphi^{(n)}(n)$;
+        \item $\pair{f}{\varphi} = \mathrm{V.P.}\intl{\real}{} \frac{\varphi(x)}{x} dx$;
+        \item $\pair{f}{\varphi} = \intl{\real}{} \varphi''(x) e^{-x} dx$;
+        \item $\pair{f}{\varphi} = \mathrm{V.P.}\intl{\real}{} \frac{\varphi(x) - \varphi(0)}{x^2} dx$.
+    \end{enumerate}
+\end{exercise}
+\begin{theory}
+    Узагальнені функції з пунктів а), б), г), д) номеру \ref{N:3_2_12} позначаються відповідно
+    $\delta$, $\delta_a$, $\mathcal{P}\frac{1}{x}$ (або $\mathrm{V.P.} \frac{1}{x}$),
+    $\mathcal{P}\frac{1}{x^2}$ (або $\mathrm{V.P.} \frac{1}{x^2}$). Іноді узагальнені функції 
+    $\mathcal{P}\frac{1}{x}$ та $\mathcal{P}\frac{1}{x^2}$ позначаються коротше: $\frac{1}{x}$ та
+    $\frac{1}{x^2}$ відповідно.
+    Узагальнені функції $\delta$ та $\delta_a$ називаються 
+    відповідно $\delta$-функцією Дірака та $\delta$-функцією Дірака, зосередженою в точці $a$.
+\end{theory}
+\begin{theory}
+    Нехай $f \in \mathcal{D}'$, $h \in C^{\infty}(\real)$. За означенням \ul{добуток} $h\cdot f$ --- це 
+    функціонал, дія якого на кожну основну функцію $\varphi$ визначена за правилом $\pair{h\cdot f}{\varphi} = \pair{f}{h\cdot \varphi}$.
+
+    \noindent Для узагальненої функції $f \in\mathcal{D}'$ запроваджуються \ul{похідна} за правилом
+    $\pair{f'}{\varphi} = -\pair{f}{\varphi'}$ (тут $\varphi$ --- довільна основна функція).
+    Індуктивно запроваджуються похідні вищих порядків: $f^{(n)} := \left( f^{(n-1)}\right)'$.
+
+    \noindent Нехай $f, f_n \in \mathcal{D}'$. \ul{Збіжність} $f_n \underset{\mathcal{D}'}{\to} f$ означає,
+    що для кожної $\varphi \in \mathcal{D}$ є збіжність $\pair{f_n}{\varphi} \to \pair{f}{\varphi}$, $n \to \infty$.
+    
+    \noindent \ul{Збіжність ряду} $\suml{n=1}{\infty} f_n$ в $\mathcal{D}'$ --- це
+    збіжність в $\mathcal{D}'$ послідовності його часткових сум.
+\end{theory}
+\begin{exercise}
+    Нехай $f \in \mathcal{D}'$, $h \in  C^{\infty}(\real)$. Довести:
+    \begin{enumerate}
+        \item $h \cdot f \in \mathcal{D}'$;
+        \item $(f = \delta) \Rightarrow (h\cdot f = h(0) \cdot \delta)$;
+        \item $(g \in C^{\infty}(\real)) \Rightarrow (g\cdot(h\cdot f) = (g \cdot h) \cdot f)$;
+        \item $\forall n \in \natur: \pair{f^{(n)}}{\varphi} = (-1)^n \pair{f}{\varphi^{(n)}}$;
+        \item $(h \cdot f)' = h'\cdot f + h\cdot f'$.
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Довести твердження:
+    \begin{enumerate}
+        \item $x^n \cdot \mathcal{P}\frac{1}{x} = x^{n-1}$ ($n \in \natur$);
+        \item $x \cdot \mathcal{P}\frac{1}{x^2} = \mathcal{P}\frac{1}{x}$;
+        \item $x^n \cdot \mathcal{P}\frac{1}{x^2} = x^{n-2}$ ($n \geq 2$).
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Нехай $f$ --- регулярна узагальнена функція ($f \in L_{1, loc}$). Довести, що якщо
+    $f \in C^1(\real)$, рівність $\pair{f'}{\varphi} = -\pair{f}{\varphi'}$ еквівалента
+    формулі інтегрування частинами: $\intl{\real}{} f' \cdot \varphi dx = - \intl{\real}{} f\cdot \varphi' dx$.
+    Таким чином, для функцій $f$ класу $C^1(\real)$ класична похідна співпадає з похідною $f'$ в сенсі
+    теорії узагальнених функцій.
+\end{exercise}
+\begin{exercise}
+    Обчислити:
+    \begin{enumerate}
+        \item $\eta'$, де $\eta(x) = \begin{cases}
+            1, & x \geq 0 \\
+            0, & x < 0 
+        \end{cases}$ --- функція Хевісайда;
+        \item $\left( |x| \right)'$;
+        \item $\left( |x| \right)''$;
+        \item $\left( x\cdot \sgn x\right)'$;
+        \item $\left( [x] \right)'$;
+        \item $\left(\eta(x) \cdot \sin x \right)'$;
+        \item $\left(\sgn(\cos x)\right)'$.
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Довести рівності:
+    \begin{enumerate}
+        \item $\left( \ln |x|\right)' = \mathcal{P}\frac{1}{x}$;
+        \item $\left(\mathcal{P}\frac{1}{x}\right)' = -\mathcal{P}\frac{1}{x^2}$;
+        \item $\left(\mathcal{P}\frac{1}{x^2}\right)' = -2\mathcal{P}\frac{1}{x^3}$,
+        де $\pair{\mathcal{P}\frac{1}{x^3}}{\varphi} = \mathrm{V.P.}\intl{\real}{} \frac{\varphi(x) - \varphi(0) - x \varphi'(0)}{x^3} dx$.
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Нехай $f, f_n \in \mathcal{D}'$, $f_n \underset{\mathcal{D}'}{\to} f$, $h \in C^{\infty}(\real)$. Доведіть:
+    \begin{enumerate}
+        \item $f'_n \underset{\mathcal{D}'}{\to} f'$;
+        \item $h\cdot f_n \underset{\mathcal{D}'}{\to} h\cdot f$.
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Довести, що в $\mathcal{D}'$ виконуються збіжності:
+    \begin{enumerate}
+        \item $\frac{\varepsilon}{\pi (x^2 + \varepsilon^2)} \to \delta$, $\varepsilon \to 0 +$;
+        \item $\arctg(nx) \to \frac{\pi}{2} \sgn x$, $n \to \infty$;
+        \item $\frac{1}{\sqrt{\varepsilon}} e^{-\frac{x^2}{2}} \to \sqrt{\pi} \cdot \delta$, $\varepsilon \to 0 +$;
+        \item $\frac{1}{x} \sin \frac{x}{\varepsilon} \to \pi \cdot \delta$, $\varepsilon \to 0 +$;
+        \item $\frac{\varepsilon}{x^2} \sin^2 \frac{x}{\varepsilon} \to \pi \cdot \delta$, $\varepsilon \to 0 +$;
+        \item $t^n e^{ixt} \to 0$, $t \to +\infty$ ($n \geq 0$);
+        \item $\frac{1}{\varepsilon} f\left( \frac{x}{\varepsilon}\right) \to \delta \cdot \intl{a}{b} f(x) dx$, $\varepsilon \to 0+$ ($f \in L_1 [a; b]$). 
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Довести, що узагальнені функції $\delta, \delta', \delta'', ..., \delta^{(n)}$
+    лінійно незалежні в $\mathcal{D}'$.
+\end{exercise}
+\begin{exercise}\label{N:3_2_21}
+    Довести рівності в $\mathcal{D}'$:
+    \begin{enumerate}
+        \item $2 \suml{k \in \mathbb{Z}}{} \delta_{k \pi} = |\sin x|'' + |\sin x|$;
+        \item $2 \suml{k \in \mathbb{Z}}{} \delta_{\left(k+\frac{1}{2}\right) \pi} = |\cos x|'' + |\cos x|$.
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Доведіть, що загальний розв'язок рівняння $y' = 0$ в $\mathcal{D}'$ має вид $y = C$ 
+    (тобто, рівняння має лише <<класичний>> розв'язок).
+\end{exercise}
+\begin{exercise}
+    Знайти загальні розв'язки рівнянь в $\mathcal{D}'$:
+    \begin{enumerate}
+        \item $y'' = 0$;
+        \item $y' = \eta$ ($\eta$ --- функція Хевісайда);
+        \item $y'' = \delta$;
+        \item $x y' = \mathcal{P}\frac{1}{x}$;
+        \item $u' = u$;
+        \item $u'' = u$;
+        \item $u'' = -u$; 
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Довести, що $u = C_1 + C_2 \eta(x) + \ln|x|$, де $C_1$ та $C_2$ --- довільні сталі,
+    є загальним розв'язком рівняння $x u' = 1$.
+\end{exercise}
+\begin{exercise}
+    Нехай ряд $\suml{n=0}{\infty} a_n \delta^{(n)}$ ($a_n \in \real$) збігається в просторі $\mathcal{D}'$.
+    Довести, що існує таке $N$, що $a_n = 0$ при $n \geq N$.
+\end{exercise}
+\begin{exercise}
+    Побудувати послідовність функцій $g_n \in L_{1, loc}(\real)$,
+    яка збігається в $\mathcal{D}'$ до функції $\delta^{(m)}$ ($m \in \natur$).
+\end{exercise}
+\begin{theory}
+    Нехай $f \in \mathcal{D}'$, $U$ --- відкрита множина в $\real$. Позначення
+    $f |_{U} = 0$ (обмеження $f$ на $U$ дорівнює нулю) означає, що
+    виконується умова: $(\varphi \in \mathcal{D}, \supp \varphi \subset U) \Rightarrow (\pair{f}{\varphi} = 0)$.
+    
+    \noindent Замкнена множина $M \subset \real$ називається \ul{носієм} узагальненої
+    функції $f$, якщо $U = \real \setminus M$ --- найбільша відкрита множина, для якої $f |_{U} = 0$.
+    Позначення: $M = \supp f$.
+
+    \noindent Нехай $f$ --- сингулярна узагальнена функція. Найменше натуральне число $n$, для якого існує регулярна функція $g$, що задовольняє умову 
+    $g^{(n)} = f$, називається \ul{порядком сингулярності} $f$.
+\end{theory}
+\begin{exercise*}
+    Нехай $f \in \mathcal{D}'$, $\{ U_\alpha\}$ --- сім'я всіх відкритих множин, для яких $f |_{U_\alpha} = 0$.
+    Позначимо $U = \bigcup\limits_{\alpha} U_\alpha$. Доведіть: $f |_{U} = 0$, тобто $U$ --- найбільша
+    відкрита множина, для якої виконується ця рівність. Тим самим $U \in \{ U_\alpha\}$ і означення $\supp f$ 
+    є коректним.
+\end{exercise*}
+\begin{exercise}
+    Нехай $f \in \mathcal{D}'$. Доведіть: $\supp f' \subset \supp f$.
+\end{exercise}
+\begin{exercise}
+    Нехай $f = \suml{k=0}{m} a_k \delta^{(k)}$, $m \in \natur$, $a_k \in \real$, $a_m \neq 0$.
+    \begin{enumerate}
+        \item Знайти $\supp f$;
+        \item Знайти порядок сингулярності функції $f$.
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Доведіть, що кожна сингулярна узагальнена функція $f \in \mathcal{D}'$ з одноточковим носієм ($\supp f = \{ a\}$) має вид
+    $f = \suml{k=0}{m} = c_k \delta_a^{(k)}$ ($m \in \natur$, $c_k \in \real$), а тому має скінченний порядок сингулярності.
+\end{exercise}
+\begin{exercise*}
+    Довести, що кожна узагальнена функція $f \in \mathcal{D}'$ з компактним носієм має скінченний порядок сингулярності.
+\end{exercise*}
+\begin{exercise*}
+    Чи можна ввести в просторі $\mathcal{D}'$ метрику, збіжність за якою співпадала б зі збіжністю в $\mathcal{D}'$?
+\end{exercise*}

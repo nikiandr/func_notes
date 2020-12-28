@@ -1,6 +1,6 @@
 %%% Работа с языком
 %\usepackage{cmap}					    % поиск в PDF				    % русские буквы в формулах
-\usepackage[12pt]{extsizes}
+%\usepackage[12pt]{extsizes}
 \usepackage[T2A]{fontenc}			% кодировка
 \usepackage[utf8]{inputenc}             % кодировка исходного текста
 \usepackage[english,ukrainian]{babel}	% локализация и переносы	    
@@ -16,19 +16,11 @@
 \usepackage{dsfont} %для цифр в шрифте типа mathbb
 \usepackage{braket} % для команды \set
 
-\usepackage{makecell}% Прикольная настройка ячеек в tabular 
-%http://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/makecell/makecell-rus.pdf
-
-\usepackage{diagbox}% Разделение клеток tabular по диагонали
-
-\usepackage{multicol} % Несколько колонок
-\usepackage{wrapfig} % Картинки посреди текста
 \usepackage{chngcntr} % для нумерации формул
 \usepackage{enumitem} % чтоб можно было делать римскую нумерацию
 \usepackage{mdwlist}
 \usepackage{adjustbox}
-\usepackage{graphicx}
-\usepackage{xcolor} % градации цветов
+\usepackage{anyfontsize}
 \usepackage[psdextra]{hyperref}
 \hypersetup{unicode=true}
 \hypersetup{
@@ -62,21 +54,6 @@
    \exercise\edef\@currentlabel{\thesection.\arabic{exercise}}}
   {\endexercise}
 
-%%%% Картинки
-\usepackage{graphicx}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{mathrsfs}
-\pgfplotsset{compat=1.16}
-
-\usetikzlibrary{patterns}
-\usetikzlibrary{shapes.geometric}
-\usetikzlibrary{arrows}
-\usetikzlibrary{arrows.meta}
-\usetikzlibrary{shapes.geometric}
-\graphicspath{{pictures/}}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
-
 \newmdenv[
   topline=false,
   bottomline=false,
@@ -101,7 +78,7 @@
 \newcommand{\intl}[2]{\int\limits_{#1}^{#2}}
 \newcommand{\suml}[2]{\sum\limits_{#1}^{#2}}
 
-\DeclareMathOperator{\sgn}{sgn} %
+\DeclareMathOperator{\sgn}{sign} %
 \DeclareMathOperator\supp{supp}
 
 \makeatletter

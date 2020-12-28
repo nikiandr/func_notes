@@ -602,3 +602,14 @@ $A$ --- обмежений; рівність $\norm{A} = 1$ та відсутн�
 $\varphi(x) = \varphi(0) + x\varphi'(0) + \frac{1}{2}x^2\varphi''(\nu(x)\cdot x)$, $0 < \nu(x) < 1$.
 Тому  $\pair{f}{\varphi} = \frac{1}{2}\intl{0}{+\infty} (\varphi''(\nu(x)x) + \varphi''(\nu(-x)(-x)))dx$,
 звідки одержуємо неперервність функціонала $f$.
+
+\noindent\ref{N:3_2_21}. а) $\pair{|\sin x|'' + |\sin x|}{\varphi} = 
+\intl{\real}{} |\sin x| (\varphi''(x) + \varphi(x)) dx = \suml{k\in \mathbb{Z}}{} \intl{k \pi - \frac{\pi}{2}}{k \pi + \frac{\pi}{2}} |\sin x| (\varphi''(x) + \varphi(x)) dx =
+\suml{k\in \mathbb{Z}}{} (-1)^k \left( \intl{k \pi}{k \pi + \frac{\pi}{2}}  \sin x \left(\varphi''(x) + \varphi(x)\right) dx - 
+\intl{k \pi - \frac{\pi}{2}}{k \pi}  \sin x \left(\varphi''(x) + \varphi(x)\right) dx\right) =
+\left[ \intl{\alpha}{\beta} \sin x \left(\varphi''(x) + \varphi(x)\right) dx = \varphi'(x) \cdot \sin x \rvert_\alpha^\beta -
+\varphi(x) \cdot \cos x \rvert_\alpha^\beta - \intl{\alpha}{\beta} \sin x \cdot \varphi(x) dx\right] = $
+
+\noindent$\suml{k\in \mathbb{Z}}{} (-1)^k \left((-1)^k \varphi'(k \pi + \frac{\pi}{2}) + (-1)^k \varphi'(k \pi) + (-1)^{k-1} \varphi'(k \pi - \frac{\pi}{2}) + (-1)^k \varphi'(k \pi)\right) =$
+
+\noindent$\suml{k\in \mathbb{Z}}{} \left( \varphi'(k \pi + \frac{\pi}{2}) - \varphi'(k \pi - \frac{\pi}{2})\right) + 2 \suml{k\in \mathbb{Z}}{} \varphi(k \pi) = \pair{2\suml{k\in \mathbb{Z}}{} \delta_{k \pi}}{\varphi}$.

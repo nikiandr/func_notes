@@ -1,10 +1,17 @@
-\documentclass{extreport}
+\documentclass[12pt]{report}
 
 \input{preamble.tex}
 
-\author{Богданський Ю.В.}
-\title{Задачник з функціонального аналізу}
-\date{\today}
+\author{\Huge Богданський Ю.В.}
+\title{\textbf{
+    \fontsize{40}{48}\selectfont{Задачі з функціонального аналізу}}
+    \\
+    \vspace{0.5em}
+    \fontsize{16}{20}\selectfontОбмежені лінійні оператори в нормованих просторах.
+    Необмежені лінійні оператори. Операторні півгрупи.
+    Простори Соболєва та узагальнені функції.
+    }
+\date{}
 
 \begin{document}
     \maketitle
@@ -14,55 +21,65 @@
             \input{blocks/1_1.tex}
             \input{blocks/1_2.tex}
             \input{blocks/1_3.tex}
+            \newpage
         \section{Геометрія гільбертового простору.}
             \input{blocks/2_1.tex}
             \input{blocks/2_2.tex}
             \input{blocks/2_3.tex}
             \input{blocks/2_4.tex}
+            \newpage
         \section{Обмежені лінійні функціонали та оператори в гільбертових просторах.}
             \input{blocks/3_1.tex}
             \input{blocks/3_2.tex}
             \input{blocks/3_3.tex}
             \input{blocks/3_4.tex}
+            \newpage
         \section{Збіжність послідовностей векторів, функціоналів та операторів.}
             \input{blocks/4_1.tex}
             \input{blocks/4_2.tex}
             \input{blocks/4_3.tex}
+            \newpage
         \section{Цілком неперервні оператори.}
             \input{blocks/5_1.tex}
             \input{blocks/5_2.tex}
             \input{blocks/5_3.tex}
-            \input{blocks/5_4.tex}  
+            \input{blocks/5_4.tex}
+            \newpage  
         \section{Обернені оператори.}
             \input{blocks/6_1.tex}
             \input{blocks/6_2.tex}
             \input{blocks/6_3.tex}
+            \newpage
         \section{Спектр та резольвента обмеженого лінійного оператора. 
                  Спектр та резольвента самоспряженого оператора.}
             \input{blocks/7_1.tex}
             \input{blocks/7_2.tex}
             \input{blocks/7_3.tex}
+            \newpage
         \section{Спектр компактного оператора, теореми Фредгольма.}
             \input{blocks/8_1.tex}
             \input{blocks/8_2.tex}
             \input{blocks/8_3.tex}
-
+            \newpage
     \chapter{Необмежені лінійні оператори. Операторні півгрупи.}
         \section{Необмежені лінійні оператори.}
             \input{blocks_2/1_1.tex}
             \input{blocks_2/1_2.tex}
             \input{blocks_2/1_3.tex}
+            \newpage
         \section{Операторні \texorpdfstring{$C_0$}{C0}-півгрупи.}
             \input{blocks_2/2_1.tex}
             \input{blocks_2/2_2.tex}
             \input{blocks_2/2_3.tex}
             \input{blocks_2/2_4.tex}
-
+            \newpage
     \chapter{Простори Соболєва та узагальнені функції}
         \section{Простір \texorpdfstring{$H^1[a;b] = W_2^1[a;b]$}{H1[a;b] = W21[a;b]}}
             \input{blocks_3/1_1.tex}
+            \newpage
         \section{Узагальнені функції}
             \input{blocks_3/2_1.tex}
+            \input{blocks_3/2_2.tex}
         \newpage
     \chapter*{Підказки}
     \addcontentsline{toc}{chapter}{Підказки}
