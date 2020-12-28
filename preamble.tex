@@ -47,7 +47,12 @@
 }
 \newtheorem{proposition}{Твердження}
 
-\theoremstyle{remark}
+
+\makeatletter  % наследуем новый теоремстайл от ремарка и переопределяем head font 
+\def\th@exercisestyle{\th@remark\thm@headfont{\bfseries}} 
+\makeatletter
+
+\theoremstyle{exercisestyle}
 \newtheorem{exercise}{}[section]
 \newenvironment{exercise*}
   {\renewcommand\theexercise{\thesection.\arabic{exercise}\rlap{$^*$}}%
