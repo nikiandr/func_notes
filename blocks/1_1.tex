@@ -11,9 +11,9 @@
     $\norm{Ax}_Y \leq C \norm{x}_X$. Надалі найчастіше нижні індекси при позначенні норми 
     не будемо ставити; за змістом формул зрозуміло, до якого простору належить відповідна 
     норма. Також при позначенні нормованого простору $(X, \norm{\cdot})$ будемо писати лише 
-    літеру X, якщо за змістом задачі норма в X не викликає сумніву. 
+    літеру $X$, якщо за змістом задачі норма в $X$ не викликає сумніву. 
 
-    Якщо Y є основним полем ($Y=\mathbb{R}$ або $Y = \mathbb{C}$), то лінійний оператор 
+    Якщо $Y$ є основним полем ($Y=\mathbb{R}$ або $Y = \mathbb{C}$), то лінійний оператор 
     $\varphi: X \rightarrow Y$ прийнято називати \underline{(лінійним) функціоналом}.
 
     Норма лінійного обмеженого оператора задається формулою:
@@ -24,7 +24,7 @@
 
 \begin{exercise}
     Нехай $A$ --- обмежений лінійний оператор з $X$ в $Y$ ($A: X \rightarrow Y$).
-    Довести: $\norm{A} = \min\left\{C|\forall x \in X : \norm{Ax} \leq C\norm{x}\right\}$.
+    Довести: $\norm{A} = \min\left\{C \mid \forall x \in X : \norm{Ax} \leq C\norm{x}\right\}$.
 \end{exercise}
 
 \begin{exercise}
@@ -62,7 +62,7 @@
         \item $\varphi(x) = \int\limits_{-1}^1tx(t)dt$;
         \item $\varphi(x) = \norm{x} = \max\limits_{-1 \leq t \leq 1} |x(t)|$;
         \item $\varphi(x) = \int\limits_0^1|x(t)|dt$;
-        \item $\varphi(x) = \int\limits_{-1}^1x(t)cos(\pi t)dt$;
+        \item $\varphi(x) = \int\limits_{-1}^1x(t)\cos(\pi t)dt$;
         \item $\varphi(x) = \int\limits_0^1tx^2(t)dt$;
         \item $\varphi(x) = \int\limits_{-1}^0x(t)dt - \int\limits_0^1x(t)dt$;
         \item $\varphi(x) = \int\limits_{-1}^1x(t^2)dt$.
@@ -83,7 +83,7 @@
         \item $X = L_2[0;1]$, $\varphi(x) = \int\limits_0^1 tx(t)dt$;
         \item $X = L_2[0;1]$, $\varphi(x) = \int\limits_0^1 |x(t)|^{\frac{1}{2}}dt$;
         \item $X = L_2[0;\frac{\pi}{2}]$,
-        $\varphi(x) = \int\limits_0^{\frac{\pi}{2}} x(t)sin(t)dt$;
+        $\varphi(x) = \int\limits_0^{\frac{\pi}{2}} x(t)\sin(t)dt$;
         \item $X = C^1[0;1]$ $(\norm{x}_1 = \max\limits_{[0;1]}|x(t)| + 
         \max\limits_{[0;1]}|x^{\prime}(t)|)$, $\varphi(x) = x^{\prime}(0) + x(1)$.
     \end{enumerate}

@@ -20,12 +20,12 @@
      $\forall x \in H, \;\forall \varepsilon > 0 \; \exists \; \{\alpha_1, ..., 
     \alpha_m\}$: $\norm{\sum\limits_{k=1}^m \alpha_k e_k - x} < \varepsilon$.
 
-    Ортонормована система $\{e_n\}$ називається \underline{замкненою}, якщо для кожного 
+    \noindent Ортонормована система $\{e_n\}$ називається \underline{замкненою}, якщо для кожного 
     $x \in H$ має місце рівність: $\norm{x}^2 = \sum\limits_{n=1}^\infty |\dotprod{x}{e_n}|^2$ 
     (\underline{рівність Парсеваля}).
 
-    Повна ортонормована система $\{e_n\}$ називається \ul{ортонормованим 
-    базисом} в $H$.
+    \noindent Повна ортонормована система $\{e_n\}$ називається \ul{ортонормованим 
+    базисом}.
 \end{theory}
 
 \begin{exercise}
@@ -47,16 +47,14 @@
         \item в просторі $H$ існує ортонормований базис.
     \end{enumerate}
 \end{exercise}
-
 \begin{theory}
     Ортонормована система векторів $\{e_n\}$ в $H$ називається \underline{тотальною}, 
     якщо умова <<$\dotprod{x}{e_n} = 0$ $\forall n \in N$>> виконується лише для вектора $x=0$.
 \end{theory}
-
 \begin{exercise}[лема Ріса-Фішера]
     Нехай $\{e_n\}$ --- ортонормована система векторів в $H$, $\{c_n\}$ --- числова послідовність,
-    для якої ряд $\sum\limits_{n=1}^\infty |c_n|^2$ --- збіжний. Тоді існує $x \in H$, 
-    для якого при всіх $n \in \mathbb{N}$ має місце рівність: $c_n = \dotprod{x}{e_n}$ і при цьому 
+    для якої ряд $\sum\limits_{n=1}^\infty |c_n|^2$  збіжний. Тоді існує $x \in H$, 
+    для якого при всіх $n \in \mathbb{N}$ $c_n = \dotprod{x}{e_n}$, і при цьому 
     $\norm{x}^2 = \sum\limits_{n=1}^\infty |c_n|^2$.
 \end{exercise}
 
@@ -70,9 +68,9 @@
 
 \begin{theory}
     Гільбертові простори $H_1$ і $H_2$ називають \underline{ізоморфними}, якщо існує 
-    лінійний оператор $A: H_1 \rightarrow H_2$, для якого виконуються рівності: 
-    $\mathrm{Ker} A = \{0\}$; $\mathrm{Im} A = H_2$; $\dotprod{Ax}{Ay}_2 = \dotprod{x}{y}_1$ (тут $x$, $y$ --- довільні 
-    вектори в $H_1$; $\dotprod{\cdot}{\cdot}_k$ --- скалярний добуток в $H_k$). 
+    лінійний оператор $A: H_1 \rightarrow H_2$, для якого виконуються рівності
+    $\mathrm{Ker} A = \{0\}$, $\mathrm{Im} A = H_2$, $\dotprod{Ax}{Ay}_2 = \dotprod{x}{y}_1$ (тут $x$, $y$ --- довільні 
+    вектори в $H_1$, $\dotprod{\cdot}{\cdot}_k$ --- скалярний добуток в $H_k$). 
     Такий оператор $A$ називається \underline{ізоморфізмом}. Позначення: $H_1 \cong H_2 $.
 \end{theory}
 
